@@ -13,7 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
       - name: Restore approved catalogs, code and verified images
-        run: python3 migration/bootstrap.py
+        run: |
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          p = Path('migration/bootstrap.py')
+          p.write_text(p.read_text().replace("safe=':/%?=&'", "safe=':/%?=&@'"))
+          PYTHON
+          python3 migration/bootstrap.py
       - name: Commit the prepared shop project
         run: |
           git config user.name 'github-actions[bot]'
