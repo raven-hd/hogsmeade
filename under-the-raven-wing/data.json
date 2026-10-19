@@ -1,0 +1,4089 @@
+{
+  "format": "hogsmeade-shop",
+  "version": 1,
+  "shop": "raven",
+  "products": [
+    {
+      "category": "ароматические свечи valentine's day | 2026",
+      "name": "«КОТЕЛ ПОЭЗИИ»",
+      "templateId": "tpl_1770152436154_fpg7z",
+      "fieldData": {
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-001.png",
+        "name": "КОТЕЛ ПОЭЗИИ",
+        "type": "свеча ароматическая",
+        "composition": "гелиотроп + белый кедр",
+        "description": "Подписываете валентинку или создаёте торжественную речь, но нужные слова будто нарочно попрятались по темным уголкам - не беда. \nЗажгите свечу и аромат, подобный глотку из волшебного источника, подарит вам прилив красноречия. Гарантируем, ваши слова попадут точно в цель и тронут сердца.",
+        "price": "20",
+        "recipient_id": "217"
+      },
+      "id": 1770467461065,
+      "group": "свечи",
+      "collection": "valentine's day | 2026",
+      "shop": "raven",
+      "sku": "SV-001"
+    },
+    {
+      "category": "ароматические свечи valentine's day | 2026",
+      "name": "«КРЫЛЬЯ МЕЧТЫ»",
+      "templateId": "tpl_1770152436154_fpg7z",
+      "fieldData": {
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-002.png",
+        "name": "КРЫЛЬЯ МЕЧТЫ",
+        "type": "свеча ароматическая",
+        "composition": "роза + сандал",
+        "description": "Нежная дымка аромата затронет ваши чувства. Его голос подобен мечте, что дарует крылья, силы и вдохновение на действие. И в то же время бережно направляет, позволяя обойти тени сомнений и острые углы неуверенности в себе. Чтобы ваш путь не омрачали ошибки прошлого и горечь разочарований.",
+        "price": "20",
+        "recipient_id": "217"
+      },
+      "id": 1770467522018,
+      "group": "свечи",
+      "collection": "valentine's day | 2026",
+      "shop": "raven",
+      "sku": "SV-002"
+    },
+    {
+      "category": "леденцы lollipop rings | 2026",
+      "group": "леденцы",
+      "collection": "lollipop rings | 2026",
+      "name": "«HONEY»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«HONEY»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-007.png",
+        "productType": "леденец-кольцо",
+        "composition": "цветочный мед",
+        "description": "Теплый и согревающий вкус меда с цветочными нотами улучшает настроение и дарит ощущение уюта.",
+        "price": "7",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771023257986,
+      "sku": "LD-007"
+    },
+    {
+      "category": "леденцы lollipop rings | 2026",
+      "group": "леденцы",
+      "collection": "lollipop rings | 2026",
+      "name": "«SWEETHEART»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«SWEETHEART»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-008.png",
+        "productType": "леденец-кольцо",
+        "composition": "черешня",
+        "description": "Характерная терпкость сочных ягод прекрасна и заставит ваше сердечко стучать чаще.",
+        "price": "8",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771023271974,
+      "sku": "LD-008"
+    },
+    {
+      "category": "леденцы lollipop rings | 2026",
+      "group": "леденцы",
+      "collection": "lollipop rings | 2026",
+      "name": "«BONBON»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«BONBON»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-009.png",
+        "productType": "леденец-кольцо",
+        "composition": "клубника",
+        "description": "Кокетливый леденец с насыщенным ягодным вкусом - такому сочетанию вы точно поставите лайк.",
+        "price": "8",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771023284887,
+      "sku": "LD-009"
+    },
+    {
+      "category": "леденцы lollipop rings | 2026",
+      "group": "леденцы",
+      "collection": "lollipop rings | 2026",
+      "name": "«BUBBLES»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«BUBBLES»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-010.png",
+        "productType": "леденец-кольцо",
+        "composition": "ежевика ",
+        "description": "Смело заявляет о себе и привлекает внимание - этот исключительный вкус с пряными оттенками вы узнаете сразу.",
+        "price": "8",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771023296794,
+      "sku": "LD-010"
+    },
+    {
+      "category": "леденцы lollipop rings | 2026",
+      "group": "леденцы",
+      "collection": "lollipop rings | 2026",
+      "name": "«LOVEY»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«LOVEY»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-011.png",
+        "productType": "леденец-кольцо",
+        "composition": "помело ",
+        "description": "Задорный вкус драгоценного помело играет в каждой грани этого привлекательного \"камушка\". Залипательное удовольствие гарантировано.",
+        "price": "8",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771023309477,
+      "sku": "LD-011"
+    },
+    {
+      "category": "леденцы lollipop rings | 2026",
+      "group": "леденцы",
+      "collection": "lollipop rings | 2026",
+      "name": "«DARLING»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«DARLING»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-012.png",
+        "productType": "леденец-кольцо",
+        "composition": "киви",
+        "description": "Многогранный самоцветик с тропическим \"характером\" держит в тонусе и способен удивить даже искушённого сластену.",
+        "price": "8",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771023324328,
+      "sku": "LD-012"
+    },
+    {
+      "category": "леденцы valentine's day | 2025",
+      "group": "леденцы",
+      "collection": "valentine's day | 2025",
+      "name": "«ПАРА ФРАЗ»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ПАРА ФРАЗ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-013.png",
+        "productType": "когтевранский леденец",
+        "composition": "груша + лаванда",
+        "description": "Гармоничный вкус, где яркость груши подчеркивает свежесть лаванды. Он волнует, как и  предвкушение праздника.",
+        "price": "6",
+        "label": "",
+        "note1": "витрина - https://github.com/blake-el/hogsmeade/blob/main/img/rav/lolipop/л1комбо.png?raw=true"
+      },
+      "shop": "raven",
+      "id": 1771023414714,
+      "sku": "LD-013"
+    },
+    {
+      "category": "леденцы valentine's day | 2025",
+      "group": "леденцы",
+      "collection": "valentine's day | 2025",
+      "name": "«ЧУВСТВОВАТЬ ПРАВИЛЬНО»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ЧУВСТВОВАТЬ ПРАВИЛЬНО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-014.png",
+        "productType": "когтевранский леденец",
+        "composition": "маттиола + черника",
+        "description": "Роскошный и таинственный, как сама любовь. Словно искорки застыли внутри этого ягодного леденца, привлекая внимание к главному.",
+        "price": "6",
+        "label": "",
+        "note1": "витрина - https://github.com/blake-el/hogsmeade/blob/main/img/rav/lolipop/л2комбо.png?raw=true"
+      },
+      "shop": "raven",
+      "id": 1771023458374,
+      "sku": "LD-014"
+    },
+    {
+      "category": "леденцы valentine's day | 2025",
+      "group": "леденцы",
+      "collection": "valentine's day | 2025",
+      "name": "«ЛЮБИ, ТАНЦУЙ»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ЛЮБИ, ТАНЦУЙ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-015.png",
+        "productType": "когтевранский леденец",
+        "composition": "мята + гипсофила",
+        "description": "На старте - прохладный вихрь вкуса, который постепенно раскрывается нежным цветочным акцентом.",
+        "price": "",
+        "label": "",
+        "note1": "витрина - https://github.com/blake-el/hogsmeade/blob/main/img/rav/lolipop/л3комбо.png?raw=true"
+      },
+      "shop": "raven",
+      "id": 1771023478900,
+      "sku": "LD-015"
+    },
+    {
+      "category": "леденцы valentine's day | 2025",
+      "group": "леденцы",
+      "collection": "valentine's day | 2025",
+      "name": "«ПРИМЕТЫ ЛЮБВИ»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ПРИМЕТЫ ЛЮБВИ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-016.png",
+        "productType": "когтевранский леденец",
+        "composition": "виноград + анемон",
+        "description": "Яркое сердечко с манящим вкусом темного винограда и лёгким травяным оттенком. \"Любит или нет\" - лепестки дадут ответ.",
+        "price": "6",
+        "label": "",
+        "note1": "витрина - https://github.com/blake-el/hogsmeade/blob/main/img/rav/lolipop/л4комбо.png?raw=true"
+      },
+      "shop": "raven",
+      "id": 1771023493579,
+      "sku": "LD-016"
+    },
+    {
+      "category": "леденцы valentine's day | 2025",
+      "group": "леденцы",
+      "collection": "valentine's day | 2025",
+      "name": "«СКВОЗЬ РОЗОВЫЕ ОЧКИ»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«СКВОЗЬ РОЗОВЫЕ ОЧКИ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-017.png",
+        "productType": "когтевранский леденец",
+        "composition": "клубника + кокос",
+        "description": "Беззаботное настроение и яркость в квадрате с ярким клубничным вкусом и кокосовой стружкой.",
+        "price": "6",
+        "label": "",
+        "note1": "витрина - https://github.com/blake-el/hogsmeade/blob/main/img/rav/lolipop/л5.1комбо.png?raw=true"
+      },
+      "shop": "raven",
+      "id": 1771023506897,
+      "sku": "LD-017"
+    },
+    {
+      "category": "леденцы valentine's day | 2025",
+      "group": "леденцы",
+      "collection": "valentine's day | 2025",
+      "name": "«ДРАГОЦЕННОЕ ВОСПОМИНАНИЕ»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ДРАГОЦЕННОЕ ВОСПОМИНАНИЕ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-018.png",
+        "productType": "когтевранский леденец",
+        "composition": "нектарин + незабудка",
+        "description": "Словно застывшее мгновение: мягкий вкус спелого нектарина и хрупкие цветы. Что может быть проще и трогательнее?",
+        "price": "6",
+        "label": "",
+        "note1": "витрина - https://github.com/blake-el/hogsmeade/blob/main/img/rav/lolipop/л6комбо.png?raw=true"
+      },
+      "shop": "raven",
+      "id": 1771023530746,
+      "sku": "LD-018"
+    },
+    {
+      "category": "cиропы valentine's day | 2026",
+      "name": "«СВИДАНИЕ ВСЛЕПУЮ»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«СВИДАНИЕ ВСЛЕПУЮ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-007.png",
+        "productType": "сироп",
+        "composition": "клубника, земляника",
+        "description": "Многогранный самоцветик с тропическим \"характером\" держит в тонусе и способен удивить даже искушённого сластену.",
+        "price": "15",
+        "label": "Коллекция сиропов \"ФЕВРАЛЬСКИЕ ИСТОРИИ\" специально для тех, кто хочет взять максимум от каждого дня последнего зимнего месяца. Не только приятный знак внимания, который подарит новые впечатления, но и особый романтичный сценарий для запоминающихся мгновений с дорогими людьми."
+      },
+      "shop": "raven",
+      "id": 1771159285961,
+      "group": "cиропы",
+      "collection": "valentine's day | 2026",
+      "sku": "SR-007"
+    },
+    {
+      "category": "леденцы valentine's day | 2026",
+      "group": "леденцы",
+      "collection": "valentine's day | 2026",
+      "name": "«МЕЛОДИЯ СЕРДЦА»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«МЕЛОДИЯ СЕРДЦА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-019.png",
+        "productType": "когтевранский леденец",
+        "composition": "питайя + мята",
+        "description": "Экзотический мотив и освежающие мятные нотки затронут струны вашей души. Вдруг именно эти эмоции вдохновят вас на активное творчество и новые свершения?",
+        "price": "7",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771160331472,
+      "sku": "LD-019"
+    },
+    {
+      "category": "леденцы valentine's day | 2026",
+      "group": "леденцы",
+      "collection": "valentine's day | 2026",
+      "name": "«ПАЗЛ»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ПАЗЛ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-020.png",
+        "productType": "когтевранский леденец",
+        "composition": "персик + виноград",
+        "description": "Благородный вкус бархатного персика с пряным мускатным акцентом - яркий пример того, как непохожие части становятся неповторимым целым.",
+        "price": "7",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771160352807,
+      "sku": "LD-020"
+    },
+    {
+      "category": "леденцы valentine's day | 2026",
+      "group": "леденцы",
+      "collection": "valentine's day | 2026",
+      "name": "«ТАК КРАСИВО»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ТАК КРАСИВО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-021.png",
+        "productType": "когтевранский леденец",
+        "composition": "манго + красный апельсин",
+        "description": "Это вкус покорит ваше сердце и оставит о себе незабываемое впечатление. Он звучит, поет и переливается, постепенно раскрывая свои грани.",
+        "price": "7",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771160374878,
+      "sku": "LD-021"
+    },
+    {
+      "category": "леденцы valentine's day | 2026",
+      "group": "леденцы",
+      "collection": "valentine's day | 2026",
+      "name": "«ГОЛОВОЛОМКА»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ГОЛОВОЛОМКА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-022.png",
+        "productType": "когтевранский леденец",
+        "composition": "ягодный микс",
+        "description": "Эти ягодки хоть и малышки, но зажгут эмоции и хорошенько испытают ваши рецепторы. Сможете определить всех участников веселого безобразия?",
+        "price": "7",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771160395514,
+      "sku": "LD-022"
+    },
+    {
+      "category": "леденцы valentine's day | 2026",
+      "group": "леденцы",
+      "collection": "valentine's day | 2026",
+      "name": "«СООТНОШЕНИЯ»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«СООТНОШЕНИЯ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-023.png",
+        "productType": "когтевранский леденец",
+        "composition": "лайм + мёд ",
+        "description": "Пикантный вкус цитруса гармонично подчеркивает сладость цветочного меда. Попробуйте сами и решите, дуэт они или пара.",
+        "price": "7",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771160413483,
+      "sku": "LD-023"
+    },
+    {
+      "category": "ароматические свечи valentine's day | 2026",
+      "name": "«ТАЕТ ЛЕД»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ТАЕТ ЛЕД»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-010.png",
+        "productType": "свеча ароматическая",
+        "composition": "корень ириса + жасмин",
+        "description": "Возникли внезапные трудности и вы не знаете, как быть? Это не препятствия, а вызов, чтобы обнаружить в себе непроявленные таланты и с честью пройти любые испытания. Эта свеча поможет обнаружить кратчайший маршрут к цели и поддержит в путешествии.",
+        "price": "15",
+        "label": "Коллекция свечей «СНЕЖНАЯ ЛУНА» из натурального пчелиного воска в честь февральского полнолуния. Вам нужен помощник, чтобы реализовать самые смелые планы и услышать голос интуиции? Вы на верном пути, осталось лишь выбрать."
+      },
+      "shop": "raven",
+      "id": 1771161071908,
+      "group": "свечи",
+      "collection": "valentine's day | 2026",
+      "sku": "SV-010"
+    },
+    {
+      "category": "ароматические свечи valentine's day | 2026",
+      "name": "«КЕДР - ГРЕЙПФРУТ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«КЕДР - ГРЕЙПФРУТ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-011.png",
+        "productType": "свеча ароматическая",
+        "composition": "",
+        "description": "Аромат для любителей ярких впечатлений, эмоциональных встреч и чувственных разговоров. Дерзкий, смелый и выразительный. Цитрусовая свежесть и горчинка в сочетании со смолистым кедром создает в помещении атмосферу уверенности и уюта. Свеча подойдет для тех, кто ценит раскрепощенность, искренность и свободу.",
+        "price": "15",
+        "label": "Ароматические свечи длительного горения из растений, заботливо выращенных в садах башни Когтевран.\nСтанут ненавязчивым штрихом в интерьере и помогут создать неповторимую атмосферу в Вашем пространстве"
+      },
+      "shop": "raven",
+      "id": 1771161795937,
+      "group": "свечи",
+      "collection": "valentine's day | 2026",
+      "sku": "SV-011"
+    },
+    {
+      "category": "ароматические свечи valentine's day | 2026",
+      "name": "«ВЕСНА В СЕРДЦЕ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ВЕСНА В СЕРДЦЕ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-012.png",
+        "productType": "свеча ароматическая",
+        "composition": "гортензия + флердоранж",
+        "description": "Это аромат-настроение вызывает улыбку, словно прикосновение игривых солнечных лучей по утру. Почувствуйте, как свет завоевывает все больше пространства день ото дня, приближая момент пробуждения природы.",
+        "price": "15",
+        "label": "Коллекция свечей «СНЕЖНАЯ ЛУНА» из натурального пчелиного воска в честь февральского полнолуния. Вам нужен помощник, чтобы реализовать самые смелые планы и услышать голос интуиции? Вы на верном пути, осталось лишь выбрать."
+      },
+      "shop": "raven",
+      "id": 1771161897021,
+      "group": "свечи",
+      "collection": "valentine's day | 2026",
+      "sku": "SV-012"
+    },
+    {
+      "category": "cиропы valentine's day | 2026",
+      "name": "«МАСТЕР КОМПЛИМЕНТОВ»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«МАСТЕР КОМПЛИМЕНТОВ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-008.png",
+        "productType": "сироп",
+        "composition": "яблоко, инжир",
+        "description": "Вкус для всех, кто соскучился по медовой сладости и ярким фруктовым переливам. Тот самый случай, когда сдерживать порывы вредно для здоровья.",
+        "price": "15",
+        "label": "Коллекция сиропов  \"ФЕВРАЛЬСКИЕ ИСТОРИИ\" специально для тех, кто хочет взять максимум от каждого дня последнего зимнего месяца. Не только приятный знак внимания, который подарит новые впечатления, но и особый романтичный сценарий для запоминающихся мгновений с дорогими людьми."
+      },
+      "shop": "raven",
+      "id": 1771162292644,
+      "group": "cиропы",
+      "collection": "valentine's day | 2026",
+      "sku": "SR-008"
+    },
+    {
+      "category": "топпинги fireplace day | 2026",
+      "group": "топпинги",
+      "collection": "fireplace day | 2026",
+      "name": "«ВЕНСКИЙ КРЕМ С КУРАГОЙ»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«ВЕНСКИЙ КРЕМ С КУРАГОЙ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-009.png",
+        "productType": "топпинг",
+        "composition": "",
+        "description": "Богатый вкус кураги и нежность сливок будто созданы для неторопливых встреч с дорогими людьми. Уют, душевный разговор и любимые лакомства - такой день не может быть плохим.",
+        "price": "15",
+        "label": "Коллекция десертных топпингов [kʌm ɪn] в честь самого уютного праздника Хогвартса Дамблдора - Дня Камина. Любой топпинг можно добавить в напиток, к десерту или использовать для приготовления собственного шедевра. Вдруг, это станет началом новой теплой истории, которую мы услышим однажды у камина?\n\nИ не забудьте кинуть веточку в огонь и загадать желание, чтобы этот день стал ещё теплее и радостнее."
+      },
+      "shop": "raven",
+      "id": 1771162491608,
+      "sku": "SR-009"
+    },
+    {
+      "category": "топпинги fireplace day | 2026",
+      "group": "топпинги",
+      "collection": "fireplace day | 2026",
+      "name": "«КАРИБСКИЙ МИКС»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«КАРИБСКИЙ МИКС»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-010.png",
+        "productType": "топпинг",
+        "composition": "",
+        "description": "Воспоминания о ярких приключениях и приятные планы на лето - не удивляйтесь, если разговор соскользнет на эти темы. С трио из сочного ананаса, кокоса и тростникового сахара иначе быть не может. Этот яркий вкус про лето, о лете и для летнего настроения в любое время года.",
+        "price": "15",
+        "label": "Коллекция десертных топпингов [kʌm ɪn] в честь самого уютного праздника Хогвартса Дамблдора - Дня Камина. Любой топпинг можно добавить в напиток, к десерту или использовать для приготовления собственного шедевра. Вдруг, это станет началом новой теплой истории, которую мы услышим однажды у камина?\n\nИ не забудьте кинуть веточку в огонь и загадать желание, чтобы этот день стал ещё теплее и радостнее."
+      },
+      "shop": "raven",
+      "id": 1771162806644,
+      "sku": "SR-010"
+    },
+    {
+      "category": "ароматические свечи valentine's day | 2026",
+      "name": "«АКАЦИЯ - МАЛИНА»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«АКАЦИЯ - МАЛИНА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-013.png",
+        "productType": "свеча ароматическая",
+        "composition": "",
+        "description": "Сладкий и нежный - аромат для тонких и чувственных натур. Медовая акация и сахарная садовая малина играют теплыми, пудровыми и цветочными нотами, задавая легкое и игривое настроение на целый день. Подойдет романтикам и мечтателям, грезящим о совместных вечерах за кружкой чая, творческих встречах и душевных беседах.",
+        "price": "15",
+        "label": "Ароматические свечи длительного горения из растений, заботливо выращенных в садах башни Когтевран.\nСтанут ненавязчивым штрихом в интерьере и помогут создать неповторимую атмосферу в Вашем пространстве"
+      },
+      "shop": "raven",
+      "id": 1771163082502,
+      "group": "свечи",
+      "collection": "valentine's day | 2026",
+      "sku": "SV-013"
+    },
+    {
+      "category": "леденцы valentine's day | 2026",
+      "group": "леденцы",
+      "collection": "valentine's day | 2026",
+      "name": "«КЛЮЧИК»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«КЛЮЧИК»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-024.png",
+        "productType": "когтевранский леденец",
+        "composition": "малина + нектарин ",
+        "description": "Богатый вкус сочного нектарина подчеркивает ягодную сладость. Этот ключик, хоть и не золотой, но переливается на солнце, как драгоценность.",
+        "price": "7",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1771163247062,
+      "sku": "LD-024"
+    },
+    {
+      "category": "cиропы valentine's day | 2026",
+      "name": "«КИНОМАРАФОН»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«КИНОМАРАФОН»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-011.png",
+        "productType": "сироп",
+        "composition": "брусника",
+        "description": "Лёгкая терпкость, кислота и сладость сменяют друг друга, словно кадры любимых фильмов, что неизменно улучшают настроение и делают день идеальным.",
+        "price": "15",
+        "label": "Коллекция сиропов \"ФЕВРАЛЬСКИЕ ИСТОРИИ\"\nспециально для тех, кто хочет взять максимум от каждого дня последнего зимнего месяца. Не только приятный знак внимания, который подарит новые впечатления, но и особый романтичный сценарий для запоминающихся мгновений с дорогими людьми."
+      },
+      "shop": "raven",
+      "id": 1771163358807,
+      "group": "cиропы",
+      "collection": "valentine's day | 2026",
+      "sku": "SR-011"
+    },
+    {
+      "category": "топпинги fireplace day | 2026",
+      "group": "топпинги",
+      "collection": "fireplace day | 2026",
+      "name": "«ИТАЛЬЯНСКИЙ ЭСПРЕССО»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«ИТАЛЬЯНСКИЙ ЭСПРЕССО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-012.png",
+        "productType": "сироп",
+        "composition": "",
+        "description": "Идеален, вне модных трендов и точка. Сдержанная сладость и аромат отборных зёрен для тех, кто точно знает, что хорошего кофе много не бывает. И никакие доказательства не нужны.",
+        "price": "15",
+        "label": "Коллекция десертных топпингов [kʌm ɪn] в честь самого уютного праздника Хогвартса Дамблдора - Дня Камина. Любой топпинг можно добавить в напиток, к десерту или использовать для приготовления собственного шедевра. Вдруг, это станет началом новой теплой истории, которую мы услышим однажды у камина?\n\nИ не забудьте кинуть веточку в огонь и загадать желание, чтобы этот день стал ещё теплее и радостнее."
+      },
+      "shop": "raven",
+      "id": 1771163507103,
+      "sku": "SR-012"
+    },
+    {
+      "category": "ароматические свечи valentine's day | 2026",
+      "name": "«ХРУСТАЛЬНЫЙ ШАР»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ХРУСТАЛЬНЫЙ ШАР»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-014.png",
+        "productType": "свеча ароматическая",
+        "composition": "лист фиалки + подснежник",
+        "description": "Хотите с лёгкостью считывать, что таит улыбка или видеть то, что скрыто? Прохладный аромат этой свечи усиливает проницательность. Всего десять минут и вы обнаружите подсказку, которая привнесет кристальную ясность в ситуацию.",
+        "price": "15",
+        "label": "Коллекция свечей «СНЕЖНАЯ ЛУНА» из натурального пчелиного воска в честь февральского полнолуния. Вам нужен помощник, чтобы реализовать самые смелые планы и услышать голос интуиции? Вы на верном пути, осталось лишь выбрать."
+      },
+      "shop": "raven",
+      "id": 1771163624897,
+      "group": "свечи",
+      "collection": "valentine's day | 2026",
+      "sku": "SV-014"
+    },
+    {
+      "category": "cиропы valentine's day | 2026",
+      "name": "«10 ПРИЧИН МОЕЙ ЛЮБВИ»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«10 ПРИЧИН МОЕЙ ЛЮБВИ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-013.png",
+        "productType": "сироп",
+        "composition": "вишня",
+        "description": "Почему только десять?!\" возмущённо спросите вы. А больше на этикетку не поместится. Но вы можете приложить к подарку подробный список, где опишите все оттенки своих романтических чувств. ",
+        "price": "15",
+        "label": "Коллекция сиропов \"ФЕВРАЛЬСКИЕ ИСТОРИИ\" специально для тех, кто хочет взять максимум от каждого дня последнего зимнего месяца. Не только приятный знак внимания, который подарит новые впечатления, но и особый романтичный сценарий для запоминающихся мгновений с дорогими людьми."
+      },
+      "shop": "raven",
+      "id": 1771504438002,
+      "group": "cиропы",
+      "collection": "valentine's day | 2026",
+      "sku": "SR-013"
+    },
+    {
+      "category": "cиропы valentine's day | 2026",
+      "name": "«РОМАНТИЧНЫЙ ПЛЕЙЛИСТ»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«РОМАНТИЧНЫЙ ПЛЕЙЛИСТ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-014.png",
+        "productType": "сироп",
+        "composition": "персик",
+        "description": "Сладкий вкус, который неизменно улучшает настроение и создаёт атмосферу. Он подарит тепло и позволит насладиться каждой нотой этого дня.",
+        "price": "15",
+        "label": "Коллекция сиропов \"ФЕВРАЛЬСКИЕ ИСТОРИИ\" специально для тех, кто хочет взять максимум от каждого дня последнего зимнего месяца. Не только приятный знак внимания, который подарит новые впечатления, но и особый романтичный сценарий для запоминающихся мгновений с дорогими людьми."
+      },
+      "shop": "raven",
+      "id": 1771505486959,
+      "group": "cиропы",
+      "collection": "valentine's day | 2026",
+      "sku": "SR-014"
+    },
+    {
+      "category": "cиропы valentine's day | 2026",
+      "name": "«РОМАНТИЧНЫЙ ФОТОСЕССИЯ»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«РОМАНТИЧНЫЙ ФОТОСЕССИЯ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-015.png",
+        "productType": "сироп",
+        "composition": "гранат, малина",
+        "description": "Раскрасьте этот момент, чтобы сохранить его в памяти. Ещё больше ярких цветов и символов любви! И пусть весь мир узнает вашу историю.",
+        "price": "15",
+        "label": "Коллекция сиропов \"ФЕВРАЛЬСКИЕ ИСТОРИИ\" специально для тех, кто хочет взять максимум от каждого дня последнего зимнего месяца. Не только приятный знак внимания, который подарит новые впечатления, но и особый романтичный сценарий для запоминающихся мгновений с дорогими людьми."
+      },
+      "shop": "raven",
+      "id": 1771506481912,
+      "group": "cиропы",
+      "collection": "valentine's day | 2026",
+      "sku": "SR-015"
+    },
+    {
+      "category": "ароматические свечи christmas fair | 2026",
+      "name": "«ДУБ - БУЗИНА»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ДУБ - БУЗИНА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-016.png",
+        "productType": "свеча ароматическая",
+        "composition": "",
+        "description": "Сладкий, пряный, с миндально-древесными нотами. Строгий запах дубовой коры играет на контрасте с травянисто-сахарным ароматом цветков бузины. Так пахнет роща после затяжного дождя - лес оживает, смешивая запахи в узнаваемом букете.",
+        "price": "10",
+        "label": "Ароматические свечи длительного горения из растений, заботливо выращенных в садах башни Когтевран.\nСтанут ненавязчивым штрихом в интерьере и помогут создать неповторимую атмосферу в Вашем пространстве."
+      },
+      "shop": "raven",
+      "id": 1771849748751,
+      "group": "свечи",
+      "collection": "christmas fair | 2026",
+      "sku": "SV-016"
+    },
+    {
+      "category": "ароматические свечи valentine's day | 2026",
+      "name": "«ТКАНЬ СНОВ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ТКАНЬ СНОВ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-017.png",
+        "productType": "свеча ароматическая",
+        "composition": "лаванда + шафран ",
+        "description": "Сплетённый из тончайших нот аромат, раскрасит ваши сны новыми ощущениями и неожиданными красками. Проведет по загадочным коридорам образов и даст подсказку о будущих событиях. Вам же любопытно заглянуть за полотно реальности?",
+        "price": "15",
+        "label": "Коллекция свечей «СНЕЖНАЯ ЛУНА» из натурального пчелиного воска в честь февральского полнолуния. Вам нужен помощник, чтобы реализовать самые смелые планы и услышать голос интуиции? Вы на верном пути, осталось лишь выбрать."
+      },
+      "shop": "raven",
+      "id": 1772289270432,
+      "group": "свечи",
+      "collection": "valentine's day | 2026",
+      "sku": "SV-017"
+    },
+    {
+      "category": "мед christmas fair | 2026",
+      "group": "мед",
+      "collection": "christmas fair | 2026",
+      "name": "«ВИШНЯ»",
+      "templateId": "template_1786737812914",
+      "fieldData": {
+        "name": "«ВИШНЯ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-001.png",
+        "productType": "крем-мед «HoneyClaw»",
+        "description": "Не ягодка, а плод-костянка — ВИШНЯ! Она отдала свою косточку в утиль, а витамины, минералы и антиоксиданты мёду, чтобы порадовать вас ярким вкусом и укрепить ваш иммунитет.",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1772289527642,
+      "sku": "MD-001"
+    },
+    {
+      "category": "ароматические свечи christmas fair | 2026",
+      "name": "«ОЛИВА - ИНЖИР»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ОЛИВА - ИНЖИР»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-018.png",
+        "productType": "свеча ароматическая",
+        "composition": "",
+        "description": "Для тех, кто не боится экспериментов. Маслянистый и терпкий запах оливы контрастирует со сладкими нотами греческого инжира. Несмотря на смелое сочетание, аромат поистине нежный: легкая древесная теплота и свежий фруктовый запах настраивают на размеренную работу и романтичный лад",
+        "price": "10",
+        "label": "Ароматические свечи длительного горения из растений, заботливо выращенных в садах башни Когтевран.\nСтанут ненавязчивым штрихом в интерьере и помогут создать неповторимую атмосферу в Вашем пространстве."
+      },
+      "shop": "raven",
+      "id": 1772378014215,
+      "group": "свечи",
+      "collection": "christmas fair | 2026",
+      "sku": "SV-018"
+    },
+    {
+      "category": "ароматические свечи christmas fair | 2026",
+      "group": "свечи",
+      "collection": "christmas fair | 2026",
+      "name": "«ЭВКАЛИПТ - ЛАВАНДА»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ЭВКАЛИПТ - ЛАВАНДА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-019.png",
+        "productType": "свеча ароматическая",
+        "composition": "",
+        "description": "Свежий, травянистый - для успокоения после тяжелого дня и расслабленной атмосферы. Холодный камфорный эвкалипт в сочетании с цветочным запахом лаванды наполняют пространство прохладой, нотками луговых трав и лесной свежестью. Так пахнет в домике в Провансе - истинная роскошь, вдохновляющая на осуществление самых смелых мечт",
+        "price": "10",
+        "label": "Ароматические свечи длительного горения из растений, заботливо выращенных в садах башни Когтевран.\nСтанут ненавязчивым штрихом в интерьере и помогут создать неповторимую атмосферу в Вашем пространстве."
+      },
+      "shop": "raven",
+      "id": 1772979398908,
+      "sku": "SV-019"
+    },
+    {
+      "category": "ароматические свечи valentine's day | 2026",
+      "name": "«САНДАЛ - ЧАЙНАЯ РОЗА»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«САНДАЛ - ЧАЙНАЯ РОЗА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-020.png",
+        "productType": "свеча ароматическая",
+        "composition": "",
+        "description": "Свеча-признание: для каждого аромат раскрывается по-разному, рассказывая о том, что важно именно вам в данный момент. Благородный пряный сандал и травянистый аккорд чайной розы сплетаются в воздухе в ассоциацию самого теплого момента вашей совместной истории. Выразите нежное чувство, благодарность или уважение: аромат скажет все за вас.",
+        "price": "15",
+        "label": "Ароматические свечи длительного горения из растений, заботливо выращенных в садах башни Когтевран.\nСтанут ненавязчивым штрихом в интерьере и помогут создать неповторимую атмосферу в Вашем пространстве."
+      },
+      "shop": "raven",
+      "id": 1772980098036,
+      "group": "свечи",
+      "collection": "valentine's day | 2026",
+      "sku": "SV-020"
+    },
+    {
+      "category": "воздух day of laughter | 2026",
+      "group": "воздух",
+      "collection": "day of laughter | 2026",
+      "name": "«КИСЛОВООДСКА»",
+      "templateId": "template_1775038151410",
+      "fieldData": {
+        "name": "«КИСЛОВООДСКА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-001.png",
+        "productType": "консервированный воздух",
+        "description": "Загадочный Кисловодск, куда каждый год уезжает в отпуск сэр Злобный, а редкие счастливчики борются за этот приз на МХД.  Мы доставили специально для вас воздух из этого райского места. Он пахнет отдыхом. Он пахнет свободой. Он пахнет карасями.",
+        "price": "15",
+        "label": "Говорят, деньги не пахнут. Зато наш воздух — ещё как.\nКоллекция консервированного воздуха от когтевранцев ко Дню смеха. Да, мы продаём воздух. И да, он того стоит."
+      },
+      "shop": "raven",
+      "id": 1775038045330,
+      "sku": "VZ-001"
+    },
+    {
+      "category": "воздух day of laughter | 2026",
+      "group": "воздух",
+      "collection": "day of laughter | 2026",
+      "name": "«ИЗ КАБИНЕТА ДИРЕКТОРА»",
+      "templateId": "template_1775038151410",
+      "fieldData": {
+        "name": "«ИЗ КАБИНЕТА ДИРЕКТОРА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-002.png",
+        "productType": "консервированный воздух",
+        "description": "Устали, что люди не соблюдают простых правил? Надоело, что никто не хочет работать? Хотите кого-нибудь наказать? Или, может, вы из тех, кто давно думает что бы такого сделать, чтобы нарваться на штраф от директора? Специально для вас всех воздух из кабинета Директора. Воздух, которых пахнет властью, слезами студентов и жареным.",
+        "price": "15",
+        "label": "Говорят, деньги не пахнут. Зато наш воздух — ещё как.\nКоллекция консервированного воздуха от когтевранцев ко Дню смеха. Да, мы продаём воздух. И да, он того стоит."
+      },
+      "shop": "raven",
+      "id": 1775038530511,
+      "sku": "VZ-002"
+    },
+    {
+      "category": "воздух day of laughter | 2026",
+      "group": "воздух",
+      "collection": "day of laughter | 2026",
+      "name": "«ИЗ РАЗДЕВАЛКИ ЗВЕЗДНОЙ СТРЕЛЫ»",
+      "templateId": "template_1775038151410",
+      "fieldData": {
+        "name": "«ИЗ РАЗДЕВАЛКИ ЗВЕЗДНОЙ СТРЕЛЫ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-003.png",
+        "productType": "консервированный воздух",
+        "description": "Когда разговор идет о квиддиче, все хотят записаться в команду старичков. Говорят, там совершенно особая атмосфера. Воздух пропитан успехом, мемами и опытом до сведенных олдскулов. И мы достали этот воздух для вас!",
+        "price": "15",
+        "label": "Говорят, деньги не пахнут. Зато наш воздух — ещё как.\nКоллекция консервированного воздуха от когтевранцев ко Дню смеха. Да, мы продаём воздух. И да, он того стоит."
+      },
+      "shop": "raven",
+      "id": 1775038580048,
+      "sku": "VZ-003"
+    },
+    {
+      "category": "воздух day of laughter | 2026",
+      "group": "воздух",
+      "collection": "day of laughter | 2026",
+      "name": "«ЖИВОЙ КАФЕДРЫ»",
+      "templateId": "template_1775038151410",
+      "fieldData": {
+        "name": "«ЖИВОЙ КАФЕДРЫ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-004.png",
+        "productType": "консервированный воздух",
+        "description": "Каждый залп объявлений об отпусках в преподавательской заставляет испытывать печаль? Уже забыли как это, когда все кабинеты кафедры открыты и приветственно раскладывают камушки? Только в наших банках - Воздух Живой кафедры. Кафедры на которой все здесь!",
+        "price": "15",
+        "label": "Говорят, деньги не пахнут. Зато наш воздух — ещё как.\nКоллекция консервированного воздуха от когтевранцев ко Дню смеха. Да, мы продаём воздух. И да, он того стоит."
+      },
+      "shop": "raven",
+      "id": 1775038614601,
+      "sku": "VZ-004"
+    },
+    {
+      "category": "воздух day of laughter | 2026",
+      "group": "воздух",
+      "collection": "day of laughter | 2026",
+      "name": "«С ВЕСЕЛЯЩИМ ЗЕЛЬЕМ»",
+      "templateId": "template_1775038151410",
+      "fieldData": {
+        "name": "«С ВЕСЕЛЯЩИМ ЗЕЛЬЕМ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-005.png",
+        "productType": "консервированный воздух",
+        "description": "День как день, только ты почему-то грустишь? Хочется добавить в атмосферу чего-то такого эдакого? Есть решение! Воздух с капелькой веселья. Воздух с капелькой безумия. Воздух с отметкой \"+ вайб\"",
+        "price": "15",
+        "label": "Говорят, деньги не пахнут. Зато наш воздух — ещё как.\nКоллекция консервированного воздуха от когтевранцев ко Дню смеха. Да, мы продаём воздух. И да, он того стоит."
+      },
+      "shop": "raven",
+      "id": 1775038654217,
+      "sku": "VZ-005"
+    },
+    {
+      "category": "воздух day of laughter | 2026",
+      "group": "воздух",
+      "collection": "day of laughter | 2026",
+      "name": "«СЮРПРИЗ»",
+      "templateId": "template_1775038151410",
+      "fieldData": {
+        "name": "«СЮРПРИЗ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-006.png",
+        "productType": "консервированный воздух",
+        "description": "В мире всегда должно быть место сюрпризу! Откройте банку и сделайте вдох. Чуете чем пахнет? ТО-ТО ЖЕ! Давайте впечатляться вместе!",
+        "price": "50",
+        "label": "Говорят, деньги не пахнут. Зато наш воздух — ещё как.\nКоллекция консервированного воздуха от когтевранцев ко Дню смеха. Да, мы продаём воздух. И да, он того стоит."
+      },
+      "shop": "raven",
+      "id": 1775038689410,
+      "sku": "VZ-006"
+    },
+    {
+      "category": "воздух custom air",
+      "group": "воздух",
+      "collection": "custom air",
+      "name": "«ФЛЁР КЕВИНА»",
+      "templateId": "template_1775038151410",
+      "fieldData": {
+        "name": "«ФЛЁР КЕВИНА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-007.png",
+        "productType": "консервированный воздух",
+        "description": "Прямо из гриффиндорского теста в самое сердце на поражение!\nЕсли ему не открыть дверь, он её снесет, починит, а потом снова снесет!\nРыцарь с песней и коллажем! Лицо локальных брендов!\nЕсли его нет рядом, просто открой банку и подыши!\n\n\nКастомная серия, доступная только определенному круг лиц.",
+        "price": "15",
+        "label": "Говорят, деньги не пахнут. Зато наш воздух — ещё как.\nКоллекция консервированного воздуха от когтевранцев ко Дню смеха. Да, мы продаём воздух. И да, он того стоит."
+      },
+      "shop": "raven",
+      "id": 1775048285556,
+      "sku": "VZ-007"
+    },
+    {
+      "category": "воздух custom air",
+      "group": "воздух",
+      "collection": "custom air",
+      "name": "«ВОЗДУХ НА ЗАКАЗ»",
+      "templateId": "template_1775038151410",
+      "fieldData": {
+        "name": "«ВОЗДУХ НА ЗАКАЗ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-008.png",
+        "productType": "консервированный воздух",
+        "description": "Хочешь вдохнуть особенный воздух? Мы готовы собрать!\nВ стоимость входит: перелеты на орлах до места дислокации, таможенные сборы, налоговые сборы, забор воздуха, дизайн упаковки и одна банка чистого продукта. Если этого продукта вы хотите больше (от 2 банок до 100500), то первая банка входит в 100 галлеонов, а все последующие будут по стандартной цене за банку. Так за 2 банки вы заплатите 115, за три 130, за четыре 145 и далее.\nЕсли у вас проблемы с математикой, мы возьмем подсчет итоговой суммы на себя совершенно бесплатно.\n\nКастомный заказ  это ваш Роскошный минимум! Дышите чем хотите! Дышите с нами!",
+        "price": "50",
+        "label": "Говорят, деньги не пахнут. Зато наш воздух — ещё как.\nКоллекция консервированного воздуха от когтевранцев ко Дню смеха. Да, мы продаём воздух. И да, он того стоит."
+      },
+      "shop": "raven",
+      "id": 1775048743869,
+      "sku": "VZ-008"
+    },
+    {
+      "category": "воздух custom air",
+      "group": "воздух",
+      "collection": "custom air",
+      "name": "«ВОЗДУХ ХОГВАРТСКОЙ БИБЛИОТЕКИ С НОТКАМИ КОГТЕВРАНСКОГО ЛИТЕРАТУРНОГО КЛУБА»",
+      "templateId": "template_1775038151410",
+      "fieldData": {
+        "name": "«ВОЗДУХ ХОГВАРТСКОЙ БИБЛИОТЕКИ С НОТКАМИ КОГТЕВРАНСКОГО ЛИТЕРАТУРНОГО КЛУБА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-009.png",
+        "productType": "воздух консервированный",
+        "description": "Самый волнующий запах для всех книголюбов и любителей целоваться за стеллажами. Воздух пропитан знаниями, тайнами, духами мадам Пинс и пылью веков",
+        "price": "15",
+        "label": "Говорят, деньги не пахнут. Зато наш воздух — ещё как.\nКоллекция консервированного воздуха от когтевранцев ко Дню смеха. Да, мы продаём воздух. И да, он того стоит."
+      },
+      "shop": "raven",
+      "id": 1775076871169,
+      "sku": "VZ-009"
+    },
+    {
+      "category": "свечи ostara fair | 2026",
+      "group": "свечи",
+      "collection": "ostara fair | 2026",
+      "name": "«ЛУННОЕ ВОЗРОЖДЕНИЕ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ЛУННОЕ ВОЗРОЖДЕНИЕ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-022.png",
+        "productType": "большая свеча",
+        "composition": "",
+        "description": "Декоративная свеча из натурального пчелиного воска с изящным барельефом: профиль луны, переходящей в звездное ночное небо. Контраст светлого и тёмного символизирует баланс света и тьмы, возрождение природы и духовное обновление. Тонкая резьба и космический узор создают ощущение таинственности и весеннего пробуждения. Станет прекрасным подарком для загадочных и тонких натур, а также для истинных сов.",
+        "price": "12",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775487803332,
+      "sku": "SV-022"
+    },
+    {
+      "category": "свечи ostara fair | 2026",
+      "group": "свечи",
+      "collection": "ostara fair | 2026",
+      "name": "«СОЛНЕЧНОЕ ПРОБУЖДЕНИЕ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«СОЛНЕЧНОЕ ПРОБУЖДЕНИЕ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-023.png",
+        "productType": "большая свеча",
+        "composition": "",
+        "description": "Декоративная свеча из натурального пчелиного воска с рельефным ликом солнца, излучающего мягкое тепло и свет. Лучи, словно пробуждающаяся энергия весны, символизируют обновление, жизнь и победу света над тьмой. Нежный кремовый оттенок подчёркивает чистоту и гармонию. Украсит полку энергичного и идейного человека, начинающего день с первыми лучами - настоящего жаворонка.",
+        "price": "12",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775487842606,
+      "sku": "SV-023"
+    },
+    {
+      "category": "свечи easter nests | 2026",
+      "group": "свечи",
+      "collection": "easter nests | 2026",
+      "name": "«ТЕПЛОЕ ГНЕЗДО»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ТЕПЛОЕ ГНЕЗДО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-024.png",
+        "productType": "свечи",
+        "composition": "",
+        "description": "Яркий праздничный комплект, \nкоторый украсит любой стол и добавит тепла в пасхальный вечер.",
+        "price": "8",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775488006949,
+      "sku": "SV-024"
+    },
+    {
+      "category": "свечи easter nests | 2026",
+      "group": "свечи",
+      "collection": "easter nests | 2026",
+      "name": "«СОЛНЕЧНОЕ ГНЕЗДО»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«СОЛНЕЧНОЕ ГНЕЗДО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-025.png",
+        "productType": "свечи",
+        "composition": "",
+        "description": "Уютный комплект свечей, который превратит любой уголок в праздничный. \nИдеально для пасхального настроения.",
+        "price": "8",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775488029112,
+      "sku": "SV-025"
+    },
+    {
+      "category": "свечи easter nests | 2026",
+      "group": "свечи",
+      "collection": "easter nests | 2026",
+      "name": "«ЛАЗУРНОЕ ГНЕЗДО»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ЛАЗУРНОЕ ГНЕЗДО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-026.png",
+        "productType": "свечи",
+        "composition": "",
+        "description": "Три свечи в гнезде — уютное украшение, которое само по себе создаёт атмосферу праздника. Зажги и почувствуй весну.",
+        "price": "8",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775488041899,
+      "sku": "SV-026"
+    },
+    {
+      "category": "свечи easter nests | 2026",
+      "group": "свечи",
+      "collection": "easter nests | 2026",
+      "name": "«УЮТНОЕ ГНЕЗДО»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«УЮТНОЕ ГНЕЗДО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-027.png",
+        "productType": "свечи",
+        "composition": "",
+        "description": "Элегантное украшение для тех, кто ценит детали. \nТри свечи в гнезде — просто, стильно и празднично.",
+        "price": "8",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775488052260,
+      "sku": "SV-027"
+    },
+    {
+      "category": "леденцы ostara fair | 2026",
+      "group": "леденцы",
+      "collection": "ostara fair | 2026",
+      "name": "«ПАСХАЛЬНЫЙ КРОЛИК»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ПАСХАЛЬНЫЙ КРОЛИК»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-025.png",
+        "productType": "набор леденцов",
+        "composition": "",
+        "description": "Каждый леденец поднимает настроение. В набор входят леденцы со вкусом черники, клубники, киви и персика.\nЕсли съесть всех зайцев сразу, возможен побочный эффект - желание обнять первого встречного.",
+        "price": "7",
+        "label": "",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1775488257018,
+      "sku": "LD-025"
+    },
+    {
+      "category": "свечи fantastic beasts | 2026",
+      "group": "свечи",
+      "collection": "fantastic beasts | 2026",
+      "name": "«НЕ ТРОГАЛ. ПРОСТО ДЕРЖУ»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«НЕ ТРОГАЛ. ПРОСТО ДЕРЖУ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-028.png",
+        "productType": "свеча декоративная",
+        "description": "Фигурный подсвечник в виде нюхлера в образе пасхального кролика клянётся, что яйцо не крал. Он просто… очень крепко его обнимает. И не отпустит. Золотое яйцо — свеча с мягким тёплым светом, которая горит долго и наполняет пространство уютом.",
+        "price": "12",
+        "label": "У каждого золотого яйца должен быть свой хранитель.\nВо время Турнира Трёх Волшебников их доверили драконам. Мы решили не нарушать традицию и позаботились о том, чтобы эти праздничные золотые свечи тоже не остались без защиты и радовали вас своей красотой весь праздник."
+      },
+      "shop": "raven",
+      "id": 1775660263695,
+      "sku": "SV-028"
+    },
+    {
+      "category": "свечи fantastic beasts | 2026",
+      "group": "свечи",
+      "collection": "fantastic beasts | 2026",
+      "name": "«У НАС БЫЛ ПЛАН»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«У НАС БЫЛ ПЛАН»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-029.png",
+        "productType": "свеча декоративная",
+        "description": "Авторская статуэтка с парой лукотрусов: один уже карабкается наверх, второй старательно поддерживает яйцо с другой стороны. Командная работа, в которой не всё пошло по плану. Золотое яйцо выполнено в виде свечи — его можно зажечь, а можно просто любоваться.",
+        "price": "12",
+        "label": "У каждого золотого яйца должен быть свой хранитель.\nВо время Турнира Трёх Волшебников их доверили драконам. Мы решили не нарушать традицию и позаботились о том, чтобы эти праздничные золотые свечи тоже не остались без защиты и радовали вас своей красотой весь праздник."
+      },
+      "shop": "raven",
+      "id": 1775660332680,
+      "sku": "SV-029"
+    },
+    {
+      "category": "свечи fantastic beasts | 2026",
+      "group": "свечи",
+      "collection": "fantastic beasts | 2026",
+      "name": "«ПРИВЕТ, РОДСТВЕННИК»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ПРИВЕТ, РОДСТВЕННИК»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-030.png",
+        "productType": "свеча декоративная",
+        "description": "Декоративная композиция с золотым сниджетом, который застыл рядом и смотрит на яйцо с нескрываемым подозрением — уж очень оно на него похоже. Золотое яйцо — свеча с мягким светом, которая долго горит и создаёт деликатное свечение.",
+        "price": "12",
+        "label": "У каждого золотого яйца должен быть свой хранитель.\nВо время Турнира Трёх Волшебников их доверили драконам. Мы решили не нарушать традицию и позаботились о том, чтобы эти праздничные золотые свечи тоже не остались без защиты и радовали вас своей красотой весь праздник."
+      },
+      "shop": "raven",
+      "id": 1775660442964,
+      "sku": "SV-030"
+    },
+    {
+      "category": "свечи fantastic beasts | 2026",
+      "group": "свечи",
+      "collection": "fantastic beasts | 2026",
+      "name": "«ГИПНОТИЧЕСКОЕ СИЯНИЕ»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ГИПНОТИЧЕСКОЕ СИЯНИЕ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-031.png",
+        "productType": "свеча декоративная",
+        "description": "Декоративная композиция с лунным тельцом, который прижался к яйцу и не торопится уходить. Иногда лучшая защита — просто не отводить взгляд. Золотое яйцо — свеча с тёплым мягким светом, создающая спокойную атмосферу.",
+        "price": "12",
+        "label": "У каждого золотого яйца должен быть свой хранитель.\nВо время Турнира Трёх Волшебников их доверили драконам. Мы решили не нарушать традицию и позаботились о том, чтобы эти праздничные золотые свечи тоже не остались без защиты и радовали вас своей красотой весь праздник."
+      },
+      "shop": "raven",
+      "id": 1775660488919,
+      "sku": "SV-031"
+    },
+    {
+      "category": "свечи fantastic beasts | 2026",
+      "group": "свечи",
+      "collection": "fantastic beasts | 2026",
+      "name": "«ОТДАЙ. НЕТ, ТЫ ОТДАЙ»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ОТДАЙ. НЕТ, ТЫ ОТДАЙ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-032.png",
+        "productType": "свеча декоративная",
+        "description": "Авторская статуэтка с двумя пикси, которые решили, что лучшая защита — это нападение. И теперь уже не могут решить, кому принадлежит яйцо. Золотое яйцо — свеча с ярким тёплым светом, которая наполняет пространство энергией и уютом.",
+        "price": "12",
+        "label": "У каждого золотого яйца должен быть свой хранитель.\nВо время Турнира Трёх Волшебников их доверили драконам. Мы решили не нарушать традицию и позаботились о том, чтобы эти праздничные золотые свечи тоже не остались без защиты и радовали вас своей красотой весь праздник."
+      },
+      "shop": "raven",
+      "id": 1775660641446,
+      "sku": "SV-032"
+    },
+    {
+      "category": "свечи fantastic beasts | 2026",
+      "group": "свечи",
+      "collection": "fantastic beasts | 2026",
+      "name": "«ФВУПЕР НЕ ОДОБРЯЕТ»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ФВУПЕР НЕ ОДОБРЯЕТ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-033.png",
+        "productType": "свеча декоративная",
+        "description": "Декоративная композиция с фвупером, который расправил крылья и явно не в восторге от происходящего. В отличие от остальных, он настроен серьёзно. Золотое яйцо — свеча с тёплым светом, наполняющая пространство теплом — в отличие от самого фвупера.",
+        "price": "12",
+        "label": "У каждого золотого яйца должен быть свой хранитель.\nВо время Турнира Трёх Волшебников их доверили драконам. Мы решили не нарушать традицию и позаботились о том, чтобы эти праздничные золотые свечи тоже не остались без защиты и радовали вас своей красотой весь праздник."
+      },
+      "shop": "raven",
+      "id": 1775660714029,
+      "sku": "SV-033"
+    },
+    {
+      "category": "свечи easter nests | 2026",
+      "group": "свечи",
+      "collection": "easter nests | 2026",
+      "name": "«ГНЕЗДО МУДРОСТИ»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ГНЕЗДО МУДРОСТИ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-034.png",
+        "productType": "набор свечей",
+        "description": "Гнездо для тех, кто знает: магия начинается задолго до заклинаний. Орнаменты и символы на яйцах отсылают к древним культурам, мифам и истокам магического знания. Идеальный выбор для любителей искать истину и смысл, преподавателей с бесконечными лекциями и студентов, которые втянулись и поселились на кафедре профессора Крина.",
+        "price": "8",
+        "label": "Пасхальные гнезда, собранные по учебным кафедрам Хогвартса. В каждом — три свечи-яйца символизирующие дисциплин, которые веками изучают юные волшебники и волшебницы."
+      },
+      "shop": "raven",
+      "id": 1775731473976,
+      "sku": "SV-034"
+    },
+    {
+      "category": "свечи easter nests | 2026",
+      "group": "свечи",
+      "collection": "easter nests | 2026",
+      "name": "«ПРАКТИЧНОЕ ГНЕЗДО»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ПРАКТИЧНОЕ ГНЕЗДО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-035.png",
+        "productType": "набор свечей",
+        "description": "Гнездо для тех, кто предпочитает использовать магию на практике. Символы заклинаний, зельеварения и древних рун украшают каждое яйцо, напоминая о дисциплинах без знания которых не может обойтись ни один волшебник. Этот набор станет идеальным выбором для студентов, которые всегда держат палочку под рукой, и преподавателей, знающих, что теория — ничто без практики.",
+        "price": "8",
+        "label": "Пасхальные гнезда, собранные по учебным кафедрам Хогвартса. В каждом — три свечи-яйца символизирующие дисциплин, которые веками изучают юные волшебники и волшебницы."
+      },
+      "shop": "raven",
+      "id": 1775731651410,
+      "sku": "SV-035"
+    },
+    {
+      "category": "свечи easter nests | 2026",
+      "group": "свечи",
+      "collection": "easter nests | 2026",
+      "name": "«ФАНТАСТИЧЕСКОЕ ГНЕЗДО»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ФАНТАСТИЧЕСКОЕ ГНЕЗДО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-036.png",
+        "productType": "набор свечей",
+        "composition": "",
+        "description": "Гнездо, вдохновленное миром магических существ и растений. Каждое яйцо украшено символами, которые знакомы всем, кто хоть раз пытался пересадить мандрагору или изгнать пикси из старой кладовки. Подойдёт тем, кто чувствует себя как рыба в воде, гуляя по Запретному лесу. Свечи наполняют пространство мягким живым светом, создавая ощущение присутствия чего-то… не до конца изученого.",
+        "price": "8",
+        "label": "Пасхальные гнезда, собранные по учебным кафедрам Хогвартса. В каждом — три свечи-яйца символизирующие дисциплин, которые веками изучают юные волшебники и волшебницы.",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1775731790321,
+      "sku": "SV-036"
+    },
+    {
+      "category": "свечи easter nests | 2026",
+      "group": "свечи",
+      "collection": "easter nests | 2026",
+      "name": "«ТЕНЕВОЕ ГНЕЗДО»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ТЕНЕВОЕ ГНЕЗДО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-037.png",
+        "productType": "набор свечей",
+        "composition": "",
+        "description": "Гнездо для тех, кто выбрал не самый простой путь. Символы темных существ украшают каждое яйцо. Подойдёт будущим мракоборцам, тем, кто тяготеет к тёмной эстетике, и преподавателям, которые точно знают: счастье можно найти даже в тёмные времена, если не забывать обращаться к свету",
+        "price": "8",
+        "label": "Пасхальные гнезда, собранные по учебным кафедрам Хогвартса. В каждом — три свечи-яйца символизирующие дисциплин, которые веками изучают юные волшебники и волшебницы.",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1775731904734,
+      "sku": "SV-037"
+    },
+    {
+      "category": "свечи easter nests | 2026",
+      "group": "свечи",
+      "collection": "easter nests | 2026",
+      "name": "«ГНЕЗДО ЧЕМПИОНОВ»",
+      "templateId": "template_1770881109332",
+      "fieldData": {
+        "name": "«ГНЕЗДО ЧЕМПИОНОВ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-038.png",
+        "productType": "набор свечей",
+        "composition": "",
+        "description": "Гнездо для тех, кто не может усидеть на месте. Символы квиддича на яйцах сразу задают настроение скорости, азарта и вечной гонки за снитчем. Идеальный вариант для игроков, болельщиков и тех, кто готов обсуждать квиддич ночи напролет.",
+        "price": "8",
+        "label": "Пасхальные гнезда, собранные по учебным кафедрам Хогвартса. В каждом — три свечи-яйца символизирующие дисциплин, которые веками изучают юные волшебники и волшебницы.",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1775732007493,
+      "sku": "SV-038"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«ХАТТОРИ РАЙТО»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ХАТТОРИ РАЙТО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-039.png",
+        "productType": "свеча",
+        "description": "Директоры школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775733691913,
+      "sku": "SV-039"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«ADELINE DELHI-SCHAFER»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ADELINE DELHI-SCHAFER»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-040.png",
+        "productType": "свеча",
+        "description": "Заместитель директора школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775733831932,
+      "sku": "SV-040"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«ЛИАРИЯ СПРАУТ»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ЛИАРИЯ СПРАУТ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-041.png",
+        "productType": "свеча",
+        "description": "Заместитель директора школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775733852184,
+      "sku": "SV-041"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«МАРИЭТТА РАЙМОН»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«МАРИЭТТА РАЙМОН»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-042.png",
+        "productType": "свеча",
+        "description": "Архитектор школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775733888846,
+      "sku": "SV-042"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«АРИАДНА ФРОСТ»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«АРИАДНА ФРОСТ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-043.png",
+        "productType": "свеча",
+        "description": "Куратор Подготовительного Отделения и главный редактор школьной газеты \"Оракул\"",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775734275913,
+      "sku": "SV-043"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«MAKHEYLA RAYGAN»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«MAKHEYLA RAYGAN»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-044.png",
+        "productType": "свеча",
+        "description": "Спортивный администратор школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775734359258,
+      "sku": "SV-044"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«ЛИТА НИЛЬСОН»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ЛИТА НИЛЬСОН»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-045.png",
+        "productType": "свеча",
+        "description": "Декан факультета Гриффиндор и хранитель трофейных школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775734414360,
+      "sku": "SV-045"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«GUGO HELWELL»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«GUGO HELWELL»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-046.png",
+        "productType": "свеча",
+        "description": "Главный лекарь школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775734467143,
+      "sku": "SV-046"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«GRACE DIAMOND-DE-KUR»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«GRACE DIAMOND-DE-KUR»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-047.png",
+        "productType": "свеча",
+        "description": "Мэр Хогсмида и Магического Лондона",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775734512249,
+      "sku": "SV-047"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«ЭННИ МУР»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ЭННИ МУР»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-048.png",
+        "productType": "свеча",
+        "description": "Декан факультета Пуффендуй школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775734600850,
+      "sku": "SV-048"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«ШЕЛИЯ МАКБРАЙД»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ШЕЛИЯ МАКБРАЙД»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-049.png",
+        "productType": "свеча",
+        "description": "Декан факультета Когтевран школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775734652270,
+      "sku": "SV-049"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«ДАРИЯ»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«ДАРИЯ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-050.png",
+        "productType": "свеча",
+        "description": "Декан факультета Слизерин школы волшебства и магии Хогвартс Дамблдора",
+        "price": "15",
+        "label": ""
+      },
+      "shop": "raven",
+      "id": 1775734682119,
+      "sku": "SV-050"
+    },
+    {
+      "category": "ароматические свечи christmas fair | 2026",
+      "group": "свечи",
+      "collection": "christmas fair | 2026",
+      "name": "«МАНДАРИН - МЯТА»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«МАНДАРИН - МЯТА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-051.png",
+        "productType": "свеча ароматическая",
+        "composition": "",
+        "description": "Аромат, ассоциирующийся с освежающим лимонадом в знойный день. Если вы слушаете его зимой, запах создает атмосферу предновогодней суеты: когда на столе остывает мандариновый кекс, пропитанный мятным сиропом. Свежий и пряный - для хорошего настроения",
+        "price": "10",
+        "label": "Ароматические свечи длительного горения из растений, заботливо выращенных в садах башни Когтевран.\nСтанут ненавязчивым штрихом в интерьере и помогут создать неповторимую атмосферу в Вашем пространстве."
+      },
+      "shop": "raven",
+      "id": 1785100914146,
+      "sku": "SV-051"
+    },
+    {
+      "category": "брелоки chickens | 2026",
+      "group": "брелоки",
+      "collection": "chickens | 2026",
+      "name": "«ЦЫП-ЦЫП-ЦЫП»",
+      "templateId": "template_1785325918208",
+      "fieldData": {
+        "name": "«ЦЫП-ЦЫП-ЦЫП»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/keychains/BR-001.png",
+        "productType": "брелок",
+        "composition": "лазурный",
+        "description": "Небольшой брелок в форме забавного пушистого цыплёнка. Мягкий, приятный на ощупь и такой хорошенький, что его так и хочется погладить. Благодаря металлическому карабину птичку удобно прикрепить к ключам, сумке или рюкзаку.",
+        "label": "Подарок за вклад в развитие Когтевранского птичника."
+      },
+      "shop": "raven",
+      "id": 1785330082245,
+      "sku": "BR-001"
+    },
+    {
+      "category": "брелоки chickens | 2026",
+      "group": "брелоки",
+      "collection": "chickens | 2026",
+      "name": "«ЦЫП-ЦЫП-ЦЫП»",
+      "templateId": "template_1785325918208",
+      "fieldData": {
+        "name": "«ЦЫП-ЦЫП-ЦЫП»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/keychains/BR-002.png",
+        "productType": "брелок",
+        "composition": "карамельный",
+        "description": "Небольшой брелок в форме забавного пушистого цыплёнка. Мягкий, приятный на ощупь и такой хорошенький, что его так и хочется погладить. Благодаря металлическому карабину птичку удобно прикрепить к ключам, сумке или рюкзаку.",
+        "label": "Подарок за вклад в развитие Когтевранского птичника."
+      },
+      "shop": "raven",
+      "id": 1785330393074,
+      "sku": "BR-002"
+    },
+    {
+      "category": "брелоки chickens | 2026",
+      "group": "брелоки",
+      "collection": "chickens | 2026",
+      "name": "«ЦЫП-ЦЫП-ЦЫП»",
+      "templateId": "template_1785325918208",
+      "fieldData": {
+        "name": "«ЦЫП-ЦЫП-ЦЫП»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/keychains/BR-003.png",
+        "productType": "брелок",
+        "composition": "зеленый",
+        "description": "Небольшой брелок в форме забавного пушистого цыплёнка. Мягкий, приятный на ощупь и такой хорошенький, что его так и хочется погладить. Благодаря металлическому карабину птичку удобно прикрепить к ключам, сумке или рюкзаку.",
+        "label": "Подарок за вклад в развитие Когтевранского птичника."
+      },
+      "shop": "raven",
+      "id": 1785330536258,
+      "sku": "BR-003"
+    },
+    {
+      "category": "брелоки chickens | 2026",
+      "group": "брелоки",
+      "collection": "chickens | 2026",
+      "name": "«ЦЫП-ЦЫП-ЦЫП»",
+      "templateId": "template_1785325918208",
+      "fieldData": {
+        "name": "«ЦЫП-ЦЫП-ЦЫП»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/keychains/BR-004.png",
+        "productType": "брелок",
+        "composition": "оранжевый",
+        "description": "Небольшой брелок в форме забавного пушистого цыплёнка. Мягкий, приятный на ощупь и такой хорошенький, что его так и хочется погладить. Благодаря металлическому карабину птичку удобно прикрепить к ключам, сумке или рюкзаку.",
+        "label": "Подарок за вклад в развитие Когтевранского птичника."
+      },
+      "shop": "raven",
+      "id": 1785330557108,
+      "sku": "BR-004"
+    },
+    {
+      "category": "брелоки chickens | 2026",
+      "group": "брелоки",
+      "collection": "chickens | 2026",
+      "name": "«ЦЫП-ЦЫП-ЦЫП»",
+      "templateId": "template_1785325918208",
+      "fieldData": {
+        "name": "«ЦЫП-ЦЫП-ЦЫП»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/keychains/BR-005.png",
+        "productType": "брелок",
+        "composition": "розовый",
+        "description": "Небольшой брелок в форме забавного пушистого цыплёнка. Мягкий, приятный на ощупь и такой хорошенький, что его так и хочется погладить. Благодаря металлическому карабину птичку удобно прикрепить к ключам, сумке или рюкзаку.",
+        "label": "Подарок за вклад в развитие Когтевранского птичника."
+      },
+      "shop": "raven",
+      "id": 1785330571742,
+      "sku": "BR-005"
+    },
+    {
+      "category": "брелоки chickens | 2026",
+      "group": "брелоки",
+      "collection": "chickens | 2026",
+      "name": "«ЦЫП-ЦЫП-ЦЫП»",
+      "templateId": "template_1785325918208",
+      "fieldData": {
+        "name": "«ЦЫП-ЦЫП-ЦЫП»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/keychains/BR-006.png",
+        "productType": "брелок",
+        "composition": "красный",
+        "description": "Небольшой брелок в форме забавного пушистого цыплёнка. Мягкий, приятный на ощупь и такой хорошенький, что его так и хочется погладить. Благодаря металлическому карабину птичку удобно прикрепить к ключам, сумке или рюкзаку.",
+        "label": "Подарок за вклад в развитие Когтевранского птичника."
+      },
+      "shop": "raven",
+      "id": 1785330587329,
+      "sku": "BR-006"
+    },
+    {
+      "category": "брелоки chickens | 2026",
+      "group": "брелоки",
+      "collection": "chickens | 2026",
+      "name": "«ЦЫП-ЦЫП-ЦЫП»",
+      "templateId": "template_1785325918208",
+      "fieldData": {
+        "name": "«ЦЫП-ЦЫП-ЦЫП»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/keychains/BR-007.png",
+        "productType": "брелок",
+        "composition": "сиреневый",
+        "description": "Небольшой брелок в форме забавного пушистого цыплёнка. Мягкий, приятный на ощупь и такой хорошенький, что его так и хочется погладить. Благодаря металлическому карабину птичку удобно прикрепить к ключам, сумке или рюкзаку.",
+        "label": "Подарок за вклад в развитие Когтевранского птичника."
+      },
+      "shop": "raven",
+      "id": 1785330597775,
+      "sku": "BR-007"
+    },
+    {
+      "category": "брелоки chickens | 2026",
+      "group": "брелоки",
+      "collection": "chickens | 2026",
+      "name": "«ЦЫП-ЦЫП-ЦЫП»",
+      "templateId": "template_1785325918208",
+      "fieldData": {
+        "name": "«ЦЫП-ЦЫП-ЦЫП»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/keychains/BR-008.png",
+        "productType": "брелок",
+        "composition": "желтый",
+        "description": "Небольшой брелок в форме забавного пушистого цыплёнка. Мягкий, приятный на ощупь и такой хорошенький, что его так и хочется погладить. Благодаря металлическому карабину птичку удобно прикрепить к ключам, сумке или рюкзаку.",
+        "label": "Подарок за вклад в развитие Когтевранского птичника."
+      },
+      "shop": "raven",
+      "id": 1785330608726,
+      "sku": "BR-008"
+    },
+    {
+      "category": "мед lammas | 2026",
+      "group": "мед",
+      "collection": "lammas | 2026",
+      "name": "«ЯБЛОЧНЫЙ ЗАКАТ»",
+      "templateId": "template_1786737812914",
+      "fieldData": {
+        "name": "«ЯБЛОЧНЫЙ ЗАКАТ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-002.png",
+        "productType": "крем-мед «HoneyClaw»",
+        "description": "Тёплый, пряный крем-мёд с ароматом спелых яблок и первых осенних вечеров.",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1786737938696,
+      "sku": "MD-002"
+    },
+    {
+      "category": "мед lammas | 2026",
+      "group": "мед",
+      "collection": "lammas | 2026",
+      "name": "«МАКОВЫЙ ВЕТЕР»",
+      "templateId": "template_1786737812914",
+      "fieldData": {
+        "name": "«МАКОВЫЙ ВЕТЕР»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-003.png",
+        "productType": "крем-мед «HoneyClaw»",
+        "description": "Нежный крем-мёд с лёгкой ореховой ноткой мака и ароматом августовского поля.",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1786738013489,
+      "sku": "MD-003"
+    },
+    {
+      "category": "мед lammas | 2026",
+      "group": "мед",
+      "collection": "lammas | 2026",
+      "name": "«ЛАВАНДОВЫЙ ПОЛДЕНЬ»",
+      "templateId": "template_1786737812914",
+      "fieldData": {
+        "name": "«ЛАВАНДОВЫЙ ПОЛДЕНЬ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-004.png",
+        "productType": "крем-мед «HoneyClaw»",
+        "description": "Воздушный цветочный мёд с тонким ароматом лаванды — как солнечный день в саду.",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1786738031994,
+      "sku": "MD-004"
+    },
+    {
+      "category": "мед lammas | 2026",
+      "group": "мед",
+      "collection": "lammas | 2026",
+      "name": "«ОБЛЕПИХОВОЕ СОЛНЦЕ»",
+      "templateId": "template_1786737812914",
+      "fieldData": {
+        "name": "«ОБЛЕПИХОВОЕ СОЛНЦЕ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-005.png",
+        "productType": "крем-мед «HoneyClaw»",
+        "description": "Яркий золотистый крем-мёд с сочной кислинкой облепихи и солнечным характером.",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1786738047966,
+      "sku": "MD-005"
+    },
+    {
+      "category": "мед lammas | 2026",
+      "group": "мед",
+      "collection": "lammas | 2026",
+      "name": "«ГРУШЕВОЕ ЗОЛОТО»",
+      "templateId": "template_1786737812914",
+      "fieldData": {
+        "name": "«ГРУШЕВОЕ ЗОЛОТО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-006.png",
+        "productType": "крем-мед «HoneyClaw»",
+        "description": "Мягкий сливочный мёд со вкусом спелой груши и нежным ванильным послевкусием.",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1786738067168,
+      "sku": "MD-006"
+    },
+    {
+      "category": "мед christmas fair | 2026",
+      "group": "мед",
+      "collection": "christmas fair | 2026",
+      "name": "«ПЕРСИК»",
+      "templateId": "template_1786737812914",
+      "fieldData": {
+        "name": "«ПЕРСИК»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-007.png",
+        "productType": "крем-мед «HoneyClaw»",
+        "description": "Нежный спелый персик, созданный чтобы подарить вашей коже красоту и здоровье вашему сердечку. А как он пахнет! А как он сладок!",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1786781800485,
+      "sku": "MD-007"
+    },
+    {
+      "category": "воздух custom air",
+      "group": "воздух",
+      "collection": "custom air",
+      "name": "«С ОТПУСКА»",
+      "templateId": "template_1787834112588",
+      "fieldData": {
+        "name": "«С ОТПУСКА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-010.png",
+        "productType": "консервированный воздух",
+        "description": "Кажется, все вокруг уже успели съездить в отпуск, кроме вас? Не беда! Мы бережно собрали для вас воздух с настоящего курорта. Откройте банку, глубоко вдохните и приготовьтесь внезапно захотеть мороженого, купить бесполезный магнитик и ещё неделю жаловаться, как после отпуска нужен ещё один отпуск.",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1787834353577,
+      "sku": "VZ-010"
+    },
+    {
+      "category": "фруктовые чипсы pseudo conf | 2026",
+      "group": "фруктовые чипсы",
+      "collection": "pseudo conf | 2026",
+      "name": "«ПОРОГ ЗНАЧИМОСТИ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ПОРОГ ЗНАЧИМОСТИ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/fruit-chips/FC-001.png",
+        "productType": "фруктовые чипсы",
+        "composition": "ананас • манго • чили",
+        "description": "Ананас, манго и чили. Сладко, интересно, жгуче. Идеальный перекус для случаев, когда результаты эксперимента недостаточно выразительны и им требуется небольшой дополнительный стимул.",
+        "price": "12"
+      },
+      "shop": "raven",
+      "id": 1788174045428,
+      "sku": "FC-001"
+    },
+    {
+      "category": "фруктовые чипсы pseudo conf | 2026",
+      "group": "фруктовые чипсы",
+      "collection": "pseudo conf | 2026",
+      "name": "«ГИПОТЕЗА»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ГИПОТЕЗА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/fruit-chips/FC-002.png",
+        "productType": "фруктовые чипсы",
+        "composition": "груша • персик • розовый перец",
+        "description": "Персик, груша и розовый перец оказались в одной упаковке исключительно в исследовательских целях. Предварительные результаты показывают, что гипотеза вполне съедобна, а дальнейшее изучение образца вызывает устойчивое желание открыть ещё одну пачку.\n",
+        "price": "12"
+      },
+      "shop": "raven",
+      "id": 1788174286729,
+      "sku": "FC-002"
+    },
+    {
+      "category": "воздух pseudo conf | 2026",
+      "group": "воздух",
+      "collection": "pseudo conf | 2026",
+      "name": "«НОРМАЛЬНЫЕ УСЛОВИЯ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«НОРМАЛЬНЫЕ УСЛОВИЯ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-011.png",
+        "productType": "консервированный воздух",
+        "composition": "",
+        "description": "Нормальные условия проведения исследования найти непросто. Поэтому мы законсервировали их для вас заранее.",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1788174546325,
+      "sku": "VZ-011"
+    },
+    {
+      "category": "ароматические свечи pseudo conf | 2026",
+      "group": "свечи",
+      "collection": "pseudo conf | 2026",
+      "name": "«ОЗАРЕНИЕ В 23:51»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ОЗАРЕНИЕ В 23:51»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-052.png",
+        "productType": "свеча ароматическая",
+        "composition": "ежевика • бергамот • черный чай",
+        "description": "Ежевика, бергамот и чёрный чай — аромат для того самого момента, когда до дедлайна осталось совсем ничего, а мозг внезапно решил включиться.",
+        "price": "8"
+      },
+      "shop": "raven",
+      "id": 1788174724750,
+      "sku": "SV-052"
+    },
+    {
+      "category": "ароматические свечи pseudo conf | 2026",
+      "group": "свечи",
+      "collection": "pseudo conf | 2026",
+      "name": "«ИСКРА СОМНЕНИЯ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ИСКРА СОМНЕНИЯ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-053.png",
+        "productType": "свеча ароматическая",
+        "composition": "груша • шалфей • розовый перец",
+        "description": "Груша, шалфей и розовый перец. Для тех редких минут, когда исследователь внезапно задаётся вопросом: «А точно ли я вообще прав?» И пахнет прекрасно.",
+        "price": "8"
+      },
+      "shop": "raven",
+      "id": 1788174844170,
+      "sku": "SV-053"
+    },
+    {
+      "category": "леденцы pseudo conf | 2026",
+      "group": "леденцы",
+      "collection": "pseudo conf | 2026",
+      "name": "«КОНТАКТ С РАЗУМОМ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«КОНТАКТ С РАЗУМОМ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-027.png",
+        "productType": "леденец",
+        "composition": "яблоко • лайм • мята",
+        "description": "Яблоко, лайм и мята в форме, располагающей к межгалактическим открытиям. Стимулирует мыслительные процессы приблизительно настолько, насколько вы сами готовы в это поверить. \n",
+        "price": "5"
+      },
+      "shop": "raven",
+      "id": 1788174926671,
+      "sku": "LD-027"
+    },
+    {
+      "category": "мед pseudo conf | 2026",
+      "group": "мед",
+      "collection": "pseudo conf | 2026",
+      "name": "«ЛИПОВЫЕ ДОКАЗАТЕЛЬСТВА»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ЛИПОВЫЕ ДОКАЗАТЕЛЬСТВА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-008.png",
+        "productType": "мед",
+        "composition": "",
+        "description": "Настоящий липовый мёд. Рекомендуется добавлять в чай, если при написании доклада вы пришли к особенно горьким выводам. После употребления даже самая сомнительная аргументация становится немного слаще.\n",
+        "price": "10"
+      },
+      "shop": "raven",
+      "id": 1788175041628,
+      "sku": "MD-008"
+    },
+    {
+      "category": "леденцы back to school | 2026",
+      "group": "леденцы",
+      "collection": "back to school | 2026",
+      "name": "«УТРО ДОБРЫМ НЕ БЫВАЕТ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«УТРО ДОБРЫМ НЕ БЫВАЕТ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-028.png",
+        "productType": "леденец",
+        "composition": "кофе · какао",
+        "description": "То ли кофе, то ли какао — каждый чувствует своё. На случай, если утро всё-таки наступило, а вы ещё не проснулись.",
+        "price": "5"
+      },
+      "shop": "raven",
+      "id": 1788303827480,
+      "sku": "LD-028"
+    },
+    {
+      "category": "леденцы back to school | 2026",
+      "group": "леденцы",
+      "collection": "back to school | 2026",
+      "name": "«НЕНАВИЖУ ПОНЕДЕЛЬНИКИ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«НЕНАВИЖУ ПОНЕДЕЛЬНИКИ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-029.png",
+        "productType": "леденец",
+        "composition": "грейпфрут · клюква",
+        "description": "Кислый грейпфрут и клюква. Вполне соответствуют названию.",
+        "price": "5"
+      },
+      "shop": "raven",
+      "id": 1788303887428,
+      "sku": "LD-029"
+    },
+    {
+      "category": "леденцы back to school | 2026",
+      "group": "леденцы",
+      "collection": "back to school | 2026",
+      "name": "«НИЧЕГО НЕ ХОЧУ РЕШАТЬ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«НИЧЕГО НЕ ХОЧУ РЕШАТЬ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/lollipops/LD-030.png",
+        "productType": "леденец",
+        "composition": "сливочная карамель · морская соль",
+        "description": "Сливочная карамель с морской солью. Иногда можно хотя бы это не усложнять.",
+        "price": "5"
+      },
+      "shop": "raven",
+      "id": 1788303923241,
+      "sku": "LD-030"
+    },
+    {
+      "category": "ароматические свечи back to school | 2026",
+      "group": "свечи",
+      "collection": "back to school | 2026",
+      "name": "«СЕНТЯБРЬ ГОРИТ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«СЕНТЯБРЬ ГОРИТ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-054.png",
+        "productType": "свеча ароматическая",
+        "composition": "сухая листва · яблочная кожура · дуб · дым",
+        "description": "Сухие листья, яблоки, дерево и немного дыма. Тот короткий момент осени, когда ещё тепло, но уже понятно, к чему всё идёт.",
+        "price": "8"
+      },
+      "shop": "raven",
+      "id": 1788304024343,
+      "sku": "SV-054"
+    },
+    {
+      "category": "ароматические свечи back to school | 2026",
+      "group": "свечи",
+      "collection": "back to school | 2026",
+      "name": "«ЗДРАВСТВУЙ, МОЯ БЕСКОНЕЧНАЯ ОСЕНЬ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ЗДРАВСТВУЙ, МОЯ БЕСКОНЕЧНАЯ ОСЕНЬ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-055.png",
+        "productType": "свеча ароматическая",
+        "composition": "чёрный чай · тёмная слива · мокрая древесина · амбра",
+        "description": "Чёрный чай, слива и мокрое дерево. Для дождя, ранних сумерек и ощущения, что ноябрь начался где-то в сентябре.",
+        "price": "8"
+      },
+      "shop": "raven",
+      "id": 1788304070913,
+      "sku": "SV-055"
+    },
+    {
+      "category": "Сиропы back to school",
+      "group": "cиропы",
+      "collection": "back to school",
+      "name": "«МНЕ ТОЛЬКО КОФЕ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«МНЕ ТОЛЬКО КОФЕ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-016.png",
+        "productType": "сироп",
+        "composition": "коричневый сахар · кардамон",
+        "description": "Коричневый сахар и кардамон. Для тех, кто любит обычный кофе, но иногда пилюлю всё-таки приходится подсластить.",
+        "price": "12"
+      },
+      "shop": "raven",
+      "id": 1788304195686,
+      "sku": "SR-016"
+    },
+    {
+      "category": "воздух back to school | 2026",
+      "group": "воздух",
+      "collection": "back to school | 2026",
+      "name": "«ПОСЛЕДНИЙ ДЕНЬ КАНИКУЛ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ПОСЛЕДНИЙ ДЕНЬ КАНИКУЛ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/air/VZ-012.png",
+        "productType": "консервированный воздух",
+        "composition": "нагретая трава · прохладный вечер · вода",
+        "description": "Тёплая трава, вода и прохладный вечер. Воздух того самого дня, который всегда заканчивается слишком быстро.",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1788304296022,
+      "sku": "VZ-012"
+    },
+    {
+      "category": "фруктовые чипсы back to school | 2026",
+      "group": "фруктовые чипсы",
+      "collection": "back to school | 2026",
+      "name": "«ЧТО ТАКОЕ ОСЕНЬ?»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ЧТО ТАКОЕ ОСЕНЬ?»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/fruit-chips/FC-003.png",
+        "productType": "фруктовые чипсы",
+        "composition": "яблоко · груша · облепиха",
+        "description": "Яблоко, груша и кислая облепиха. Осень, если её высушить и заставить хрустеть.",
+        "price": "12"
+      },
+      "shop": "raven",
+      "id": 1788304346932,
+      "sku": "FC-003"
+    },
+    {
+      "category": "сладкие букеты custom bouquet",
+      "group": "сладкие букеты",
+      "collection": "custom bouquet",
+      "name": "«CАХАРНЫЙ УДАР»",
+      "templateId": "template_1782507999186",
+      "fieldData": {
+        "name": "«CАХАРНЫЙ УДАР»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/sweet-bouquets/SB-001.png",
+        "productType": "сладкий букет",
+        "composition": "леденцы, леденцы. леденцы",
+        "description": "Сладкий букет из леденцов, карамельных палочек и сахарных кристаллов в сине-белой гамме. Яркий, праздничный и полностью съедобный подарок ко дню рождения.",
+        "price": "30",
+        "note1": ""
+      },
+      "shop": "raven",
+      "id": 1790376239902,
+      "sku": "SB-001"
+    },
+    {
+      "category": "ароматические свечи christmas fair | 2026",
+      "group": "свечи",
+      "collection": "christmas fair | 2026",
+      "name": "«РОЗМАРИН - ЯБЛОКО»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«РОЗМАРИН - ЯБЛОКО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-056.png",
+        "productType": "свеча ароматическая",
+        "composition": "",
+        "description": "Запах возвращает воспоминаниями в далекую зиму в родном доме. Когда начинается метель, дом наполняется ароматом запеченных яблок с розмарином - и тут же становится теплее и уютнее, а рождественская атмосфера ощущается жаром печи и пряными нотами",
+        "price": "10",
+        "label": "Ароматические свечи длительного горения из растений, заботливо выращенных в садах башни Когтевран.\nСтанут ненавязчивым штрихом в интерьере и помогут создать неповторимую атмосферу в Вашем пространстве."
+      },
+      "shop": "raven",
+      "id": 1792096222765,
+      "sku": "SV-056"
+    },
+    {
+      "category": "ароматические свечи christmas fair | 2026",
+      "group": "свечи",
+      "collection": "christmas fair | 2026",
+      "name": "«ГРУША - КЕШЬЮ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ГРУША - КЕШЬЮ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-057.png",
+        "productType": "свеча ароматическая",
+        "composition": "",
+        "description": "Легкий и сладкий: сочная сицилийская груша и сливочный кешью играют в дуэте ароматом свежей фруктовой выпечки. Запах ненавязчивый, подходящий для создания атмосферы в солнечный летний день - словно вы балуете себя десертом на побережье Средиземного моря.",
+        "price": "10",
+        "label": "Ароматические свечи длительного горения из растений, заботливо выращенных в садах башни Когтевран.\nСтанут ненавязчивым штрихом в интерьере и помогут создать неповторимую атмосферу в Вашем пространстве."
+      },
+      "shop": "raven",
+      "id": 1792096292336,
+      "sku": "SV-057"
+    },
+    {
+      "category": "свечи great sabbath | 2026",
+      "group": "свечи",
+      "collection": "great sabbath | 2026",
+      "name": "«КОЛОДЕЦ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«КОЛОДЕЦ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-058.png",
+        "productType": "свеча ароматическая",
+        "composition": "яблоня + гвоздика",
+        "description": "Сдержанный и благородный аромат. Яблоневый цвет и острая гвоздика — классическое сочетание, которое делает любое пространство уютным и живым.",
+        "price": "15",
+        "label": "Каждую весну Хогвартс готовится к самому жаркому событию сезона — Дню Великого Шабаша, во время которого торжественно сжигают директора вот уже который год. Говорят, настоящий костер — это не только огонь, но и аромат. Знатоки давно знают: правильная ветка в пламени творит чудеса."
+      },
+      "shop": "raven",
+      "id": 1792163303022,
+      "sku": "SV-058"
+    },
+    {
+      "category": "свечи great sabbath | 2026",
+      "group": "свечи",
+      "collection": "great sabbath | 2026",
+      "name": "«ШАЛАШ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ШАЛАШ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-059.png",
+        "productType": "свеча ароматическая",
+        "composition": "вишня + корица",
+        "description": "Тёплый, обволакивающий аромат — как будто весна уже пришла и кто-то разжёг первый костёр в саду. Пряная корица добавляет глубины, вишня — лёгкость.",
+        "price": "15",
+        "label": "Каждую весну Хогвартс готовится к самому жаркому событию сезона — Дню Великого Шабаша, во время которого торжественно сжигают директора вот уже который год. Говорят, настоящий костер — это не только огонь, но и аромат. Знатоки давно знают: правильная ветка в пламени творит чудеса."
+      },
+      "shop": "raven",
+      "id": 1792163343285,
+      "sku": "SV-059"
+    },
+    {
+      "category": "свечи great sabbath | 2026",
+      "group": "свечи",
+      "collection": "great sabbath | 2026",
+      "name": "«ЗВЕЗДА»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ЗВЕЗДА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-060.png",
+        "productType": "свеча ароматическая",
+        "composition": "груша + имбирь",
+        "description": "Свежий и чуть дерзкий аромат. Нежная груша и острый имбирь — неожиданное, но очень точное сочетание для тех, кто любит когда интересно.",
+        "price": "15",
+        "label": "Каждую весну Хогвартс готовится к самому жаркому событию сезона — Дню Великого Шабаша, во время которого торжественно сжигают директора вот уже который год. Говорят, настоящий костер — это не только огонь, но и аромат. Знатоки давно знают: правильная ветка в пламени творит чудеса."
+      },
+      "shop": "raven",
+      "id": 1792163379489,
+      "sku": "SV-060"
+    },
+    {
+      "category": "свечи great sabbath | 2026",
+      "group": "свечи",
+      "collection": "great sabbath | 2026",
+      "name": "«НОДЬЯ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«НОДЬЯ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-061.png",
+        "productType": "свечаароматическая",
+        "composition": "вишня + кардамон",
+        "description": "Изысканный и немного восточный аромат. Вишня и кардамон создают атмосферу неспешного вечера с хорошей компанией.",
+        "price": "15",
+        "label": "Каждую весну Хогвартс готовится к самому жаркому событию сезона — Дню Великого Шабаша, во время которого торжественно сжигают директора вот уже который год. Говорят, настоящий костер — это не только огонь, но и аромат. Знатоки давно знают: правильная ветка в пламени творит чудеса."
+      },
+      "shop": "raven",
+      "id": 1792163418981,
+      "sku": "SV-061"
+    },
+    {
+      "category": "свечи great sabbath | 2026",
+      "group": "свечи",
+      "collection": "great sabbath | 2026",
+      "name": "«ФИНСКАЯ СВЕЧА»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«ФИНСКАЯ СВЕЧА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-062.png",
+        "productType": "свеча ароматическая",
+        "composition": "можевельник + розовый перец",
+        "description": "Свежий лесной аромат. Хвоя очищает пространство, розовый перец добавляет неожиданную тёплую ноту. Как прогулка по лесу накануне праздника.",
+        "price": "15",
+        "label": "Каждую весну Хогвартс готовится к самому жаркому событию сезона — Дню Великого Шабаша, во время которого торжественно сжигают директора вот уже который год. Говорят, настоящий костер — это не только огонь, но и аромат. Знатоки давно знают: правильная ветка в пламени творит чудеса."
+      },
+      "shop": "raven",
+      "id": 1792163465211,
+      "sku": "SV-062"
+    },
+    {
+      "category": "свечи great sabbath | 2026",
+      "group": "свечи",
+      "collection": "great sabbath | 2026",
+      "name": "«СТОГ»",
+      "templateId": "template_1771161011315",
+      "fieldData": {
+        "name": "«СТОГ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-063.png",
+        "productType": "свеча ароматическая",
+        "composition": "груша + корица",
+        "description": "Самый уютный аромат коллекции. Мягкий, сладковатый, тёплый — как объятие в конце долгого дня.",
+        "price": "15",
+        "label": "Каждую весну Хогвартс готовится к самому жаркому событию сезона — Дню Великого Шабаша, во время которого торжественно сжигают директора вот уже который год. Говорят, настоящий костер — это не только огонь, но и аромат. Знатоки давно знают: правильная ветка в пламени творит чудеса."
+      },
+      "shop": "raven",
+      "id": 1792163498557,
+      "sku": "SV-063"
+    },
+    {
+      "category": "свечи лвс | 2026",
+      "group": "свечи",
+      "collection": "лвс | 2026",
+      "name": "«СВЕЧА ЛВС—2026»",
+      "templateId": "template_1775659835074",
+      "fieldData": {
+        "name": "«СВЕЧА ЛВС—2026»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/candles/SV-064.png",
+        "productType": "индивидуальный заказ",
+        "description": "А если вы хотите порадовать себя или своих близких — мы создадим свечу с портретом специально для вас, чтобы этот подарок стал по-настоящему личным и запоминающимся.",
+        "price": "30",
+        "label": "\nВсе мы с нетерпением ждём ХВЛ-2026. Мы решили немного скрасить это время и, не откладывая идею в долгий ящик, создали коллекцию «Лица в свете» — декоративные свечи-яйца, на которых запечатлены те, чьё влияние на жизнь школы невозможно не заметить."
+      },
+      "shop": "raven",
+      "id": 1792163594169,
+      "sku": "SV-064"
+    },
+    {
+      "category": "топпинги great sabbath | 2026",
+      "group": "топпинги",
+      "collection": "great sabbath | 2026",
+      "name": "«ПРОБУЖДАЮЩАЯ СМОРОДИНА»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«ПРОБУЖДАЮЩАЯ СМОРОДИНА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-017.png",
+        "productType": "топпинг",
+        "composition": "черная смородина",
+        "description": "Пикантный вкус и насыщенный цвет этого соуса будто созданы для кулинарных экспромтов. Подарит яркие впечатления и станет идеальным дополнением не только к мясным блюдам.",
+        "price": "15",
+        "label": "Новая коллекция в честь фееричной и незабываемой Ночи сожжения. Потому что костер, потому что шашлык, потому что это должно быть ярко.\nЯгодный или фруктовый топпинг — оригинальное дополнение к сочному мясу."
+      },
+      "shop": "raven",
+      "id": 1792163846391,
+      "sku": "SR-017"
+    },
+    {
+      "category": "топпинги great sabbath | 2026",
+      "group": "топпинги",
+      "collection": "great sabbath | 2026",
+      "name": "«ВИШНЕВЫЙ МОРОК»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«ВИШНЕВЫЙ МОРОК»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-018.png",
+        "productType": "топпинг",
+        "composition": "вишня",
+        "description": "Насыщенный соус из спелых ягод с ароматными специями привнесет изюминку любому вашему блюду и подарит летнее настроение.",
+        "price": "15",
+        "label": "Новая коллекция в честь фееричной и незабываемой Ночи сожжения. Потому что костер, потому что шашлык, потому что это должно быть ярко.\nЯгодный или фруктовый топпинг — оригинальное дополнение к сочному мясу."
+      },
+      "shop": "raven",
+      "id": 1792163909231,
+      "sku": "SR-018"
+    },
+    {
+      "category": "топпинги great sabbath | 2026",
+      "group": "топпинги",
+      "collection": "great sabbath | 2026",
+      "name": "«ТЕМНАЯ СЛИВА»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«ТЕМНАЯ СЛИВА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-019.png",
+        "productType": "топпинг",
+        "composition": "слива",
+        "description": "Идеальный баланс сладости и остринки - богатый и насыщенный вкус этого соуса знаком многим. Проверенный временем хит подходит к любому мясу.",
+        "price": "15",
+        "label": "Новая коллекция в честь фееричной и незабываемой Ночи сожжения. Потому что костер, потому что шашлык, потому что это должно быть ярко.\nЯгодный или фруктовый топпинг — оригинальное дополнение к сочному мясу."
+      },
+      "shop": "raven",
+      "id": 1792163947283,
+      "sku": "SR-019"
+    },
+    {
+      "category": "топпинги great sabbath | 2026",
+      "group": "топпинги",
+      "collection": "great sabbath | 2026",
+      "name": "«ОГНЕННЫЙ АПЕЛЬСИН»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«ОГНЕННЫЙ АПЕЛЬСИН»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-020.png",
+        "productType": "топпинг",
+        "composition": "апельсин",
+        "description": "Зажжёт ваши чувства и станет ярким акцентом к идеальному шашлыку. Несколько капель и на вашей тарелке не просто блюдо, а шедевр кулинарного искусства.",
+        "price": "15",
+        "label": "Новая коллекция в честь фееричной и незабываемой Ночи сожжения. Потому что костер, потому что шашлык, потому что это должно быть ярко.\nЯгодный или фруктовый топпинг — оригинальное дополнение к сочному мясу."
+      },
+      "shop": "raven",
+      "id": 1792163984860,
+      "sku": "SR-020"
+    },
+    {
+      "category": "топпинги great sabbath | 2026",
+      "group": "топпинги",
+      "collection": "great sabbath | 2026",
+      "name": "«ДИКИЙ КРЫЖОВНИК»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«ДИКИЙ КРЫЖОВНИК»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-021.png",
+        "productType": "топпинг",
+        "composition": "крыжовник",
+        "description": "Необычная форма бутылки подчеркивает исключительность этого ягодного соуса. Не похож на то, что вы пробовали ранее, но его кисло-сладкий вкус вас приятно удивит и запомнится надолго.",
+        "price": "15",
+        "label": "Новая коллекция в честь фееричной и незабываемой Ночи сожжения. Потому что костер, потому что шашлык, потому что это должно быть ярко.\nЯгодный или фруктовый топпинг — оригинальное дополнение к сочному мясу."
+      },
+      "shop": "raven",
+      "id": 1792164015887,
+      "sku": "SR-021"
+    },
+    {
+      "category": "топпинги great sabbath | 2026",
+      "group": "топпинги",
+      "collection": "great sabbath | 2026",
+      "name": "«БЕСШАБАШНОЕ ЯБЛОКО LUX»",
+      "templateId": "template_1771159474542",
+      "fieldData": {
+        "name": "«БЕСШАБАШНОЕ ЯБЛОКО LUX»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/syrups/SR-022.png",
+        "productType": "топпинг",
+        "composition": "яблоко",
+        "description": "Яблочная классика ХД в новом прочтении, которую оценят гурманы и менее искушённые волшебники. И все любители яблок, разумеется. Обречён быть звездой на любой вечеринке и пикнике.",
+        "price": "30",
+        "label": "Новая коллекция в честь фееричной и незабываемой Ночи сожжения. Потому что костер, потому что шашлык, потому что это должно быть ярко.\nЯгодный или фруктовый топпинг — оригинальное дополнение к сочному мясу."
+      },
+      "shop": "raven",
+      "id": 1792164061521,
+      "sku": "SR-022"
+    },
+    {
+      "category": "мед christmas fair | 2026",
+      "group": "мед",
+      "collection": "christmas fair | 2026",
+      "name": "«ГОЛУБИКА»",
+      "templateId": "template_1786737812914",
+      "fieldData": {
+        "name": "«ГОЛУБИКА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-009.png",
+        "productType": "крем-мед",
+        "description": "Голубика-голубика, так вкусна и деловита! Ягодка для зрения, для иммунитета, для мозга, для любого времени года! Приходили к выводу \"понятно, почему не когтевранец\"? ШАНС ЕСТЬ!",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1792164165384,
+      "sku": "MD-009"
+    },
+    {
+      "category": "мед christmas fair | 2026",
+      "group": "мед",
+      "collection": "christmas fair | 2026",
+      "name": "«ПОМЕЛО»",
+      "templateId": "template_1786737812914",
+      "fieldData": {
+        "name": "«ПОМЕЛО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/honey/MD-010.png",
+        "productType": "крем-мед",
+        "description": "Помело. Когда хочется цитрусов, но мандарины надоели. Когда хочешь чего-то традиционного. Витаминная бомба для самой здоровой зимы!",
+        "price": "15"
+      },
+      "shop": "raven",
+      "id": 1792164189119,
+      "sku": "MD-010"
+    }
+  ],
+  "templates": [
+    {
+      "id": "template_1782507999186",
+      "name": "Букеты",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Состав",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note1",
+          "name": "Флорист",
+          "placeholder": "Дополнительная информация...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note2",
+          "name": "Примечание 2",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=250][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[color=#D6B891]•[/color]\n[size=85][color=#A1817E][b]Флорист:[/b] {{note1}}[/color][/size]\n\n[/center]",
+          "optionalFields": {},
+          "fullPreview": "[center][width=250][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E][СОСТАВ][/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[color=#D6B891]•[/color]\n[size=85][color=#A1817E][b]Флорист:[/b] [ПРИМЕЧАНИЕ 1][/color][/size]\n\n[/center]"
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][i]Текст записки[/i][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E][СОСТАВ][/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]\n\n\n[/width][/center]"
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][quote][i]Текст записки[/i][/quote][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E][СОСТАВ][/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]\n\n\n[/width][/center]"
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      }
+    },
+    {
+      "id": "template_1785325918208",
+      "name": "Брелоки",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Цвет",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note1",
+          "name": "Примечание 1",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note2",
+          "name": "Примечание 2",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {},
+          "fullPreview": "[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]"
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n\n[more=ЭТИКЕТКА]{{label}}[/more]\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][i]Текст записки[/i][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E][ЦВЕТ][/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n\n[more=ЭТИКЕТКА][ТЕКСТ ЭТИКЕТКИ][/more]\n[/center]\n\n\n[/width][/center]"
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][quote][i]Текст записки[/i][/quote][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E][ЦВЕТ][/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]\n\n\n[/width][/center]"
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      }
+    },
+    {
+      "id": "template_1786737812914",
+      "name": "мед",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Состав",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note1",
+          "name": "Примечание 1",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note2",
+          "name": "Примечание 2",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {},
+          "fullPreview": "[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]"
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][i]Текст записки[/i][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]\n\n\n[/width][/center]"
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][quote][i]Текст записки[/i][/quote][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]\n\n\n[/width][/center]"
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      }
+    },
+    {
+      "id": "template_1787834112588",
+      "name": "воздух",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Состав",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note1",
+          "name": "Примечание 1",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note2",
+          "name": "Примечание 2",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {},
+          "fullPreview": "[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]"
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][i]Текст записки[/i][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]\n\n\n[/width][/center]"
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][quote][i]Текст записки[/i][/quote][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]\n\n\n[/width][/center]"
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      }
+    },
+    {
+      "id": "template_1788173914879",
+      "name": "общая",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Состав",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note1",
+          "name": "Примечание 1",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note2",
+          "name": "Примечание 2",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {},
+          "fullPreview": "[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E][СОСТАВ][/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]"
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][i]Текст записки[/i][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E][СОСТАВ][/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]\n\n\n[/width][/center]"
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          },
+          "fullPreview": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для [mention=000]Получатель[/mention] от [mention=000]Отправитель[/mention]\n[more=ЗАПИСКА][quote][i]Текст записки[/i][/quote][/more]\n\n[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[size=120][b][color=#8f714a][ТИП ТОВАРА][/color][/b][/size]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E][СОСТАВ][/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]\n\n\n[/width][/center]"
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      }
+    },
+    {
+      "id": "tpl_1770152436154_fpg7z",
+      "name": "старые карточки · восстановлено",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "type",
+          "name": "тип товара",
+          "placeholder": "тип товара",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Состав",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "recipient_id",
+          "name": "счет получателя",
+          "placeholder": "217",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": false
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {}
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{type}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {}
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{type}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {}
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      },
+      "recovery": {
+        "source": "provided-general-template",
+        "baseTemplateId": "template_1788173914879",
+        "reason": "definition absent in supplied template export; fields inferred from original product data"
+      }
+    },
+    {
+      "id": "template_1770881109332",
+      "name": "карточки с этикеткой · восстановлено",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Состав",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note1",
+          "name": "Примечание 1",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {}
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": true,
+              "template": "[size=85]{{note1}}[/size]"
+            }
+          }
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": true,
+              "template": "[size=85]{{note1}}[/size]"
+            }
+          }
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      },
+      "recovery": {
+        "source": "provided-general-template",
+        "baseTemplateId": "template_1788173914879",
+        "reason": "definition absent in supplied template export; fields inferred from original product data"
+      }
+    },
+    {
+      "id": "template_1771159474542",
+      "name": "сиропы и топпинги · восстановлено",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Состав",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {}
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            }
+          }
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            }
+          }
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      },
+      "recovery": {
+        "source": "provided-general-template",
+        "baseTemplateId": "template_1788173914879",
+        "reason": "definition absent in supplied template export; fields inferred from original product data"
+      }
+    },
+    {
+      "id": "template_1771161011315",
+      "name": "ароматические свечи · восстановлено",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Состав",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {}
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            }
+          }
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            }
+          }
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      },
+      "recovery": {
+        "source": "provided-general-template",
+        "baseTemplateId": "template_1788173914879",
+        "reason": "definition absent in supplied template export; fields inferred from original product data"
+      }
+    },
+    {
+      "id": "template_1775038151410",
+      "name": "консервированный воздух · восстановлено",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {}
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            }
+          }
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            }
+          }
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      },
+      "recovery": {
+        "source": "provided-general-template",
+        "baseTemplateId": "template_1788173914879",
+        "reason": "definition absent in supplied template export; fields inferred from original product data"
+      }
+    },
+    {
+      "id": "template_1775659835074",
+      "name": "декоративные свечи · восстановлено",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {}
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            }
+          }
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": true,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            }
+          }
+        }
+      },
+      "deliveryTemplates": {
+        "hogsmeade": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][i]{{NOTE}}[/i][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        },
+        "hogwarts": {
+          "raven": {
+            "header": "[center][width=600][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/under-the-raven-wing/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          },
+          "peach": {
+            "header": "[center][width=400][img]https://raw.githubusercontent.com/raven-hd/hogsmeade/main/rich-peach/images/branding/delivery-banner.png[/img][/width]\n[width=600]Доставка для {{RECIPIENT}} от {{SENDER}}\n",
+            "note": "[more=ЗАПИСКА][quote][i]{{NOTE}}[/i][/quote][/more]\n\n",
+            "productBlock": "{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}",
+            "footer": "\n[/width][/center]"
+          }
+        }
+      },
+      "recovery": {
+        "source": "provided-general-template",
+        "baseTemplateId": "template_1788173914879",
+        "reason": "definition absent in supplied template export; fields inferred from original product data"
+      }
+    }
+  ],
+  "deliveryProfiles": [],
+  "catalogName": "",
+  "currentDeliveryProfileId": "hogsmeade",
+  "settings": {
+    "catalogColumns": 4,
+    "catalogHeaderEnabled": true,
+    "catalogHeaderEvent": "",
+    "catalogHeaderTitle": "",
+    "catalogHeaderDescription": ""
+  },
+  "skuRegistry": {
+    "version": 1,
+    "owners": {
+      "SV-001": "1770467461065",
+      "SV-002": "1770467522018",
+      "SV-003": "1770467562375",
+      "SV-004": "1770467603101",
+      "SV-005": "1770467639101",
+      "SR-001": "1770494368579",
+      "SR-002": "1770494410778",
+      "SR-003": "1770494453751",
+      "SR-004": "1770494494757",
+      "SR-005": "1770494554890",
+      "SR-006": "1770494595532",
+      "LD-001": "1770494685063",
+      "LD-002": "1770494726962",
+      "LD-003": "1770494788475",
+      "LD-004": "1770494831913",
+      "LD-005": "1770494869415",
+      "LD-006": "1770494932057",
+      "SV-006": "1770495084114",
+      "SV-007": "1770495882696",
+      "SV-008": "1770495917610",
+      "SV-009": "1770495975656",
+      "LD-007": "1771023257986",
+      "LD-008": "1771023271974",
+      "LD-009": "1771023284887",
+      "LD-010": "1771023296794",
+      "LD-011": "1771023309477",
+      "LD-012": "1771023324328",
+      "LD-013": "1771023414714",
+      "LD-014": "1771023458374",
+      "LD-015": "1771023478900",
+      "LD-016": "1771023493579",
+      "LD-017": "1771023506897",
+      "LD-018": "1771023530746",
+      "SR-007": "1771159285961",
+      "LD-019": "1771160331472",
+      "LD-020": "1771160352807",
+      "LD-021": "1771160374878",
+      "LD-022": "1771160395514",
+      "LD-023": "1771160413483",
+      "SV-010": "1771161071908",
+      "SV-011": "1771161795937",
+      "SV-012": "1771161897021",
+      "SR-008": "1771162292644",
+      "SR-009": "1771162491608",
+      "SR-010": "1771162806644",
+      "SV-013": "1771163082502",
+      "LD-024": "1771163247062",
+      "SR-011": "1771163358807",
+      "SR-012": "1771163507103",
+      "SV-014": "1771163624897",
+      "SV-015": "1771163776000",
+      "RV-001": "1771503630766",
+      "SR-013": "1771504438002",
+      "SR-014": "1771505486959",
+      "SR-015": "1771506481912",
+      "SV-016": "1771849748751",
+      "SV-017": "1772289270432",
+      "MD-001": "1772289527642",
+      "SV-018": "1772378014215",
+      "SV-019": "1772979398908",
+      "SV-020": "1772980098036",
+      "SV-021": "1772980436826",
+      "VZ-001": "1775038045330",
+      "VZ-002": "1775038530511",
+      "VZ-003": "1775038580048",
+      "VZ-004": "1775038614601",
+      "VZ-005": "1775038654217",
+      "VZ-006": "1775038689410",
+      "VZ-007": "1775048285556",
+      "VZ-008": "1775048743869",
+      "VZ-009": "1775076871169",
+      "SV-022": "1775487803332",
+      "SV-023": "1775487842606",
+      "SV-024": "1775488006949",
+      "SV-025": "1775488029112",
+      "SV-026": "1775488041899",
+      "SV-027": "1775488052260",
+      "LD-025": "1775488257018",
+      "SV-028": "1775660263695",
+      "SV-029": "1775660332680",
+      "SV-030": "1775660442964",
+      "SV-031": "1775660488919",
+      "SV-032": "1775660641446",
+      "SV-033": "1775660714029",
+      "SV-034": "1775731473976",
+      "SV-035": "1775731651410",
+      "SV-036": "1775731790321",
+      "SV-037": "1775731904734",
+      "SV-038": "1775732007493",
+      "SV-039": "1775733691913",
+      "SV-040": "1775733831932",
+      "SV-041": "1775733852184",
+      "SV-042": "1775733888846",
+      "SV-043": "1775734275913",
+      "SV-044": "1775734359258",
+      "SV-045": "1775734414360",
+      "SV-046": "1775734467143",
+      "SV-047": "1775734512249",
+      "SV-048": "1775734600850",
+      "SV-049": "1775734652270",
+      "SV-050": "1775734682119",
+      "LD-026": "1783597556747",
+      "SV-051": "1785100914146",
+      "BR-001": "1785330082245",
+      "BR-002": "1785330393074",
+      "BR-003": "1785330536258",
+      "BR-004": "1785330557108",
+      "BR-005": "1785330571742",
+      "BR-006": "1785330587329",
+      "BR-007": "1785330597775",
+      "BR-008": "1785330608726",
+      "MD-002": "1786737938696",
+      "MD-003": "1786738013489",
+      "MD-004": "1786738031994",
+      "MD-005": "1786738047966",
+      "MD-006": "1786738067168",
+      "MD-007": "1786781800485",
+      "VZ-010": "1787834353577",
+      "FC-001": "1788174045428",
+      "FC-002": "1788174286729",
+      "VZ-011": "1788174546325",
+      "SV-052": "1788174724750",
+      "SV-053": "1788174844170",
+      "LD-027": "1788174926671",
+      "MD-008": "1788175041628",
+      "LD-028": "1788303827480",
+      "LD-029": "1788303887428",
+      "LD-030": "1788303923241",
+      "SV-054": "1788304024343",
+      "SV-055": "1788304070913",
+      "SR-016": "1788304195686",
+      "VZ-012": "1788304296022",
+      "FC-003": "1788304346932",
+      "SB-001": "1790376239902",
+      "SV-056": "1792096222765",
+      "SV-057": "1792096292336",
+      "SV-058": "1792163303022",
+      "SV-059": "1792163343285",
+      "SV-060": "1792163379489",
+      "SV-061": "1792163418981",
+      "SV-062": "1792163465211",
+      "SV-063": "1792163498557",
+      "SV-064": "1792163594169",
+      "SR-017": "1792163846391",
+      "SR-018": "1792163909231",
+      "SR-019": "1792163947283",
+      "SR-020": "1792163984860",
+      "SR-021": "1792164015887",
+      "SR-022": "1792164061521",
+      "MD-009": "1792164165384",
+      "MD-010": "1792164189119"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+App.Workspace = {
+    encodeKey: function (value) { return encodeURIComponent(value).replace(/'/g, '%27'); },
+    nextProductId: function () { return Math.max(Date.now(), ...App.State.products.map(function (p) { return p.id + 1; }), ...Object.values(App.SKU.registry().owners).map(function (id) { return Number(id) + 1; })); },
+    settingsKey: function () { return 'delivery.v2.' + App.State.currentShop + '.settings'; },
+    getSettings: function () {
+        try { return JSON.parse(localStorage.getItem(this.settingsKey())) || {}; } catch (_) { return {}; }
+    },
+    init: function () {
+        var shop = App.getCurrentShop();
+        document.title = shop.name + ' · мастерская доставок';
+        document.getElementById('shopTitle').textContent = shop.name;
+        var logo = document.getElementById('shopLogo');
+        var banner = App.getCurrentBanner();
+        if (banner.url) { logo.src = banner.url; logo.alt = shop.name; }
+        else document.getElementById('shopLogoContainer').hidden = true;
+        document.getElementById('shopFooter').textContent = shop.name;
+        if (!App.State.templates.length) {
+            var accent = App.State.currentShop === 'peach' ? '#A85A73' : '#D6B891';
+            var base = App.Config.DEFAULT_PRODUCT_CARD_TEMPLATE.replace(/#D6B891/g, accent);
+            var contexts = App.Config.makeDefaultContexts(App.getDeliveryProfiles());
+            Object.values(contexts).forEach(function (c) { c.cardTemplate = c.cardTemplate.replace(/#D6B891/g, accent); });
+            App.State.templates = [{ id: 'basic', name: 'основная карточка', fields: structuredClone(App.Config.DEFAULT_TEMPLATE_FIELDS), productCardTemplate: base, contexts: contexts }];
+            App.Storage.saveTemplates();
+        }
+        var profile = App.getCurrentDeliveryProfile();
+        App.State.currentDeliveryProfileId = profile.id;
+        App.State.currentMode = profile.id;
+        var settings = this.getSettings();
+        ['catalogColumns', 'catalogHeaderEnabled', 'catalogHeaderEvent', 'catalogHeaderTitle', 'catalogHeaderDescription'].forEach(function (key) {
+            if (Object.hasOwn(settings, key)) App.State[key] = settings[key];
+        });
+        document.addEventListener('input', function (e) {
+            if (e.target.closest('#catalogSettings')) App.Workspace.saveCatalogSettings();
+        });
+        document.addEventListener('change', function (e) {
+            if (e.target.closest('#catalogSettings')) App.Workspace.saveCatalogSettings();
+        });
+        // Keep the shared address book up to date in other open shop tabs.
+        window.addEventListener('storage', function (e) {
+            if (e.key === App.Config.STORAGE_KEYS.USERS) {
+                App.State.users = App.Storage.loadUsers(); App.Users.updateDatalist(); App.Users.refreshFieldHints();
+            }
+        });
+    },
+    saveCatalogSettings: function () {
+        var settings = this.getSettings();
+        ['catalogColumns', 'catalogHeaderEnabled', 'catalogHeaderEvent', 'catalogHeaderTitle', 'catalogHeaderDescription'].forEach(function (key) { settings[key] = App.State[key]; });
+        App.Storage.write(this.settingsKey(), settings);
+    }
+};

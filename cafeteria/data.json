@@ -1,0 +1,143 @@
+{
+  "format": "hogsmeade-shop",
+  "version": 1,
+  "shop": "cafeteria",
+  "products": [],
+  "templates": [
+    {
+      "id": "basic",
+      "name": "основная карточка",
+      "fields": [
+        {
+          "id": "image",
+          "name": "Изображение",
+          "placeholder": "URL картинки",
+          "type": "url",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "productType",
+          "name": "Тип товара",
+          "placeholder": "букет, свеча ароматическая...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "composition",
+          "name": "Состав",
+          "placeholder": "розы, лаванда...",
+          "type": "text",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "description",
+          "name": "Описание",
+          "placeholder": "Описание товара...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": true
+        },
+        {
+          "id": "price",
+          "name": "Цена",
+          "placeholder": "45",
+          "type": "number",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": true,
+          "showInDelivery": false
+        },
+        {
+          "id": "label",
+          "name": "Этикетка",
+          "placeholder": "Текст этикетки...",
+          "type": "textarea",
+          "enabled": true,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note1",
+          "name": "Примечание 1",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        },
+        {
+          "id": "note2",
+          "name": "Примечание 2",
+          "placeholder": "Дополнительная информация...",
+          "type": "textarea",
+          "enabled": false,
+          "required": false,
+          "showInCatalog": false,
+          "showInDelivery": true
+        }
+      ],
+      "productCardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+      "contexts": {
+        "catalog": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {}
+        },
+        "delivery_hogsmeade": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          }
+        },
+        "delivery_hogwarts": {
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "optionalFields": {
+            "label": {
+              "enabled": false,
+              "template": "[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]"
+            },
+            "note1": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]"
+            },
+            "note2": {
+              "enabled": false,
+              "template": "[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "deliveryProfiles": [],
+  "catalogName": "",
+  "currentDeliveryProfileId": "hogsmeade",
+  "settings": {},
+  "skuRegistry": {
+    "version": 1,
+    "owners": {}
+  }
+}

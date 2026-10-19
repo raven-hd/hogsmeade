@@ -1,0 +1,70 @@
+/* Original layout and original decorative SVG. Themes change colors only. */
+:root {
+ --page:#201f1e;--surface:#2a2928;--surface-alt:#2a2422;--input-bg:#1a1918;--soft:#4a3e34;
+ --accent:#D6B891;--accent-hover:#d4a574;--secondary:#E8A87C;--text:#b9a992;--muted:#8a7a6a;
+ --line:#3c362f;--line-strong:#5a4a3a;--danger:#c24a4a;
+ --accent-rgb:214,184,145;--secondary-rgb:232,168,124;--soft-rgb:74,62,52;--input-rgb:26,25,24;--panel-rgb:42,36,30;--text-rgb:185,169,146;
+ --glow-top:#ffc981;--glow-base:#886544;--ornament:url('assets/ornament-raven.svg');color-scheme:dark;
+}
+:root[data-shop=peach] {
+ --page:#211e20;--surface:#2c272b;--surface-alt:#30272d;--input-bg:#1e1b1e;--soft:#493b44;
+ --accent:#d9adbf;--accent-hover:#e7c3d0;--secondary:#acc19e;--text:#c5b5be;--muted:#aa969f;
+ --line:#483c44;--line-strong:#68525f;--danger:#d3798a;
+ --accent-rgb:217,173,191;--secondary-rgb:172,193,158;--soft-rgb:73,59,68;--input-rgb:30,27,30;--panel-rgb:44,39,43;--text-rgb:197,181,190;
+ --glow-top:#cba4b6;--glow-base:#66555e;--ornament:url('assets/ornament-peach.svg');
+}
+:root[data-shop=cafeteria] {
+ --page:#1f2220;--surface:#282d29;--surface-alt:#29302b;--input-bg:#191e1b;--soft:#3d493e;
+ --accent:#bdc6a1;--accent-hover:#d0d8b6;--secondary:#d1b18b;--text:#bbc1b4;--muted:#939f90;
+ --line:#3c493f;--line-strong:#576452;--danger:#d17d7d;
+ --accent-rgb:189,198,161;--secondary-rgb:209,177,139;--soft-rgb:61,73,62;--input-rgb:25,30,27;--panel-rgb:40,45,41;--text-rgb:187,193,180;
+ --glow-top:#c6cda3;--glow-base:#5f705e;--ornament:url('assets/ornament-cafeteria.svg');
+}
+body{color:var(--text);background-image:var(--ornament),radial-gradient(ellipse 400px 250px at 50% -120px,var(--glow-top) 0%,var(--glow-base) 200px,transparent 700px)}
+.panel{background-color:var(--surface);min-width:0}
+/* Tint the existing texture rather than replace its pattern. */
+:root[data-shop=peach] .panel,:root[data-shop=cafeteria] .panel{background-image:linear-gradient(rgba(var(--panel-rgb),.7),rgba(var(--panel-rgb),.7)),url('https://drive.dhog.org/hogsm/textures/topic-item-bg.jpg')}
+:root[data-shop=peach] footer,:root[data-shop=cafeteria] footer{background-image:linear-gradient(rgba(var(--panel-rgb),.72),rgba(var(--panel-rgb),.72)),url('assets/footer-bg.jpg')}
+:root[data-shop=peach] .product-item.selected{border-color:var(--secondary);background:rgba(var(--secondary-rgb),.12)}
+:root[data-shop=peach] .mode-toggle-btn.active,:root[data-shop=peach] .version-btn.active{border-color:var(--secondary);background:rgba(var(--secondary-rgb),.13)}
+:root[data-shop=peach] .mode-toggle-btn.active i,:root[data-shop=peach] .version-btn.active i,:root[data-shop=peach] .info-box{color:var(--secondary)}
+.workspace-header{display:flex;align-items:center;gap:8px;min-height:26px;flex:0 0 auto;margin-bottom:6px}
+.workspace-header h1{font-size:12px;font-weight:400;color:var(--accent);line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.back-link{font-size:11px;color:var(--muted);text-decoration:none;white-space:nowrap}.back-link:hover{color:var(--accent)}
+.workspace-actions{display:flex;gap:4px;margin-left:auto;flex:0 0 auto}.workspace-actions button{width:26px;height:26px;padding:0;font-size:12px}
+.header-logo{margin-bottom:10px}.header-logo img{max-height:78px;object-fit:contain}
+.grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.catalog-search{position:relative;margin:0 0 7px;flex-shrink:0}.catalog-search>i{position:absolute;left:8px;top:8px;font-size:11px;color:var(--muted)}
+.catalog-search input{width:100%;padding:6px 8px 6px 25px;font-size:11px;color:var(--text);background:var(--input-bg);border:1px solid var(--line);border-radius:4px;box-sizing:border-box}
+.generation-mode-toggle{margin-left:0;padding-left:0;border-left:0}
+.generation-mode-toggle .mode-toggle-btn{width:28px;min-width:28px;height:28px;padding:0;font-size:13px}
+.panel-header>div{min-width:0}.panel-header h2{white-space:nowrap}.product-name{overflow-wrap:anywhere}.version-toggle{flex-shrink:0}
+.form-box{min-height:0}.image-upload-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}.file-button{font-size:10px;cursor:pointer;padding:3px 6px;border:1px dashed var(--line-strong);border-radius:3px;color:var(--secondary)}.upload-status{font-size:10px;color:var(--muted)}
+.image-settings{max-width:450px}.image-settings label{display:block;margin:7px 0}.image-settings label input{display:block;width:100%;margin-top:3px}.image-settings p{margin:7px 0;font-size:12px;color:var(--text)}.image-settings small{display:block;font-size:10px;color:var(--muted);line-height:1.5}.image-settings input[type=password]{padding:8px;border-radius:4px;background:var(--input-bg);color:var(--text);border:1px solid var(--line)}
+button:disabled{cursor:wait;opacity:.5}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:1px solid var(--secondary);outline-offset:2px}
+[hidden]{display:none!important}
+/* Half-screen desktop windows keep both original panels side by side. */
+@media(min-width:640px) and (max-width:1000px){
+ .main-wrapper{padding:8px}.grid{gap:8px}.panel{padding:8px}.panel-header{gap:6px}.panel-header h2{font-size:14px}
+ .catalog-controls{gap:4px}.catalog-btn,.add-product-btn,.version-btn{width:26px;height:26px}.catalog-btn i,.add-product-btn i,.version-btn i{font-size:12px}
+ .header-logo img{max-width:320px;max-height:54px}.header-logo{margin-bottom:6px}.generation-mode-toggle .mode-toggle-btn{width:26px;min-width:26px;height:26px}
+ .group-collection-row{gap:6px}.form-row{gap:6px}.template-selector{gap:4px}.template-selector select{min-width:0}
+ .catalog-settings{padding:8px}.form-box{overflow-y:auto;max-height:65vh}
+}
+@media(max-width:639px){
+ .grid{grid-template-columns:minmax(0,1fr)}.workspace-header{gap:6px}.workspace-header h1{font-size:11px}.header-logo img{max-height:50px}
+ .catalog-search{margin-top:0}.image-settings{max-width:95vw}.output-area{overflow-wrap:anywhere}
+}
+/* The separate shop chooser uses the same compact, textured design. */
+body.home{height:auto;min-height:100vh}.home-shell{width:min(850px,100%);margin:0 auto;padding:15px}.home-top{display:flex;justify-content:space-between;gap:10px;font-size:10px;color:var(--muted);margin-bottom:15px}.home-intro{margin-bottom:14px}.home-intro h1{font-size:20px;font-weight:400;color:var(--accent);margin-bottom:5px}.home-intro p{font-size:12px;color:var(--text)}
+.shop-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.shop-card{display:flex;flex-direction:column;gap:8px;color:var(--accent);text-decoration:none;border:1px solid var(--line);padding:12px;background-color:var(--surface);background-image:url('https://drive.dhog.org/hogsm/textures/topic-item-bg.jpg');box-shadow:0 2px 4px rgba(0,0,0,.3)}.shop-card:hover{border-color:var(--accent)}.shop-card.peach{color:#d9adbf;border-color:#68525f}.shop-card.cafe{color:#bdc6a1;border-color:#576452}.shop-card h2{font-size:16px;color:inherit;font-weight:400}.shop-card .emblem{font-size:22px}.shop-card .number{font-size:9px;opacity:.65}.shop-card p{font-size:11px;color:var(--text)}.shop-card .enter{display:flex;justify-content:space-between;margin-top:auto;font-size:11px;border-top:1px solid var(--line);padding-top:8px}.home-note{margin-top:15px;display:flex;justify-content:space-between;gap:20px;font-size:10px;color:var(--muted)}.home-note span{max-width:380px}
+@media(max-width:639px){.home-shell{padding:10px}.shop-cards{grid-template-columns:1fr}.shop-card{gap:5px}.home-note{flex-direction:column;gap:7px}}
+
+/* The product name remains primary; the SKU takes only a small inline badge. */
+.product-sku{display:inline;font-family:Consolas,monospace;font-size:10px;line-height:1.2;font-weight:400;color:var(--muted);white-space:nowrap;margin-left:5px;user-select:text}
+#formSku{font-size:9px}
+.cloud-bar:not([hidden]){display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:10px;min-height:25px;flex-wrap:wrap}
+.cloud-bar #cloudStatus{margin-right:auto;min-width:0;flex:1 1 140px;color:var(--muted);overflow-wrap:anywhere}
+.cloud-bar #cloudStatus[data-dirty=true]{color:var(--accent)}
+.cloud-bar button{padding:4px 7px;font-size:10px;line-height:1.2}
+.cloud-bar button:disabled{opacity:.45;cursor:default}

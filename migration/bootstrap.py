@@ -23,7 +23,7 @@ def copy(item):
         if parts[3]!='blob':raise ValueError('unexpected source path')
         url='https://raw.githubusercontent.com/'+'/'.join(parts[1:3]+parts[4:])
     else:url=urllib.parse.urlunsplit((p.scheme,p.netloc,p.path,'',''))
-    url=urllib.parse.quote(url,safe=':/%?=&')
+    url=urllib.parse.quote(url,safe=':/%?=&@')
     for attempt in range(3):
         try:
             with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Hogsmeade-project-import'}),timeout=60) as response:content=response.read()

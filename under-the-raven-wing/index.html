@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru" data-cloud="true" data-workspace="raven">
+<head>
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>мастерская доставок</title>
+    <link rel="stylesheet" href="shared/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="shared/styles.css">
+    <link rel="stylesheet" href="shared/workspace.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <header class="workspace-header">
+                <a class="back-link" href="index.html" title="выбрать другой магазин"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> магазины</a>
+                <h1 id="shopTitle"></h1>
+                <div class="workspace-actions">
+                    <button onclick="App.Backup.download()" title="сохранить полную копию магазина" aria-label="сохранить полную копию магазина"><i class="fa-solid fa-download" aria-hidden="true"></i></button>
+                    <button onclick="document.getElementById('backupInput').click()" title="восстановить полную копию магазина" aria-label="восстановить полную копию магазина"><i class="fa-solid fa-upload" aria-hidden="true"></i></button>
+                    <button onclick="App.Images.openSettings()" title="настройки картинок и github" aria-label="настройки картинок и github"><i class="fa-brands fa-github" aria-hidden="true"></i></button>
+                </div>
+                <input hidden type="file" id="backupInput" accept=".json,application/json" onchange="App.Backup.restore(event)">
+            </header>
+            <div class="cloud-bar" id="cloudBar" hidden>
+                <span id="cloudStatus" role="status">загрузка каталога…</span>
+                <button id="cloudSave" onclick="App.Cloud.save()"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> сохранить на github</button>
+                <button id="cloudLoad" onclick="App.Cloud.load()" title="загрузить актуальный каталог с github" aria-label="загрузить актуальный каталог с github"><i class="fa-solid fa-rotate" aria-hidden="true"></i></button>
+            </div>
+            <div class="header-logo" id="shopLogoContainer"><img id="shopLogo" alt="" onerror="this.parentElement.hidden=true"></div>
+            <div class="grid">
+                <!-- Левая панель - Каталог -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <div style="display: flex; align-items: center; flex-wrap: wrap;">
+                            <button class="collapse-all-btn" onclick="toggleAllCategories()" title="Свернуть/развернуть все категории">
+                                <i class="fa-solid fa-angles-up"></i>
+                            </button>
+                            <h2>Каталог товаров</h2>
+                            <span class="catalog-name" id="catalogName"></span>
+                        </div>
+                        <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+                            <div class="catalog-controls">
+                                <button class="catalog-btn" onclick="openCatalogEditorModal()" title="Редактировать структуру каталога (группы и коллекции)">
+                                    <i class="fa-solid fa-folder-tree"></i>
+                                </button>
+                                <button class="catalog-btn" onclick="clearAllSelections()" title="Снять все галочки">
+                                    <i class="fa-solid fa-square-xmark"></i>
+                                </button>
+                                <button class="catalog-btn" onclick="downloadCatalog()" title="Скачать текущий ассортимент">
+                                    <i class="fa fa-archive" aria-hidden="true"></i>
+                                </button>
+                                <button class="catalog-btn" onclick="document.getElementById('fileInput').click()" title="Загрузить ассортимент из файла">
+                                    <i class="fa-solid fa-cart-flatbed"></i>
+                                </button>
+                                <button class="catalog-btn" onclick="clearCatalog()" title="Очистить каталог товаров">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <button class="add-product-btn" onclick="toggleAddForm()" title="Добавить товар">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <input type="file" id="fileInput" accept=".json" onchange="uploadCatalog(event)">
+                    
+                    <div id="addForm" class="form-box hidden">
+                        <h3 id="formTitle">Новый товар</h3>
+                        
+                        <div class="form-tabs">
+                            <button type="button" class="form-tab active" onclick="switchFormTab('simple')">Простой режим</button>
+                            <button type="button" class="form-tab" onclick="switchFormTab('advanced')">BB-код предпросмотр</button>
+                        </div>
+                        
+                        <!-- Простой режим -->
+                        <div id="simpleMode" class="tab-content active">
+                            <div class="template-selector">
+                                <label>Шаблон:</label>
+                                <select id="simpleTemplateSelect" onchange="onTemplateSelectChange()">
+                                    <!-- Заполняется динамически -->
+                                </select>
+                            </div>
+                            <div class="group-collection-row">
+                                <div>
+                                    <label>Группа <span style="opacity:0.6;font-size:11px;">(напр. Свечи)</span></label>
+                                    <input type="text" id="simpleGroup" placeholder="Свечи, Букеты..." list="groupList">
+                                    <datalist id="groupList"></datalist>
+                                </div>
+                                <div>
+                                    <label>Коллекция <span style="opacity:0.6;font-size:11px;">(напр. ДСВ)</span></label>
+                                    <input type="text" id="simpleCollection" placeholder="ДСВ, РЯ, Пасха..." list="collectionList">
+                                    <datalist id="collectionList"></datalist>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div>
+                                    <label>Категория <span style="opacity:0.6;font-size:11px;">(авто из группы+коллекции)</span></label>
+                                    <input type="text" id="simpleCategory" placeholder="Заполняется автоматически" list="categoryList">
+                                    <datalist id="categoryList"></datalist>
+                                </div>
+                                <div>
+                                    <label>Название товара <small id="formSku" class="product-sku"></small></label>
+                                    <input type="text" id="simpleName" placeholder="Название (будет капсом в ёлочках)">
+                                </div>
+                            </div>
+                            <!-- Динамические поля шаблона -->
+                            <div id="dynamicFieldsContainer">
+                                <!-- Поля генерируются на основе выбранного шаблона -->
+                            </div>
+                        </div>
+                        
+                        <!-- BB-код предпросмотр -->
+                        <div id="advancedMode" class="tab-content">
+                            <div class="placeholder-hint" style="margin-bottom: 8px;">
+                                <i class="fa-solid fa-eye"></i> 
+                                <strong>Предпросмотр BB-кода</strong>
+                                <span style="opacity: 0.7;">(генерируется из полей простого режима)</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Описание товара (BB-код)</label>
+                                <textarea id="previewDescription" rows="6" readonly style="background: var(--input-bg); font-family: monospace; font-size: 11px;"></textarea>
+                            </div>
+                            <div class="form-group" id="previewLabelContainer">
+                                <label>Дополнительные поля (BB-код)</label>
+                                <textarea id="previewLabel" rows="4" readonly style="background: var(--input-bg); font-family: monospace; font-size: 11px;"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 8px; margin-top: 8px;">
+                            <button type="button" onclick="saveProduct()">Сохранить</button>
+                            <button type="button" onclick="cancelEdit()">Отмена</button>
+                        </div>
+                    </div>
+                    
+                    <label class="catalog-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="productSearch" type="search" aria-label="поиск по названию или артикулу" placeholder="название или артикул" oninput="App.Products.render()"></label>
+                    <div class="product-list" id="productList"></div>
+                </div>
+                
+                <!-- Правая панель - Генерация -->
+                <div class="panel right-panel">
+                    <div class="panel-header">
+                        <h2>Генератор сообщений</h2>
+                        <div style="display: flex; gap: 8px; align-items: center;">
+                            <button type="button" class="catalog-btn" onclick="openTemplatesModal()" title="Управление шаблонами">
+                                <i class="fa-solid fa-palette"></i>
+                            </button>
+                            <button type="button" class="catalog-btn" onclick="openUsersModal()" title="База пользователей">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </button>
+                            <div class="version-toggle" id="modeButtonsContainer">
+                                <!-- Кнопки режимов генерируются динамически -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="right-panel-content">
+                        <div class="form-fields">
+                            <!-- Баннер доставки добавляется динамически -->
+                            
+                            <div class="form-group">
+                                <label>Получатель (без @)</label>
+                                <div style="display: flex; gap: 4px;">
+                                    <input type="text" id="recipient" placeholder="начните вводить имя..." list="usersList" 
+                                        oninput="App.Users.onRecipientInput()" onchange="App.Users.onRecipientSelect()" style="flex: 1;">
+                                    <button type="button" onclick="App.Users.resetRecipient()" 
+                                        title="Выбрать другого пользователя" 
+                                        style="padding: 8px 12px; background: var(--soft); color: var(--accent); border: 1px solid var(--line); border-radius: 4px; cursor: pointer;">
+                                        <i class="fa-solid fa-rotate-right"></i>
+                                    </button>
+                                </div>
+                                <datalist id="usersList"></datalist>
+                                <input type="hidden" id="recipientId">
+                                <small id="recipientHint" style="opacity: 0.7; display: none; margin-top: 4px;"></small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Отправитель</label>
+                                <div style="display: flex; gap: 4px;">
+                                    <input type="text" id="sender" placeholder="начните вводить имя..." list="usersList"
+                                        oninput="App.Users.onSenderInput()" onchange="App.Users.onSenderSelect()" style="flex: 1;">
+                                    <button type="button" onclick="App.Users.resetSender()" 
+                                        title="Выбрать другого пользователя"
+                                        style="padding: 8px 12px; background: var(--soft); color: var(--accent); border: 1px solid var(--line); border-radius: 4px; cursor: pointer;">
+                                        <i class="fa-solid fa-rotate-right"></i>
+                                    </button>
+                                </div>
+                                <input type="hidden" id="senderId">
+                                <small id="senderHint" style="opacity: 0.7; display: none; margin-top: 4px;"></small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Текст записки</label>
+                                <textarea id="note" rows="2" placeholder="текст записки"></textarea>
+                            </div>
+                            
+                            <!-- Настройки каталога добавляются динамически -->
+                        </div>
+                        
+                        <div class="output-section">
+                            <!-- Строка адреса доставки — показывается когда выбран получатель -->
+                            <div id="deliveryAddressBar" class="delivery-address-bar" style="display:none;">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span id="deliveryAddressLabel">Адрес доставки:</span>
+                                <a id="deliveryAddressLink" href="#" target="_blank" class="delivery-address-link"></a>
+                                <button type="button" class="delivery-address-copy" onclick="App.Users.copyDeliveryAddress()" title="Скопировать адрес">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-shrink: 0;">
+                                <label style="margin: 0;">Готовое сообщение</label>
+                                <!-- Переключатель режима добавляется динамически -->
+                                <button type="button" onclick="copyMessage()">Копировать</button>
+                            </div>
+                            <div class="output-area" id="output">Выберите товары и заполните поля выше</div>
+                        </div>
+                        
+                        <div class="info-box">
+                            Выбрано товаров: <span id="selectedCount">0</span>
+                            <span id="totalPriceDisplay" style="display:none;">
+                                &nbsp;·&nbsp; Сумма: <span id="totalPrice" style="color:var(--accent); font-weight:600;"></span> г
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            <span id="shopFooter"></span> · локальная копия в браузере · изменения отправляются кнопкой «сохранить на github»
+        </div>
+    </footer>
+    
+    <!-- Modal для пользователей -->
+    <div id="usersModal" class="modal-overlay hidden">
+        <div class="modal">
+            <h3>База пользователей</h3>
+            <div style="margin-bottom: 10px;">
+                <div class="form-row" style="margin-bottom: 8px;">
+                    <input type="text" id="newUserName" placeholder="Имя пользователя" style="flex: 1;">
+                </div>
+                <div class="user-ids-grid">
+                    <input type="text" id="newUserHogsmeade" placeholder="Хогсмид ID">
+                    <input type="text" id="newUserHogwarts" placeholder="Хогвартс ID">
+                    <input type="text" id="newUserGryffindor" placeholder="Гриффиндор ID">
+                    <input type="text" id="newUserRavenclaw" placeholder="Когтевран ID">
+                    <input type="text" id="newUserHufflepuff" placeholder="Пуффендуй ID">
+                    <input type="text" id="newUserSlytherin" placeholder="Слизерин ID">
+                </div>
+                <!-- Адреса доставки — по одному на профиль -->
+                <div class="user-addresses-section">
+                    <div class="user-addresses-label">
+                        <i class="fa-solid fa-location-dot"></i> Адреса доставки
+                        <span style="opacity:0.5; font-size:11px;">(ссылки на тему/профиль форума)</span>
+                    </div>
+                    <div class="user-ids-grid">
+                        <input type="text" id="newUserAddrHogsmeade" placeholder="Адрес Хогсмид (URL)">
+                        <input type="text" id="newUserAddrHogwarts" placeholder="Адрес Хогвартс (URL)">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 4px;">
+                    <button type="button" id="saveUserBtn" onclick="saveUser()" style="flex: 1;">Добавить</button>
+                    <button type="button" id="cancelUserEditBtn" onclick="cancelUserEdit()" style="display: none; padding: 5px 8px;" title="Отменить редактирование">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Поиск -->
+            <div class="user-search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="userSearchInput" placeholder="Поиск по имени..." oninput="App.Users.filterList()">
+                <button type="button" class="user-sort-btn" onclick="App.Users.toggleSort()" id="userSortBtn" title="Сортировать по алфавиту">
+                    <i class="fa-solid fa-arrow-down-a-z"></i>
+                </button>
+            </div>
+            <div class="user-list" id="usersListModal"></div>
+            <div class="modal-buttons">
+                <button type="button" onclick="downloadUsers()"><i class="fa-solid fa-download"></i> Скачать</button>
+                <button type="button" onclick="document.getElementById('usersFileInput').click()"><i class="fa-solid fa-upload"></i> Загрузить</button>
+                <button type="button" onclick="closeUsersModal()">Закрыть</button>
+            </div>
+            <input type="file" id="usersFileInput" accept=".json" onchange="uploadUsers(event)">
+        </div>
+    </div>
+    
+    <!-- Modal для шаблонов -->
+    <div id="templatesModal" class="modal-overlay hidden">
+        <div class="modal modal-large">
+            <h3>Управление шаблонами оформления</h3>
+            
+            <!-- Список шаблонов -->
+            <div id="templatesListView">
+                <div class="template-list" id="templatesListModal"></div>
+                
+                <div class="modal-buttons" id="templateModalButtons">
+                    <button type="button" onclick="showTemplateForm()"><i class="fa-solid fa-plus"></i> Новый шаблон</button>
+                    <button type="button" onclick="downloadTemplates()"><i class="fa-solid fa-download"></i> Скачать</button>
+                    <button type="button" onclick="document.getElementById('templatesFileInput').click()"><i class="fa-solid fa-upload"></i> Загрузить</button>
+                    <button type="button" onclick="closeTemplatesModal()">Закрыть</button>
+                </div>
+                <input type="file" id="templatesFileInput" accept=".json" onchange="uploadTemplates(event)">
+            </div>
+            
+            <!-- Мастер создания шаблона -->
+            <div id="templateWizard" class="hidden">
+                <!-- Индикатор шагов (3 шага) -->
+                <div class="wizard-steps">
+                    <div class="wizard-step-indicator active" id="wizardStep1" onclick="App.Templates.goToStep(1)">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Поля</span>
+                    </div>
+                    <div class="wizard-step-connector"></div>
+                    <div class="wizard-step-indicator" id="wizardStep2" onclick="App.Templates.goToStep(2)">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Оформление</span>
+                    </div>
+                    <div class="wizard-step-connector"></div>
+                    <div class="wizard-step-indicator" id="wizardStep3" onclick="App.Templates.goToStep(3)">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Предпросмотр</span>
+                    </div>
+                </div>
+                
+                <!-- Контент шага -->
+                <div id="wizardContent" class="wizard-content">
+                    <!-- Заполняется динамически -->
+                </div>
+                
+                <!-- Кнопки навигации мастера -->
+                <div class="wizard-nav">
+                    <button type="button" id="wizardPrevBtn" onclick="App.Templates.prevStep()">← Назад</button>
+                    <button type="button" onclick="App.Templates.cancelWizard()">Отмена</button>
+                    <button type="button" id="wizardNextBtn" onclick="App.Templates.nextStep()">Далее →</button>
+                    <button type="button" id="wizardSaveBtn" onclick="App.Templates.saveTemplate()" style="display: none;">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal редактора структуры каталога -->
+    <div id="catalogEditorModal" class="modal-overlay hidden">
+        <div class="modal modal-large">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-shrink:0;">
+                <h3 style="margin:0;">Редактор структуры каталога</h3>
+                <button type="button" class="catalog-btn" onclick="closeCatalogEditorModal()" title="Закрыть">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <p style="opacity:0.65; font-size:13px; margin-bottom:14px; flex-shrink:0;">
+                Выберите группу или коллекцию слева — справа появятся доступные действия
+            </p>
+            <div class="catalog-editor-body">
+                <!-- Заполняется динамически -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript модули (порядок важен!) -->
+    <script src="shared/config.js"></script>
+    <script src="shared/workspace-config.js"></script>
+    <script src="shared/sku.js"></script>
+    <script src="shared/storage.js"></script>
+    <script src="shared/ui.js"></script>
+    <script src="shared/users.js"></script>
+    <script src="shared/templates.js"></script>
+    <script src="shared/products.js"></script>
+    <script src="shared/catalog-editor.js"></script>
+    <script src="shared/message.js"></script>
+    <script src="shared/template-library.js"></script>
+    <script src="shared/catalog-routing.js"></script>
+    <script src="shared/backup.js"></script>
+    <script src="shared/images.js"></script>
+    <script src="shared/workspace.js"></script>
+    <script src="shared/cloud.js"></script>
+    <script src="shared/app.js"></script>
+</body>
+</html>
