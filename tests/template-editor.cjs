@@ -87,6 +87,8 @@ let checks=0;function ok(v,m){assert.ok(v,m);checks++;console.log('ok · '+m);}
   await p.evaluate(id=>{App.Templates.openModal();App.Templates.edit(id);},id);
   ok(await p.locator('#wizardTemplateName').inputValue()==='проверка "карточки"','quoted template names survive reopening the editor');
   ok(await p.evaluate(id=>App.Cloud.normalize(App.Cloud.snapshot()).templates.find(t=>t.id===id).contexts.catalog.pricePlacement==='auto',id),'GitHub catalog normalization preserves the new price placement setting');
+  await p.setViewportSize({width:390,height:900});await p.evaluate(()=>{App.Templates.goToStep(2);App.Templates.switchCtxTab('catalog');});
+  ok(await p.locator('#ctx_price_catalog').evaluate(el=>el.getBoundingClientRect().width>0&&el.getBoundingClientRect().width<=el.closest('.ctx-tab-content').getBoundingClientRect().width),'price control fits a narrow window');
   ok(errors.length===0,'template editing and generation produce no JavaScript errors');
   console.log('PASS '+checks+' checks');
  }finally{await browser.close();server.close();}
