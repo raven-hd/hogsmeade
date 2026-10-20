@@ -1,7 +1,42 @@
-/* GitHub image upload: credentials live only in memory and are sent only to api.github.com. */
+/* GitHub upload. Optional device credentials are shared across shops, scoped to a repository,
+   and kept outside settings, backups and public documents. Requests go only to api.github.com. */
 App.Images = {
-    token: '', busy: false,
+    token: '', tokenTarget: '', remembered: false, busy: false,
     config: function () { return Object.assign(App.Config.CLOUD_ENABLED ? { owner: 'raven-hd', repo: 'hogsmeade', branch: 'main', folder: App.Config.SHOP_FOLDERS[App.State.currentShop] + '/images' } : {}, App.Workspace.getSettings().github || {}); },
+    credentialTarget: function (cfg) { var c = cfg || this.config(); return (c.owner || '').toLowerCase() + '/' + (c.repo || '').toLowerCase(); },
+    credentialKey: function (cfg) { return 'delivery.v2.auth.github.' + this.credentialTarget(cfg); },
+    savedToken: function (cfg) {
+        try { return localStorage.getItem(this.credentialKey(cfg)) || ''; } catch (_) { return ''; }
+    },
+    restoreToken: function () {
+        this.token = this.savedToken(); this.tokenTarget = this.credentialTarget(); this.remembered = !!this.token;
+    },
+    saveToken: function (entered, remember, cfg) {
+        var target = this.credentialTarget(cfg);
+        var token = entered || (this.tokenTarget === target ? this.token : this.savedToken(cfg));
+        // Write before updating memory: a storage error must not look like successful remembering.
+        if (remember && token) localStorage.setItem(this.credentialKey(cfg), token);
+        else localStorage.removeItem(this.credentialKey(cfg));
+        this.token = token; this.tokenTarget = target; this.remembered = !!token && remember;
+    },
+    forgetToken: function () {
+        localStorage.removeItem(this.credentialKey());
+        this.token = ''; this.tokenTarget = this.credentialTarget(); this.remembered = false;
+        App.UserCloud?.schedule(); this.renderCredentialStatus();
+    },
+    initCredentials: function () {
+        this.restoreToken();
+        window.addEventListener('storage', function (e) {
+            if (e.key === null || e.key === App.Images.credentialKey() || (e.key === App.Workspace.settingsKey() && App.Images.tokenTarget !== App.Images.credentialTarget())) {
+                App.Images.restoreToken(); App.Images.renderCredentialStatus(); App.UserCloud?.schedule();
+            }
+        });
+    },
+    renderCredentialStatus: function () {
+        var overlay = document.getElementById('imageSettings'); if (!overlay) return;
+        overlay.querySelector('#ghRemember').checked = this.remembered;
+        overlay.querySelector('#ghStatus').textContent = this.token ? this.remembered ? 'токен подключен · сохранен на этом устройстве' : 'токен подключен · только в этой вкладке' : 'токен не подключен';
+    },
     openSettings: function () {
         var previous = document.getElementById('imageSettings'); if (previous) previous.remove();
         var c = this.config(), esc = App.UI.escapeHtml;
@@ -12,23 +47,29 @@ App.Images = {
             '<label>ветка<input id="ghBranch" value="' + esc(c.branch || 'main') + '"></label>' +
             '<label>папка изображений<input id="ghFolder" value="' + esc(c.folder || ('images/' + App.State.currentShop)) + '"></label>' +
             '<label>токен доступа<input id="ghToken" type="password" autocomplete="new-password" placeholder="fine-grained token: contents → read and write"></label>' +
-            '<small>токен нужен для выбранного репозитория. он действует здесь до перезагрузки страницы и не попадает в резервную копию. изображения загружаются в публичный репозиторий, чтобы их видел форум.</small>' +
+            '<label style="display:flex;align-items:center;gap:6px"><input id="ghRemember" type="checkbox" style="width:auto;margin:0;flex:none">запомнить токен на этом устройстве</label>' +
+            '<small>с галочкой токен сохраняется в браузере для всех магазинов этого репозитория, без нее — только до перезагрузки вкладки. в резервные копии и файлы github он не попадает. кнопка «отключить токен» удаляет сохраненное подключение.</small>' +
             '<small>нужен доступ contents → read and write. общая база пользователей хранится в shared/users.json репозитория raven-hd/hogsmeade: имена, ID и ссылки форума. после подключения токена ее изменения отправляются автоматически.</small>' +
             '<label>счет магазина для оплаты в каталоге<input id="paymentAccount" inputmode="numeric" value="' + esc(App.Workspace.getSettings().paymentAccount ?? (App.State.currentShop === 'cafeteria' ? '' : '217')) + '"></label>' +
             '<div class="modal-buttons"><button id="ghSave">сохранить</button><button id="ghForget">отключить токен</button><button id="ghClose">закрыть</button></div><p id="ghStatus" role="status"></p></section>';
         document.body.appendChild(overlay);
         overlay.querySelector('#ghClose').onclick = function () { overlay.remove(); };
-        overlay.querySelector('#ghForget').onclick = function () { App.Images.token = ''; overlay.querySelector('#ghToken').value = ''; overlay.querySelector('#ghStatus').textContent = 'токен отключен'; App.UserCloud?.render(); };
+        this.renderCredentialStatus();
+        overlay.querySelector('#ghForget').onclick = function () {
+            try { App.Images.forgetToken(); overlay.querySelector('#ghToken').value = ''; overlay.querySelector('#ghStatus').textContent = 'токен отключен и удален с этого устройства'; }
+            catch (_) { overlay.querySelector('#ghStatus').textContent = 'не удалось удалить сохраненный токен: проверьте доступ к данным браузера'; }
+        };
         overlay.querySelector('#ghSave').onclick = function () {
             var val = function (id) { return overlay.querySelector('#' + id).value.trim(); };
             var cfg = { owner: val('ghOwner'), repo: val('ghRepo'), branch: val('ghBranch'), folder: val('ghFolder').replace(/^\/+|\/+$/g, '') };
             if (!/^[A-Za-z0-9-]+$/.test(cfg.owner) || !/^[A-Za-z0-9_.-]+$/.test(cfg.repo) || !cfg.branch || /(^|\/)\.{1,2}(\/|$)/.test(cfg.folder) || !cfg.folder) { overlay.querySelector('#ghStatus').textContent = 'проверьте владельца, репозиторий, ветку и папку'; return; }
             var account = val('paymentAccount');
             if (account && !/^\d+$/.test(account)) { overlay.querySelector('#ghStatus').textContent = 'номер счета должен состоять из цифр'; return; }
+            try { App.Images.saveToken(val('ghToken'), overlay.querySelector('#ghRemember').checked, cfg); }
+            catch (_) { overlay.querySelector('#ghStatus').textContent = 'не удалось сохранить подключение: проверьте доступ к данным браузера'; return; }
             var settings = App.Workspace.getSettings(); settings.github = cfg; settings.paymentAccount = account;
             App.Storage.write(App.Workspace.settingsKey(), settings);
             if (App.Cloud && App.Cloud.meta && App.Cloud.meta.target !== App.Cloud.target()) { App.Cloud.meta = null; App.Cloud.conflict = false; }
-            var token = val('ghToken'); if (token) App.Images.token = token;
             overlay.remove(); App.Message.update(); App.UI.showToast('Настройки этого магазина сохранены');
             App.UserCloud?.schedule();
         };
