@@ -71,6 +71,7 @@ App.init = function() {
 
 App.start = async function () {
     try {
+        App.Images.initCredentials?.();
         await Promise.all([App.Cloud?.bootstrap(), App.UserCloud?.bootstrap()]);
         App.init();
         if (App.Cloud) App.Cloud.watch();
