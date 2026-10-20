@@ -13,12 +13,12 @@ App.Images = {
             '<label>папка изображений<input id="ghFolder" value="' + esc(c.folder || ('images/' + App.State.currentShop)) + '"></label>' +
             '<label>токен доступа<input id="ghToken" type="password" autocomplete="new-password" placeholder="fine-grained token: contents → read and write"></label>' +
             '<small>токен нужен для выбранного репозитория. он действует здесь до перезагрузки страницы и не попадает в резервную копию. изображения загружаются в публичный репозиторий, чтобы их видел форум.</small>' +
-            '<small>нужен доступ contents → read and write. адресная книга остается в браузере и в полных резервных копиях. в публичный каталог она не отправляется.</small>' +
+            '<small>нужен доступ contents → read and write. общая база пользователей хранится в shared/users.json репозитория raven-hd/hogsmeade: имена, ID и ссылки форума. после подключения токена ее изменения отправляются автоматически.</small>' +
             '<label>счет магазина для оплаты в каталоге<input id="paymentAccount" inputmode="numeric" value="' + esc(App.Workspace.getSettings().paymentAccount ?? (App.State.currentShop === 'cafeteria' ? '' : '217')) + '"></label>' +
             '<div class="modal-buttons"><button id="ghSave">сохранить</button><button id="ghForget">отключить токен</button><button id="ghClose">закрыть</button></div><p id="ghStatus" role="status"></p></section>';
         document.body.appendChild(overlay);
         overlay.querySelector('#ghClose').onclick = function () { overlay.remove(); };
-        overlay.querySelector('#ghForget').onclick = function () { App.Images.token = ''; overlay.querySelector('#ghToken').value = ''; overlay.querySelector('#ghStatus').textContent = 'токен отключен'; };
+        overlay.querySelector('#ghForget').onclick = function () { App.Images.token = ''; overlay.querySelector('#ghToken').value = ''; overlay.querySelector('#ghStatus').textContent = 'токен отключен'; App.UserCloud?.render(); };
         overlay.querySelector('#ghSave').onclick = function () {
             var val = function (id) { return overlay.querySelector('#' + id).value.trim(); };
             var cfg = { owner: val('ghOwner'), repo: val('ghRepo'), branch: val('ghBranch'), folder: val('ghFolder').replace(/^\/+|\/+$/g, '') };
@@ -30,6 +30,7 @@ App.Images = {
             if (App.Cloud && App.Cloud.meta && App.Cloud.meta.target !== App.Cloud.target()) { App.Cloud.meta = null; App.Cloud.conflict = false; }
             var token = val('ghToken'); if (token) App.Images.token = token;
             overlay.remove(); App.Message.update(); App.UI.showToast('Настройки этого магазина сохранены');
+            App.UserCloud?.schedule();
         };
         overlay.querySelector('#ghOwner').focus();
     },
@@ -60,7 +61,7 @@ App.Images = {
         if (!['image/png', 'image/jpeg', 'image/webp', 'image/gif'].includes(file.type)) throw new Error('поддерживаются png, jpg, webp и gif');
         if (!file.size || file.size > 10 * 1024 * 1024) throw new Error('размер картинки: от 1 байта до 10 мб');
         var cfg = this.config();
-        if (!cfg.owner || !cfg.repo || !this.token) throw new Error('сначала откройте «картинки · github» и подключите репозиторий');
+        if (!cfg.owner || !cfg.repo || !this.token) throw new Error('сначала откройте «магазин · github» и подключите репозиторий');
         var identity = this.identity();
         var headers = { Authorization: 'Bearer ' + this.token, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2026-03-10' };
         var base = 'https://api.github.com/repos/' + encodeURIComponent(cfg.owner) + '/' + encodeURIComponent(cfg.repo);
