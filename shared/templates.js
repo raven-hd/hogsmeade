@@ -90,7 +90,7 @@ App.Templates = {
         
         var html = '<div id="deliveryProfilesSection" style="margin-top: 20px; border-top: 1px solid var(--line); padding-top: 16px;">' +
             '<h4 style="color: var(--accent); margin: 0 0 8px;">Профили доставки</h4>' +
-            '<p style="opacity: 0.7; font-size: 13px; margin-bottom: 12px;">Хогсмид и Хогвартс — разные форматы сообщения и разные индексы пользователей</p>' +
+            '<p style="opacity: 0.7; font-size: 13px; margin-bottom: 12px;">профиль форума выбирает ID пользователя, шапку доставки и оформление записки. карточки товаров настраиваются отдельно в шаблонах. каталог публикуется в Хогсмиде.</p>' +
             '<div class="delivery-profiles-list">';
         
         profiles.forEach(function(profile) {
@@ -312,11 +312,11 @@ App.Templates = {
         
         var html = '<div class="wizard-step-content">' +
             '<h4>Шаг 1: Поля карточки товара</h4>' +
-            '<p style="opacity: 0.8; margin-bottom: 15px;">Задайте набор полей. На шаге 2 вы настроите как они используются в каталоге и при доставке.</p>' +
+            '<p style="opacity: 0.8; margin-bottom: 15px;">выберите данные товара: состав, описание, цену, этикетку и другие поля. название есть у каждого товара. на шаге 2 отдельно настраиваются каталог Хогсмида и доставки на форумы.</p>' +
             
             '<div class="form-group">' +
             '<label>Название шаблона</label>' +
-            '<input type="text" id="wizardTemplateName" value="' + (template.name || '') + '" placeholder="Например: Rich Peach Букеты">' +
+            '<input type="text" id="wizardTemplateName" value="' + App.UI.escapeHtml(template.name || '') + '" placeholder="Например: Rich Peach Букеты">' +
             '</div>' +
             
             '<div class="fields-configurator">' +
@@ -356,7 +356,7 @@ App.Templates = {
         
         // Список всех включённых полей — для подсказки плейсхолдеров
         var enabledFields = template.fields.filter(function(f) { return f.enabled; });
-        var placeholderHint = '{{name}}, ' + enabledFields.map(function(f) {
+        var placeholderHint = '<code>{{name}}</code>, <code>{{sku}}</code>, <code>{{payment}}</code>, ' + enabledFields.map(function(f) {
             return '<code>{{' + f.id + '}}</code>';
         }).join(', ');
         
@@ -370,26 +370,17 @@ App.Templates = {
         if (!template.contexts) template.contexts = {};
         contexts.forEach(function(ctx) {
             if (!template.contexts[ctx.id]) {
-                template.contexts[ctx.id] = {
-                    cardTemplate: ctx.id === 'catalog'
-                        ? (template.productCardTemplate || App.Config.DEFAULT_CATALOG_CARD_TEMPLATE)
-                        : (template.productCardTemplate || App.Config.DEFAULT_PRODUCT_CARD_TEMPLATE),
-                    optionalFields: {
-                        label: { enabled: false, template: App.Config.DEFAULT_FIELD_TEMPLATES.label },
-                        note1: { enabled: false, template: App.Config.DEFAULT_FIELD_TEMPLATES.note1 },
-                        note2: { enabled: false, template: App.Config.DEFAULT_FIELD_TEMPLATES.note2 }
-                    }
-                };
+                template.contexts[ctx.id] = structuredClone(App.Message.getTemplateContext(template, ctx.id));
             }
         });
         
         // Запоминаем активную вкладку
-        var activeCtxId = App.State._step2ActiveCtx || contexts[0].id;
+        var activeCtxId = contexts.some(function(c) { return c.id === App.State._step2ActiveCtx; }) ? App.State._step2ActiveCtx : contexts[0].id;
         App.State._step2ActiveCtx = activeCtxId;
         
         var html = '<div class="wizard-step-content">' +
-            '<h4>Шаг 2: Оформление по контекстам</h4>' +
-            '<p style="opacity:0.8; margin-bottom:12px;">Каждый контекст — отдельный BB-код. Используйте только нужные плейсхолдеры.</p>' +
+            '<h4>Шаг 2: Каталог и доставки</h4>' +
+            '<p style="opacity:0.8; margin-bottom:12px;">данные товара общие, оформление каждой вкладки независимое. цена {{price}} — число, {{payment}} — оплата с артикулом, {{sku}} — артикул.</p>' +
             '<div class="placeholder-hint" style="margin-bottom:14px;">' +
             '<strong>Доступные плейсхолдеры:</strong> ' + placeholderHint +
             '</div>' +
@@ -423,7 +414,13 @@ App.Templates = {
                 '</textarea>';
             
             if (!ctx.isDelivery) {
-                html += '<small style="opacity:0.7;">В каталоге — обычно без типа товара, без этикетки и маркеров. Только визуал.</small>';
+                html += '<small style="opacity:0.7;">карточка для каталога Хогсмида: изображение, описание, состав, цена и любая другая нужная информация.</small>';
+                var placement = ctxData.pricePlacement || 'auto';
+                html += '<label style="margin-top:8px">оплата в каталоге <select id="ctx_price_catalog">' +
+                    '<option value="auto"' + (placement === 'auto' ? ' selected' : '') + '>по шаблону: внутри карточки или отдельной строкой</option>' +
+                    '<option value="row"' + (placement === 'row' ? ' selected' : '') + '>всегда отдельной строкой</option>' +
+                    '<option value="card"' + (placement === 'card' ? ' selected' : '') + '>только внутри карточки</option></select></label>' +
+                    '<small style="opacity:0.7">в режиме «по шаблону» отдельная строка не добавляется, если карточка содержит {{price}} или {{payment}}. для оплаты внутри карточки вставьте {{payment}} в нужное место.</small>';
             } else {
                 html += '<small style="opacity:0.7;">В доставке — карточка товара без шапки/записки. Шапка берётся из профиля "' + App.UI.escapeHtml(ctx.label.replace(/^📬 /, '')) + '".</small>';
             }
@@ -433,7 +430,7 @@ App.Templates = {
             if (ctx.isDelivery) {
                 html += '<div class="optional-fields-section">' +
                     '<h5 style="color:var(--accent); margin:16px 0 8px;">Опциональные поля</h5>' +
-                    '<p style="opacity:0.7; font-size:13px; margin-bottom:12px;">Добавляются после карточки если заполнены. BB-код может отличаться для каждого режима доставки.</p>';
+                    '<p style="opacity:0.7; font-size:13px; margin-bottom:12px;">эти блоки добавляются после карточки, только если поле включено на шаге 1 и заполнено у товара. оформление может отличаться для каждого форума. если поле уже вставлено в саму карточку, отключите его отдельный блок.</p>';
                 
                 ['label', 'note1', 'note2'].forEach(function(fieldId) {
                     var fieldNames = { label: 'Этикетка', note1: 'Примечание 1', note2: 'Примечание 2' };
@@ -443,12 +440,13 @@ App.Templates = {
                     
                     var cbId = 'opt_' + ctx.id + '_' + fieldId + '_enabled';
                     var taId = 'opt_' + ctx.id + '_' + fieldId + '_template';
+                    var field = template.fields.find(function(f) { return f.id === fieldId; });
                     
                     html += '<div class="optional-field-item">' +
                         '<label style="display:flex; align-items:center; gap:8px; cursor:pointer;">' +
                         '<input type="checkbox" id="' + cbId + '" ' + (optData.enabled ? 'checked' : '') +
                         ' onchange="App.Templates.toggleOptField(\'' + ctx.id + '\',\'' + fieldId + '\')">' +
-                        '<strong>' + fieldNames[fieldId] + '</strong>' +
+                        '<strong>' + fieldNames[fieldId] + '</strong>' + (field && !field.enabled ? ' <small>поле отключено на шаге 1</small>' : '') +
                         '</label>' +
                         '<div id="opt_' + ctx.id + '_' + fieldId + '_wrap" style="' + (optData.enabled ? '' : 'display:none;') + ' margin-top:8px;">' +
                         '<textarea id="' + taId + '" rows="2" style="font-family:monospace; font-size:11px; width:100%;">' +
@@ -501,6 +499,8 @@ App.Templates = {
         Object.keys(template.contexts).forEach(function(ctxId) {
             var cardTA = document.getElementById('ctx_card_' + ctxId);
             if (cardTA) template.contexts[ctxId].cardTemplate = cardTA.value;
+            var priceSelect = document.getElementById('ctx_price_' + ctxId);
+            if (priceSelect) template.contexts[ctxId].pricePlacement = priceSelect.value;
             
             // Опциональные поля
             var ctxData = template.contexts[ctxId];
@@ -564,6 +564,14 @@ App.Templates = {
                 fields: JSON.parse(JSON.stringify(App.Config.DEFAULT_TEMPLATE_FIELDS)),
                 contexts: App.Config.makeDefaultContexts(App.getDeliveryProfiles())
             };
+            Object.keys(App.State.tempTemplate.contexts).forEach(function(id) {
+                if (id === 'catalog') return;
+                var ctx = App.State.tempTemplate.contexts[id];
+                ['label', 'note1', 'note2'].forEach(function(key) {
+                    var field = App.State.tempTemplate.fields.find(function(f) { return f.id === key; });
+                    ctx.optionalFields[key].enabled = !!field?.enabled;
+                });
+            });
         }
         
         // Убеждаемся что contexts есть всегда
@@ -576,100 +584,38 @@ App.Templates = {
     
     // ==================== ШАГ 3: ПРЕДПРОСМОТР ====================
     renderStep3: function() {
-        var template = App.Templates.getTempTemplate();
-        var profiles = App.getDeliveryProfiles();
-        
-        var contexts = [{ id: 'catalog', label: 'Каталог', isDelivery: false }];
-        profiles.forEach(function(p) {
-            contexts.push({ id: 'delivery_' + p.id, label: p.name, isDelivery: true, profile: p });
-        });
-        
-        var activeCtxId = App.State._step3ActiveCtx || contexts[0].id;
-        App.State._step3ActiveCtx = activeCtxId;
-        
-        // Пример данных для предпросмотра
-        var exampleData = { name: '«ПРИМЕР ТОВАРА»' };
-        template.fields.forEach(function(f) {
-            if (f.enabled) exampleData[f.id] = '[' + f.name.toUpperCase() + ']';
-        });
-        exampleData.image = 'https://via.placeholder.com/300x300?text=Фото';
-        exampleData.label = '[ТЕКСТ ЭТИКЕТКИ]';
-        exampleData.note1 = '[ПРИМЕЧАНИЕ 1]';
-        exampleData.note2 = '[ПРИМЕЧАНИЕ 2]';
-        
-        var html = '<div class="wizard-step-content">' +
-            '<h4>Шаг 3: Предпросмотр</h4>' +
-            '<p style="opacity:0.8; margin-bottom:12px;">Проверьте итоговый BB-код для каждого контекста. Можно редактировать прямо здесь — изменения сохранятся.</p>' +
-            '<div class="ctx-tabs">';
-        
+        var template = App.Templates.getTempTemplate(), profiles = App.getDeliveryProfiles();
+        var contexts = [{ id: 'catalog', label: 'каталог · Хогсмид' }];
+        profiles.forEach(function(p) { contexts.push({ id: 'delivery_' + p.id, label: 'доставка · ' + p.name, profile: p }); });
+        var active = contexts.some(function(c) { return c.id === App.State._step3ActiveCtx; }) ? App.State._step3ActiveCtx : 'catalog';
+        App.State._step3ActiveCtx = active;
+        var data = { name: 'ПРИМЕР ТОВАРА' };
+        template.fields.forEach(function(f) { if (f.enabled) data[f.id] = f.id === 'price' ? '10' : '[' + f.name.toUpperCase() + ']'; });
+        if (template.fields.some(function(f) { return f.id === 'image' && f.enabled; })) data.image = 'https://example.org/product.png';
+        var product = { sku: App.State.currentShop === 'peach' ? 'BK-001' : App.State.currentShop === 'cafeteria' ? 'KF-001' : 'SV-001', fieldData: data };
+        var html = '<div class="wizard-step-content"><h4>Шаг 3: Проверка</h4>' +
+            '<p style="opacity:0.8;margin-bottom:12px">пример с условными данными. каталог и доставки имеют разное оформление. BB-код и цену меняйте на шаге 2; шапку и записку — в профиле форума.</p><div class="ctx-tabs">';
         contexts.forEach(function(ctx) {
-            var isActive = ctx.id === activeCtxId;
-            html += '<button type="button" class="ctx-tab' + (isActive ? ' active' : '') + '" ' +
-                'onclick="App.Templates.switchStep3Tab(\'' + ctx.id + '\')">' + ctx.label + '</button>';
+            html += '<button type="button" class="ctx-tab' + (ctx.id === active ? ' active' : '') + '" onclick="App.Templates.switchStep3Tab(\'' + ctx.id + '\')">' + App.UI.escapeHtml(ctx.label) + '</button>';
         });
         html += '</div>';
-        
         contexts.forEach(function(ctx) {
-            var isActive = ctx.id === activeCtxId;
-            var ctxData = (template.contexts && template.contexts[ctx.id]) || {};
-            var cardTemplate = ctxData.cardTemplate || '';
-            
-            // Строим полный BB-код для предпросмотра
-            var preview = '';
-            
-            if (!ctx.isDelivery) {
-                // Каталог — только карточка
-                preview = App.Templates._applyExampleData(cardTemplate, exampleData, template.fields);
-            } else {
-                // Доставка — шапка профиля + карточка + опциональные поля
-                var profile = ctx.profile;
-                var shopTemplate = profile ? (profile[App.State.currentShop] || {}) : {};
-                
-                if (shopTemplate.header) {
-                    preview += shopTemplate.header
-                        .replace(/\{\{RECIPIENT\}\}/g, '[mention=000]Получатель[/mention]')
-                        .replace(/\{\{SENDER\}\}/g, '[mention=000]Отправитель[/mention]');
-                }
-                if (shopTemplate.note) {
-                    preview += shopTemplate.note.replace(/\{\{NOTE\}\}/g, 'Текст записки');
-                }
-                
-                var card = App.Templates._applyExampleData(cardTemplate, exampleData, template.fields);
-                var labelBB = '', note1BB = '', note2BB = '';
-                
-                if (ctxData.optionalFields) {
-                    if (ctxData.optionalFields.label && ctxData.optionalFields.label.enabled) {
-                        labelBB = ctxData.optionalFields.label.template.replace(/\{\{label\}\}/g, exampleData.label);
-                    }
-                    if (ctxData.optionalFields.note1 && ctxData.optionalFields.note1.enabled) {
-                        note1BB = ctxData.optionalFields.note1.template.replace(/\{\{note1\}\}/g, exampleData.note1);
-                    }
-                    if (ctxData.optionalFields.note2 && ctxData.optionalFields.note2.enabled) {
-                        note2BB = ctxData.optionalFields.note2.template.replace(/\{\{note2\}\}/g, exampleData.note2);
-                    }
-                }
-                
-                var productBlock = shopTemplate.productBlock || '{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}';
-                preview += productBlock
-                    .replace(/\{\{PRODUCT\}\}/g, card)
-                    .replace(/\{\{LABEL\}\}/g, labelBB)
-                    .replace(/\{\{NOTE1\}\}/g, note1BB)
-                    .replace(/\{\{NOTE2\}\}/g, note2BB);
-                
-                if (shopTemplate.footer) preview += shopTemplate.footer;
+            var card = App.Message.generateProductCard(template, data, ctx.id, product), preview = card;
+            if (ctx.profile) {
+                var message = App.Message.deliveryTemplateFor(ctx.profile, App.State.currentShop);
+                var values = { RECIPIENT: '[mention=000]Получатель[/mention]', SENDER: '[mention=000]Отправитель[/mention]', NOTE: 'Текст записки' };
+                var extras = { PRODUCT: card, LABEL: App.Message.generateFieldBBCode(template, data, 'label', ctx.id), NOTE1: App.Message.generateFieldBBCode(template, data, 'note1', ctx.id), NOTE2: App.Message.generateFieldBBCode(template, data, 'note2', ctx.id) };
+                var body = message.productBlock ? App.Message.interpolate(message.productBlock, extras) : card + ['LABEL', 'NOTE1', 'NOTE2'].map(function(k) { return extras[k] ? '\n\n' + extras[k] : ''; }).join('');
+                preview = App.Message.interpolate(message.header || '', values) + App.Message.interpolate(message.note || '', values) + body + (message.footer || '');
+            } else if (App.Message.catalogPriceInRow(template)) {
+                var payment = App.Message.generatePayment(product);
+                if (payment) preview += '\n\n' + payment;
             }
-            
-            html += '<div class="ctx-tab-content' + (isActive ? ' active' : '') + '" id="step3_content_' + ctx.id + '">' +
-                '<textarea readonly id="step3_preview_' + ctx.id + '" rows="20" ' +
-                'style="font-family:monospace; font-size:11px; width:100%;">' +
-                App.UI.escapeHtml(preview) +
-                '</textarea>' +
-                '<small style="opacity:0.7;">проверочный пример. оформление меняется на шаге 2, шапка — в профиле доставки. Изменения сохранятся в шаблоне.</small>' +
-                '</div>';
+            html += '<div class="ctx-tab-content' + (ctx.id === active ? ' active' : '') + '" id="step3_content_' + ctx.id + '">' +
+                '<textarea readonly id="step3_preview_' + ctx.id + '" rows="16" style="font-family:monospace;font-size:11px;width:100%">' + App.UI.escapeHtml(preview) + '</textarea>' +
+                '<small style="opacity:0.7">' + (ctx.profile ? 'полное сообщение доставки · ID пользователя выбирается по полю ' + App.UI.escapeHtml(ctx.profile.userField) : 'карточка каталога и ее оплата; общая таблица собирается при публикации каталога') + '</small></div>';
         });
-        
-        html += '</div>';
-        return html;
+        return html + '</div>';
     },
     
     // Применить пример данных к BB-коду карточки
@@ -712,6 +658,7 @@ App.Templates = {
     
     prevStep: function() {
         if (App.State.templateWizardStep > 1) {
+            App.Templates.saveStepData();
             App.State.templateWizardStep--;
             App.Templates.updateWizardStep();
         }
@@ -749,17 +696,6 @@ App.Templates = {
         } else if (step === 2) {
             App.Templates.saveStep2Data();
             
-        } else if (step === 3) {
-            // Сохраняем отредактированные BB-коды из textarea предпросмотра обратно в contexts
-            if (template.contexts) {
-                Object.keys(template.contexts).forEach(function(ctxId) {
-                    var ta = document.getElementById('step3_preview_' + ctxId);
-                    if (!ta) return;
-                    // Пытаемся извлечь карточку товара из отредактированного текста
-                    // Для простоты: сохраняем весь отредактированный блок как fullPreview
-                    template.contexts[ctxId].fullPreview = ta.value;
-                });
-            }
         }
         
         App.State.tempTemplate = template;
@@ -781,8 +717,7 @@ App.Templates = {
         }
         
         
-        // Добавляем дефолтные шаблоны доставки (на основе магазина)
-        template.deliveryTemplates = App.Config.DEFAULT_DELIVERY_TEMPLATES;
+        // Message headers belong to forum profiles, not individual product templates.
         
         // Если это новый шаблон
         if (!template.id || template.id.startsWith('temp_')) {
