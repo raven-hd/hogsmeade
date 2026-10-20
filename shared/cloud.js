@@ -1,4 +1,4 @@
-/* One atomic public document per shop. The shared address book never enters this document. */
+/* One atomic document per shop. The shared forum address book has its own document below. */
 App.Cloud = {
     busy: false, suspended: true, initialized: false, conflict: false, externalChange: false,
     meta: null, notice: '', timer: null,
@@ -158,5 +158,189 @@ App.Cloud = {
             this.install(remote.data, remote.sha); location.reload();
         } catch (error) { this.notice = error.message; App.UI.showToast(error.message, true); }
         finally { this.busy = false; this.render(); }
+    }
+};
+
+/* Shared across shops and devices. Reads need no token; writes use the image-upload token.
+   A three-way merge combines different records. Conflicting edits keep the local draft. */
+App.UserCloud = {
+    initialized: false, busy: false, conflict: false, notice: '', meta: null, timer: null,
+    metaKey: 'delivery.v2.shared.users.cloud',
+    recoveryKey: 'delivery.v2.recovery.users',
+    url: 'https://api.github.com/repos/raven-hd/hogsmeade/contents/shared/users.json',
+    enabled: function () { return App.Config.CLOUD_ENABLED; },
+    exclusive: function (action) {
+        // Other shop tabs share localStorage. Serialize baseline changes across those tabs.
+        return navigator.locks ? navigator.locks.request('hogsmeade-shared-users', action) : action();
+    },
+    normalize: function (users) {
+        App.Backup.validateUsers(users);
+        var names = new Set();
+        return users.map(function (u) {
+            var out = {}, key = u.name.trim().toLowerCase();
+            if (names.has(key)) throw new Error('в базе повторяется имя пользователя');
+            names.add(key);
+            ['name', 'hogsmeadeId', 'hogwartsId', 'gryffindorId', 'ravenclawId', 'hufflepuffId', 'slytherinId', 'addrHogsmeade', 'addrHogwarts'].forEach(function (field) {
+                if (u[field] != null && typeof u[field] !== 'string') throw new Error('неверное поле пользователя');
+                out[field] = (u[field] || '').trim();
+            });
+            return out;
+        });
+    },
+    parse: function (data) {
+        if (data?.format !== 'hogsmeade-users' || data.version !== 1) throw new Error('неизвестный формат общей базы');
+        return this.normalize(data.users);
+    },
+    local: function () { return this.normalize(App.Storage.loadUsers()); },
+    equal: function (a, b) { return App.Cloud.serialize(a) === App.Cloud.serialize(b); },
+    dirty: function () { return !this.meta || !this.equal(this.local(), this.meta.base); },
+    readMeta: function () {
+        try {
+            var m = JSON.parse(localStorage.getItem(this.metaKey));
+            this.meta = m && m.url === this.url ? { url: this.url, sha: m.sha || null, base: this.normalize(m.base) } : null;
+        } catch (_) { this.meta = null; }
+    },
+    merge: function (base, local, remote) {
+        var map = function (list) { return new Map((list || []).map(function (u) { return [u.name.toLowerCase(), u]; })); };
+        var b = map(base), l = map(local), r = map(remote), self = this;
+        // Remote order stays stable; new local records are appended.
+        var keys = new Set([...r.keys(), ...l.keys(), ...b.keys()]), merged = [];
+        keys.forEach(function (key) {
+            var before = b.get(key), here = l.get(key), there = r.get(key), result;
+            if (self.equal(here, there)) result = here;
+            else if (base !== null && self.equal(here, before)) result = there;
+            else if (base !== null && self.equal(there, before)) result = here;
+            else if (base === null && !here) result = there;
+            else if (base === null && !there) result = here;
+            else throw new Error('одна запись изменена на двух устройствах · локальная база сохранена');
+            if (result) merged.push(result);
+        });
+        return merged;
+    },
+    readRemote: async function () {
+        var response = await fetch(this.url + '?ref=main', { headers: App.Cloud.headers(), cache: 'no-store', signal: AbortSignal.timeout(15000) });
+        if (!response.ok) throw new Error(response.status === 404 ? 'общая база на github еще не создана или нет доступа' : App.Images.errorText(response.status));
+        var file = await response.json();
+        if (!file.sha || file.encoding !== 'base64' || typeof file.content !== 'string') throw new Error('github не вернул общую базу');
+        return { sha: file.sha, users: this.parse(JSON.parse(App.Cloud.decode(file.content))) };
+    },
+    install: function (users, remote) {
+        var key = App.Config.STORAGE_KEYS.USERS, oldUsers = localStorage.getItem(key), oldMeta = localStorage.getItem(this.metaKey);
+        var meta = { url: this.url, sha: remote.sha || null, base: remote.users };
+        try {
+            localStorage.setItem(key, JSON.stringify(users));
+            localStorage.setItem(this.metaKey, JSON.stringify(meta));
+        } catch (error) {
+            if (oldUsers === null) localStorage.removeItem(key); else localStorage.setItem(key, oldUsers);
+            if (oldMeta === null) localStorage.removeItem(this.metaKey); else localStorage.setItem(this.metaKey, oldMeta);
+            throw error;
+        }
+        this.meta = meta;
+        if (this.initialized) this.refresh();
+    },
+    refresh: function () {
+        var editing = App.State.editingUserIndex == null ? null : App.State.users[App.State.editingUserIndex]?.name;
+        App.State.users = this.local();
+        if (editing) {
+            var index = App.State.users.findIndex(function (u) { return u.name === editing; });
+            if (index < 0) App.Users.cancelEdit(); else App.State.editingUserIndex = index;
+        }
+        App.Users.updateDatalist(); App.Users.renderList(); App.Users.refreshFieldHints(); App.Message.update();
+    },
+    reconcile: function (remote) {
+        this.readMeta();
+        var merged;
+        try { merged = this.merge(this.meta ? this.meta.base : null, this.local(), remote.users); }
+        catch (error) { this.conflict = true; throw error; }
+        this.install(merged, remote); this.conflict = false;
+    },
+    bootstrap: function () { var self = this; return this.exclusive(function () { return self.bootstrapLocked(); }); },
+    bootstrapLocked: async function () {
+        if (!this.enabled()) return;
+        this.readMeta();
+        try { this.reconcile(await this.readRemote()); }
+        catch (error) {
+            if (this.conflict) { this.notice = error.message; return; }
+            try {
+                var response = await fetch(new URL('shared/users.json', App.Config.BASE_URL), { cache: 'no-store' });
+                if (!response.ok) throw new Error('нет копии');
+                var users = this.parse(await response.json());
+                // A deployed Pages copy can lag behind the API: never replace a known baseline with it.
+                if (!this.meta) this.reconcile({ sha: null, users: users });
+            } catch (fallbackError) { if (this.conflict) this.notice = fallbackError.message; }
+            if (!this.notice) this.notice = 'github недоступен · база сохранена в браузере';
+        }
+    },
+    watch: function () {
+        if (!this.enabled()) return;
+        this.initialized = true;
+        var modal = document.querySelector('#usersModal .modal'), self = this;
+        var bar = document.createElement('div'); bar.className = 'cloud-bar'; bar.style.cssText = 'margin:0 0 10px;flex-wrap:wrap';
+        bar.innerHTML = '<span id="usersCloudStatus" role="status" style="flex:1;min-width:160px"></span><button type="button" id="usersCloudSave" title="сохранить общую базу на github"><i class="fa-solid fa-cloud-arrow-up"></i></button><button type="button" id="usersCloudLoad" title="обновить базу с github"><i class="fa-solid fa-arrows-rotate"></i></button>';
+        modal.querySelector('h3').after(bar);
+        document.getElementById('usersCloudSave').onclick = function () { self.save(); };
+        document.getElementById('usersCloudLoad').onclick = function () { self.load(); };
+        window.addEventListener('beforeunload', function (e) { if (self.dirty()) { e.preventDefault(); e.returnValue = ''; } });
+        window.addEventListener('online', function () { self.schedule(); });
+        window.addEventListener('storage', function (e) {
+            if (e.key === self.metaKey || e.key === App.Config.STORAGE_KEYS.USERS) {
+                self.readMeta(); self.refresh(); self.schedule();
+            }
+        });
+        this.schedule();
+    },
+    render: function () {
+        if (!this.initialized) return;
+        var dirty = this.dirty();
+        document.getElementById('usersCloudStatus').textContent = this.notice || (this.conflict ? 'конфликт записей · локальная база сохранена' : dirty ? App.Images.token ? 'изменения ожидают отправки на github' : 'изменения в браузере · подключите токен github' : this.meta?.sha ? 'общая база · сохранено на github' : 'общая база · загружена копия сайта');
+        document.getElementById('usersCloudSave').disabled = this.busy || this.conflict || !dirty;
+        document.getElementById('usersCloudLoad').disabled = this.busy;
+    },
+    schedule: function () {
+        if (!this.enabled() || !this.initialized) return;
+        clearTimeout(this.timer); this.notice = ''; this.render();
+        var self = this;
+        if (App.Images.token && !this.busy && !this.conflict && this.dirty()) this.timer = setTimeout(function () { self.save(); }, 1000);
+    },
+    save: function () { var self = this; return this.exclusive(function () { return self.saveLocked(); }); },
+    saveLocked: async function () {
+        if (!this.initialized || this.busy || this.conflict) return;
+        if (!App.Images.token) { App.Images.openSettings(); return; }
+        this.busy = true; this.notice = 'сохраняем общую базу…'; this.render();
+        var success = false;
+        try {
+            // Read + merge first, then compare-and-swap the exact version we read.
+            for (var attempt = 0; attempt < 3; attempt++) {
+                var remote = await this.readRemote(); this.reconcile(remote);
+                var users = this.local();
+                if (this.equal(users, remote.users)) { success = true; break; }
+                var response = await fetch(this.url, { method: 'PUT', headers: Object.assign({ 'Content-Type': 'application/json' }, App.Cloud.headers()), body: JSON.stringify({ message: 'Update shared forum users', branch: 'main', sha: remote.sha, content: App.Cloud.encode(JSON.stringify({ format: 'hogsmeade-users', version: 1, users: users }, null, 2) + '\n') }), signal: AbortSignal.timeout(30000) });
+                if (response.status === 409) continue;
+                if (!response.ok) throw new Error(App.Images.errorText(response.status));
+                var result = await response.json();
+                if (!result.content?.sha) throw new Error('не получено подтверждение сохранения базы');
+                // Edits made during the request stay dirty and are sent in the next batch.
+                this.install(this.local(), { sha: result.content.sha, users: users }); success = true; break;
+            }
+            if (!success) throw new Error('база меняется в другой вкладке · повторите сохранение');
+            this.notice = '';
+        } catch (error) { this.notice = error.message; App.UI.showToast('база пользователей: ' + error.message, true); }
+        finally { this.busy = false; this.render(); if (success) this.schedule(); }
+    },
+    load: function () { var self = this; return this.exclusive(function () { return self.loadLocked(); }); },
+    loadLocked: async function () {
+        if (this.busy) return;
+        if (this.conflict && !confirm('сначала скачайте локальную базу кнопкой «скачать». загрузить версию github? локальная копия также останется в резерве браузера.')) return;
+        var replace = this.conflict;
+        this.busy = true; this.notice = 'обновляем общую базу…'; this.render();
+        try {
+            var remote = await this.readRemote();
+            if (replace) {
+                localStorage.setItem(this.recoveryKey, JSON.stringify(this.local()));
+                this.install(remote.users, remote); this.conflict = false;
+            } else this.reconcile(remote);
+            this.notice = '';
+        } catch (error) { this.notice = error.message; App.UI.showToast('база пользователей: ' + error.message, true); }
+        finally { this.busy = false; this.render(); if (!this.notice) this.schedule(); }
     }
 };
