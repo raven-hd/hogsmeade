@@ -34,6 +34,7 @@ App.Storage = {
             var serialized = name === 'CATALOG_NAME' || name === 'CURRENT_DELIVERY_PROFILE' ? String(data) : JSON.stringify(data);
             localStorage.setItem(App.Config.STORAGE_KEYS[name] || name, serialized);
             if (App.Cloud) App.Cloud.schedule();
+            if (name === 'USERS' && App.UserCloud) App.UserCloud.schedule();
         } catch (error) {
             App.UI.showToast('Не удалось сохранить изменения. Скачайте резервную копию: память браузера может быть заполнена.', true);
             throw error;
