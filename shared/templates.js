@@ -416,7 +416,7 @@ App.Templates = {
             if (!ctx.isDelivery) {
                 html += '<small style="opacity:0.7;">карточка для каталога Хогсмида: изображение, описание, состав, цена и любая другая нужная информация.</small>';
                 var placement = ctxData.pricePlacement || 'auto';
-                html += '<label style="margin-top:8px">оплата в каталоге <select id="ctx_price_catalog">' +
+                html += '<label style="margin-top:8px">оплата в каталоге <select id="ctx_price_catalog" style="display:block;width:100%;max-width:100%">' +
                     '<option value="auto"' + (placement === 'auto' ? ' selected' : '') + '>по шаблону: внутри карточки или отдельной строкой</option>' +
                     '<option value="row"' + (placement === 'row' ? ' selected' : '') + '>всегда отдельной строкой</option>' +
                     '<option value="card"' + (placement === 'card' ? ' selected' : '') + '>только внутри карточки</option></select></label>' +
