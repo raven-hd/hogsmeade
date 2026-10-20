@@ -71,9 +71,10 @@ App.init = function() {
 
 App.start = async function () {
     try {
-        if (App.Cloud) await App.Cloud.bootstrap();
+        await Promise.all([App.Cloud?.bootstrap(), App.UserCloud?.bootstrap()]);
         App.init();
         if (App.Cloud) App.Cloud.watch();
+        if (App.UserCloud) App.UserCloud.watch();
     } catch (error) {
         App.UI.showToast('не удалось открыть мастерскую: ' + error.message, true);
     }
