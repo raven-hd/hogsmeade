@@ -349,7 +349,8 @@ App.Products = {
         
         // Генерируем BB-код карточки
         var contextId = App.State.catalogMode === 'catalog' ? 'catalog' : 'delivery_' + App.State.currentDeliveryProfileId;
-        var productCard = App.Message.generateProductCard(template, fieldData, contextId);
+        var previewProduct = App.State.products.find(function (p) { return p.id === App.State.editingId; }) || App.Products.draftIdentity;
+        var productCard = App.Message.generateProductCard(template, fieldData, contextId, previewProduct);
         document.getElementById('previewDescription').value = productCard;
         
         // Генерируем BB-код этикетки (и других опциональных полей)
@@ -437,8 +438,9 @@ App.Products = {
             return;
         }
         
-        // Собираем данные полей
-        var fieldData = {};
+        // Hidden or temporarily disabled fields remain available if the template enables them again.
+        var existingProduct = App.State.products.find(function (p) { return p.id === App.State.editingId; });
+        var fieldData = structuredClone(existingProduct?.fieldData || {});
         
         // ВАЖНО: Добавляем название в fieldData!
         fieldData.name = App.formatProductName(name);
