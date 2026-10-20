@@ -12,19 +12,22 @@ App.Message = {
         if (template.contexts && template.contexts[contextId]) {
             return template.contexts[contextId];
         }
-        // Fallback на каталог
-        if (template.contexts && template.contexts['catalog']) {
-            return template.contexts['catalog'];
+        // Missing delivery variants must inherit another delivery, never the catalog.
+        if (contextId !== 'catalog' && !template.productCardTemplate) {
+            var profile = App.getDeliveryProfiles().find(function (p) { return 'delivery_' + p.id === contextId; });
+            var baseId = profile?.userField === 'hogsmeadeId' ? 'delivery_hogsmeade' : 'delivery_hogwarts';
+            var base = template.contexts?.[baseId] || template.contexts?.delivery_hogsmeade;
+            if (base) return base;
         }
-        // Legacy fallback — старый шаблон без contexts
+        // Compatibility with older templates; new variants use the appropriate base card.
         return {
-            cardTemplate: template.productCardTemplate || '',
+            cardTemplate: template.productCardTemplate || (contextId === 'catalog' ? App.Config.DEFAULT_CATALOG_CARD_TEMPLATE : App.Config.DEFAULT_PRODUCT_CARD_TEMPLATE),
             optionalFields: template.optionalFields || {}
         };
     },
     
     // ==================== ГЕНЕРАЦИЯ BB-КОДА КАРТОЧКИ ====================
-    generateProductCard: function(template, fieldData, contextId) {
+    generateProductCard: function(template, fieldData, contextId, product) {
         var ctx = App.Message.getTemplateContext(template, contextId || 'catalog');
         var cardTemplate = ctx.cardTemplate || template.productCardTemplate || '';
         
@@ -32,7 +35,29 @@ App.Message = {
         
         var values = { name: fieldData.name ?? '' };
         (template.fields || []).forEach(function(field) { values[field.id] = field.enabled ? (fieldData[field.id] ?? '') : ''; });
+        values.sku = product?.sku || '';
+        values.payment = template.fields?.some(function(f) { return f.id === 'price' && !f.enabled; }) ? '' : App.Message.generatePayment(product, fieldData);
         return App.Message.interpolate(cardTemplate, values);
+    },
+
+    generatePayment: function(product, fieldData) {
+        var data = fieldData || product?.fieldData || {};
+        var price = String(data.price ?? '').trim();
+        if (!price) return '';
+        var account = App.Workspace.getSettings().paymentAccount ?? (App.State.currentShop === 'cafeteria' ? '' : '217');
+        return /^\d+$/.test(account) && product?.sku ? '[pay to=' + account + ' comment=' + product.sku + ']' + price + '[/pay]' : price + ' г';
+    },
+
+    catalogPriceInRow: function(template) {
+        var ctx = App.Message.getTemplateContext(template, 'catalog');
+        if (ctx.pricePlacement === 'card') return false;
+        if (ctx.pricePlacement === 'row') return true;
+        return !/\{\{(?:price|payment)\}\}/.test(ctx.cardTemplate || '');
+    },
+
+    catalogRowPayment: function(product) {
+        var template = App.Templates.getById(product.templateId);
+        return template && !App.Message.catalogPriceInRow(template) ? '' : App.Message.generatePayment(product);
     },
 
     interpolate: function(text, values) {
@@ -40,6 +65,8 @@ App.Message = {
     },
 
     generateFieldBBCode: function(template, fieldData, fieldId, contextId) {
+        var field = template.fields?.find(function (f) { return f.id === fieldId; });
+        if (field && !field.enabled) return '';
         var ctx = App.Message.getTemplateContext(template, contextId || 'catalog');
         var fieldCfg = (ctx.optionalFields || template.optionalFields || {})[fieldId];
         if (!fieldCfg || !fieldCfg.enabled || fieldData[fieldId] == null || String(fieldData[fieldId]).trim() === '') return '';
@@ -60,6 +87,10 @@ App.Message = {
         // Берём активный профиль доставки
         var profile = App.getCurrentDeliveryProfile();
         
+        return App.Message.deliveryTemplateFor(profile, bannerId);
+    },
+
+    deliveryTemplateFor: function(profile, bannerId) {
         if (!profile) {
             console.warn('Профиль доставки не найден, используем fallback');
             return App.Config.DEFAULT_DELIVERY_TEMPLATES.hogwarts.raven;
@@ -164,7 +195,7 @@ App.Message = {
             var profile = App.getCurrentDeliveryProfile();
             var contextId = profile ? ('delivery_' + profile.id) : 'delivery_hogsmeade';
             
-            var productCard = App.Message.generateProductCard(template, product.fieldData || {}, contextId);
+            var productCard = App.Message.generateProductCard(template, product.fieldData || {}, contextId, product);
             var labelBBCode = App.Message.generateFieldBBCode(template, product.fieldData || {}, 'label', contextId);
             var note1BBCode = App.Message.generateFieldBBCode(template, product.fieldData || {}, 'note1', contextId);
             var note2BBCode = App.Message.generateFieldBBCode(template, product.fieldData || {}, 'note2', contextId);
@@ -245,11 +276,6 @@ App.Message = {
         // Товары в таблице с чередованием цен
         var rows = Math.ceil(selected.length / columns);
         
-        // Проверяем есть ли товары с ценами
-        var hasAnyPrice = selected.some(function(p) {
-            return p.fieldData && p.fieldData.price && p.fieldData.price.toString().trim();
-        });
-        
         for (var row = 0; row < rows; row++) {
             // Строка с товарами
             catalog += '[tr]';
@@ -262,7 +288,7 @@ App.Message = {
                     var template = App.Templates.getById(product.templateId);
                     
                     if (template && product.fieldData) {
-                        var productCard = App.Message.generateProductCard(template, product.fieldData, 'catalog');
+                        var productCard = App.Message.generateProductCard(template, product.fieldData, 'catalog', product);
                         catalog += '[td][center]\n' + productCard + '\n[/center][/td]';
                     } else {
                         catalog += '[td][center]' + (product.name || 'Товар без данных') + '[/center][/td]';
@@ -275,7 +301,7 @@ App.Message = {
             catalog += '[/tr]\n';
             
             // Строка с ценами сразу после товаров (если есть цены)
-            if (hasAnyPrice) {
+            if (selected.slice(row * columns, (row + 1) * columns).some(function(p) { return !!App.Message.catalogRowPayment(p); })) {
                 catalog += '[tr]\n';
                 
                 for (var col = 0; col < columns; col++) {
@@ -283,11 +309,8 @@ App.Message = {
                     
                     if (index < selected.length) {
                         var product = selected[index];
-                        var price = product.fieldData && product.fieldData.price ? product.fieldData.price.toString().trim() : '';
-                        
-                        if (price) {
-                            var account = App.Workspace.getSettings().paymentAccount ?? (App.State.currentShop === 'cafeteria' ? '' : '217');
-                            var priceText = /^\d+$/.test(account) ? '[pay to=' + account + ' comment=' + product.sku + ']' + price + '[/pay]' : price + ' г';
+                        var priceText = App.Message.catalogRowPayment(product);
+                        if (priceText) {
                             catalog += '[tdt=transparent]\n' + priceText + '\n[/tdt]\n';
                         } else {
                             catalog += '[tdt=transparent][/tdt]\n';
