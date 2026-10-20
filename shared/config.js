@@ -220,10 +220,10 @@ App.Config = {
     ],
     
     // Дефолтный BB-код карточки товара — используется как основа для всех контекстов
-    DEFAULT_PRODUCT_CARD_TEMPLATE: '[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]',
+    DEFAULT_PRODUCT_CARD_TEMPLATE: '[center][width=300][img]{{image}}[/img][/width]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]',
     
     // Дефолтный BB-код для каталога (без типа товара)
-    DEFAULT_CATALOG_CARD_TEMPLATE: '[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]',
+    DEFAULT_CATALOG_CARD_TEMPLATE: '[center][width=300][img]{{image}}[/img][/width]\n[size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]',
     
     // Дефолтные BB-шаблоны для опциональных полей (используются как образец)
     DEFAULT_FIELD_TEMPLATES: {
