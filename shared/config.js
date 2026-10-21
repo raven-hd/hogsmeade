@@ -192,7 +192,7 @@ App.Config = {
             name: 'Этикетка', 
             placeholder: 'Текст этикетки...', 
             type: 'textarea', 
-            enabled: true,
+            enabled: false,
             required: false,
             showInCatalog: false,
             showInDelivery: true
@@ -225,31 +225,16 @@ App.Config = {
     // Дефолтный BB-код для каталога (без типа товара)
     DEFAULT_CATALOG_CARD_TEMPLATE: '[center][width=300][img]{{image}}[/img][/width]\n[size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]',
     
-    // Дефолтные BB-шаблоны для опциональных полей (используются как образец)
-    DEFAULT_FIELD_TEMPLATES: {
-        label: '[center][width=450][more=ЭТИКЕТКА][justify]{{label}}[/justify][/more][/width][/center]',
-        note1: '[color=#D6B891]•[/color] [size=85][color=#A1817E]\n[b]{{note1}}[/b][/color][/size]',
-        note2: '[color=#D6B891]•[/color] [size=85][color=#A1817E]\n{{note2}}[/color][/size]'
-    },
-    
-    // Дефолтная структура контекстов шаблона
-    // contexts: { catalog: {...}, delivery_<profileId>: {...} }
     makeDefaultContexts: function(profiles) {
         var ctx = {};
         // Каталог
         ctx['catalog'] = {
-            cardTemplate: App.Config.DEFAULT_CATALOG_CARD_TEMPLATE,
-            optionalFields: {}
+            cardTemplate: App.Config.DEFAULT_CATALOG_CARD_TEMPLATE
         };
         // Для каждого профиля доставки
         profiles.forEach(function(p) {
             ctx['delivery_' + p.id] = {
-                cardTemplate: App.Config.DEFAULT_PRODUCT_CARD_TEMPLATE,
-                optionalFields: {
-                    label: { enabled: false, template: App.Config.DEFAULT_FIELD_TEMPLATES.label },
-                    note1: { enabled: false, template: App.Config.DEFAULT_FIELD_TEMPLATES.note1 },
-                    note2: { enabled: false, template: App.Config.DEFAULT_FIELD_TEMPLATES.note2 }
-                }
+                cardTemplate: App.Config.DEFAULT_PRODUCT_CARD_TEMPLATE
             };
         });
         return ctx;
