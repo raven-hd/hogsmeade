@@ -8,6 +8,24 @@ App.Message = {
     // ==================== ПОЛУЧЕНИЕ КОНТЕКСТА ШАБЛОНА ====================
     // contextId: 'catalog' | 'delivery_hogsmeade' | 'delivery_hogwarts' | ...
     getTemplateContext: function(template, contextId) {
+        var ctx = Object.assign({}, App.Message.getStoredTemplateContext(template, contextId));
+        var extras = ctx.optionalFields || {};
+        // Keep old notes in the one editable card. Automatic labels are retired.
+        if (contextId !== 'catalog') {
+            ['note1', 'note2'].forEach(function(id) {
+                var field = extras[id];
+                if (field?.enabled && !(ctx.cardTemplate || '').includes('{{' + id + '}}')) {
+                    ctx.cardTemplate = (ctx.cardTemplate || '') + '{{#' + id + '}}\n\n' + (field.template || '{{' + id + '}}') + '{{/' + id + '}}';
+                }
+            });
+        }
+        delete ctx.optionalFields;
+        delete ctx.fullPreview;
+        delete ctx.pricePlacement;
+        return ctx;
+    },
+
+    getStoredTemplateContext: function(template, contextId) {
         // Новая структура с contexts
         if (template.contexts && template.contexts[contextId]) {
             return template.contexts[contextId];
@@ -36,7 +54,16 @@ App.Message = {
         var values = { name: fieldData.name ?? '' };
         (template.fields || []).forEach(function(field) { values[field.id] = field.enabled ? (fieldData[field.id] ?? '') : ''; });
         values.sku = product?.sku || '';
-        values.payment = template.fields?.some(function(f) { return f.id === 'price' && !f.enabled; }) ? '' : App.Message.generatePayment(product, fieldData);
+        values.payment = !contextId || contextId === 'catalog' || template.fields?.some(function(f) { return f.id === 'price' && !f.enabled; }) ? '' : App.Message.generatePayment(product, fieldData);
+        // Process optional wrappers before inserting values, so product text stays literal.
+        var section = /\{\{#([a-zA-Z0-9_-]+)\}\}((?:(?!\{\{[#/])[\s\S])*?)\{\{\/\1\}\}/g;
+        var previous;
+        do {
+            previous = cardTemplate;
+            cardTemplate = cardTemplate.replace(section, function(_, id, body) {
+                return String(values[id] ?? '').trim() ? body : '';
+            });
+        } while (cardTemplate !== previous);
         return App.Message.interpolate(cardTemplate, values);
     },
 
@@ -48,30 +75,18 @@ App.Message = {
         return /^\d+$/.test(account) && product?.sku ? '[pay to=' + account + ' comment=' + product.sku + ']' + price + '[/pay]' : price + ' г';
     },
 
-    catalogPriceInRow: function(template) {
-        var ctx = App.Message.getTemplateContext(template, 'catalog');
-        if (ctx.pricePlacement === 'card') return false;
-        if (ctx.pricePlacement === 'row') return true;
-        return !/\{\{(?:price|payment)\}\}/.test(ctx.cardTemplate || '');
-    },
+    catalogPriceInRow: function() { return true; },
 
     catalogRowPayment: function(product) {
-        var template = App.Templates.getById(product.templateId);
-        return template && !App.Message.catalogPriceInRow(template) ? '' : App.Message.generatePayment(product);
+        return App.Message.generatePayment(product);
     },
 
     interpolate: function(text, values) {
         return String(text).replace(/\{\{([a-zA-Z0-9_-]+)\}\}/g, function(match, key) { return Object.hasOwn(values, key) ? String(values[key] ?? '') : match; });
     },
 
-    generateFieldBBCode: function(template, fieldData, fieldId, contextId) {
-        var field = template.fields?.find(function (f) { return f.id === fieldId; });
-        if (field && !field.enabled) return '';
-        var ctx = App.Message.getTemplateContext(template, contextId || 'catalog');
-        var fieldCfg = (ctx.optionalFields || template.optionalFields || {})[fieldId];
-        if (!fieldCfg || !fieldCfg.enabled || fieldData[fieldId] == null || String(fieldData[fieldId]).trim() === '') return '';
-        return App.Message.interpolate(fieldCfg.template || ('{{' + fieldId + '}}'), { [fieldId]: fieldData[fieldId] });
-    },
+    // Compatibility for old profile product blocks: everything is now in PRODUCT.
+    generateFieldBBCode: function() { return ''; },
 
     // ==================== ПОЛУЧЕНИЕ ШАБЛОНА ДОСТАВКИ ====================
     getDeliveryTemplate: function() {
