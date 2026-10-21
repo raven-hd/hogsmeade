@@ -1,7 +1,7 @@
 /* One atomic document per shop. The shared forum address book has its own document below. */
 App.Cloud = {
     busy: false, suspended: true, initialized: false, conflict: false, externalChange: false,
-    meta: null, notice: '', timer: null,
+    meta: null, notice: '', timer: null, feedbackState: null, feedbackNotice: '',
     enabled: function () { return App.Config.CLOUD_ENABLED; },
     folder: function () { return App.Config.SHOP_FOLDERS[App.State.currentShop]; },
     path: function () { return this.folder() + '/data.json'; },
@@ -124,8 +124,23 @@ App.Cloud = {
         var dirty = this.dirty(), text = this.notice || (this.externalChange ? 'магазин изменен в другой вкладке · обновите страницу' : this.conflict ? 'конфликт версий · сначала загрузите актуальную копию' : dirty ? 'есть изменения только в этом браузере' : this.meta?.sha ? 'сохранено на github' : 'локальная копия · github пока не подключен');
         document.getElementById('cloudStatus').textContent = text;
         document.getElementById('cloudStatus').dataset.dirty = String(dirty || this.conflict || this.externalChange);
-        document.getElementById('cloudSave').disabled = this.busy || this.conflict || this.externalChange || (!dirty && !!this.meta?.sha);
-        document.getElementById('cloudLoad').disabled = this.busy;
+        var save = document.getElementById('cloudSave'), load = document.getElementById('cloudLoad');
+        var state = this.busy ? 'busy' : this.externalChange ? 'external' : this.conflict ? 'conflict' : this.notice ? 'warning' : dirty ? 'dirty' : 'saved';
+        save.disabled = this.busy || this.conflict || this.externalChange || (!dirty && !!this.meta?.sha);
+        load.disabled = this.busy;
+        save.dataset.syncState = state;
+        save.title = 'сохранить каталог и шаблоны на github · ' + text;
+        save.setAttribute('aria-label', save.title);
+        save.setAttribute('aria-busy', String(this.busy));
+        load.title = 'загрузить актуальный каталог с github · ' + text;
+        load.setAttribute('aria-label', load.title);
+        // Notify once per state change; the save button keeps a visible reminder.
+        if (this.initialized && !this.busy && (state !== this.feedbackState || this.notice !== this.feedbackNotice)) {
+            if (state === 'external' || state === 'conflict' || state === 'warning') App.UI.showToast(text, true);
+            else if (state === 'dirty') App.UI.showToast('изменения только в браузере · сохраните их кнопкой с облаком');
+        }
+        this.feedbackState = state;
+        this.feedbackNotice = this.notice;
     },
     save: async function () {
         if (!this.initialized || this.busy || this.conflict || this.externalChange) return;
