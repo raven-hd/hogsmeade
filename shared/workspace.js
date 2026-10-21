@@ -11,12 +11,7 @@ App.Workspace = {
         App.Workspace.compactToolbar();
         try { localStorage.setItem('delivery.v2.last-shop', shop.id); } catch (_) {}
         document.title = shop.name + ' · мастерская доставок';
-        document.getElementById('shopTitle').hidden = true;
-        var logo = document.getElementById('shopLogo');
-        var banner = App.getCurrentBanner();
-        if (banner.url) { logo.src = banner.url; logo.alt = shop.name; }
-        else document.getElementById('shopLogoContainer').hidden = true;
-        document.getElementById('shopFooter').textContent = shop.name;
+        App.Workspace.renderShopHeading(shop);
         if (!App.State.templates.length) {
             var accent = App.State.currentShop === 'peach' ? '#A85A73' : '#D6B891';
             var base = App.Config.DEFAULT_PRODUCT_CARD_TEMPLATE.replace(/#D6B891/g, accent);
@@ -45,6 +40,27 @@ App.Workspace = {
             }
         });
     },
+    renderShopHeading: function (shop) {
+        var title = document.getElementById('shopTitle');
+        title.hidden = false;
+        title.className = 'shop-name';
+        title.textContent = shop.name;
+        var branding = document.getElementById('shopLogoContainer');
+        branding.className = 'shop-heading';
+        branding.hidden = false;
+        branding.replaceChildren(title);
+        if (shop.id === 'raven') {
+            var subtitle = document.createElement('p');
+            subtitle.className = 'shop-subtitle';
+            subtitle.textContent = 'оригинальные товары башни воздуха est. 2014';
+            branding.appendChild(subtitle);
+        }
+        var footer = document.querySelector('footer .footer-text');
+        var credit = document.createElement('span');
+        credit.id = 'shopFooter';
+        credit.textContent = '© Blake Cringe Production & Ellington Cockroach Entertainment';
+        footer.replaceChildren(credit);
+    },
     renderDashboardLink: function () {
         var header = document.querySelector('.workspace-header');
         if (!header) return;
@@ -52,11 +68,13 @@ App.Workspace = {
         link.className = 'back-link';
         link.href = 'https://raven-hd.github.io/dashboard.html';
         link.title = 'общий дашборд';
+        link.setAttribute('aria-label', link.title);
+        header.setAttribute('role', 'navigation');
+        header.setAttribute('aria-label', 'управление магазином');
         var icon = document.createElement('i');
         icon.className = 'fa-solid fa-arrow-left';
         icon.setAttribute('aria-hidden', 'true');
         link.appendChild(icon);
-        link.appendChild(document.createTextNode(' дашборд'));
         var previous = header.querySelector('#shopSwitcher, .back-link');
         if (previous) previous.replaceWith(link);
         else header.prepend(link);
