@@ -4264,10 +4264,11 @@
         "catalog": {
           "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
           "optionalFields": {},
-          "fullPreview": "[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]"
+          "fullPreview": "[center][width=300][img]https://via.placeholder.com/300x300?text=Фото[/img][/width][/center]\n[center][size=150][b][color=#D6B891]«ПРИМЕР ТОВАРА»[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n[ОПИСАНИЕ]\n[/center]",
+          "pricePlacement": "row"
         },
         "delivery_hogsmeade": {
-          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[/center]",
+          "cardTemplate": "[center][width=300][img]{{image}}[/img][/width][/center]\n[size=120][b][color=#8f714a]{{productType}}[/color][/b][/size]\n[center][size=150][b][color=#D6B891]{{name}}[/color][/b][/size]\n[size=85][color=#A1817E]{{composition}}[/color][/size]\n[color=#D6B891]•[/color]\n{{description}}\n[color=#D6B891]•[/color]\n[more=ОТКРЫТЬ КОРОБОЧКУ][center][width=300][img]{{note1}}[/img][/width][/center][/more]\n[/center]",
           "optionalFields": {
             "label": {
               "enabled": false,
