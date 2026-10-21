@@ -1,17 +1,17 @@
-/* Original layout and original decorative SVG. Themes change colors only. */
+/* Original compact layout and decorative SVG, with a palette for each shop. */
 :root {
- --page:#201f1e;--surface:#2a2928;--surface-alt:#2a2422;--input-bg:#1a1918;--soft:#4a3e34;
- --accent:#D6B891;--accent-hover:#d4a574;--secondary:#E8A87C;--text:#b9a992;--muted:#8a7a6a;
- --line:#3c362f;--line-strong:#5a4a3a;--danger:#c24a4a;
- --accent-rgb:214,184,145;--secondary-rgb:232,168,124;--soft-rgb:74,62,52;--input-rgb:26,25,24;--panel-rgb:42,36,30;--text-rgb:185,169,146;
- --glow-top:#ffc981;--glow-base:#886544;--ornament:url('assets/ornament-raven.svg');color-scheme:dark;
+ --page:#101925;--surface:#1b2938;--surface-alt:#213246;--input-bg:#0d1722;--soft:#30455b;
+ --accent:#d0b48c;--accent-hover:#e4c89c;--secondary:#9fb8d0;--text:#c1cad2;--muted:#94a4b6;
+ --line:#33485a;--line-strong:#526779;--danger:#dc8585;
+ --accent-rgb:208,180,140;--secondary-rgb:159,184,208;--soft-rgb:48,69,91;--input-rgb:13,23,34;--panel-rgb:27,41,56;--text-rgb:193,202,210;
+ --glow-top:#48627e;--glow-base:#192b43;--ornament:url('assets/ornament-raven.svg');--ornament-ink:#526779;color-scheme:dark;
 }
 :root[data-shop=peach] {
- --page:#211e20;--surface:#2c272b;--surface-alt:#30272d;--input-bg:#1e1b1e;--soft:#493b44;
- --accent:#d9adbf;--accent-hover:#e7c3d0;--secondary:#acc19e;--text:#c5b5be;--muted:#aa969f;
- --line:#483c44;--line-strong:#68525f;--danger:#d3798a;
- --accent-rgb:217,173,191;--secondary-rgb:172,193,158;--soft-rgb:73,59,68;--input-rgb:30,27,30;--panel-rgb:44,39,43;--text-rgb:197,181,190;
- --glow-top:#cba4b6;--glow-base:#66555e;--ornament:url('assets/ornament-peach.svg');
+ --page:#f3e5ce;--surface:#fff4df;--surface-alt:#f0e2ce;--input-bg:#fff9ec;--soft:#e4c8bf;
+ --accent:#8b2147;--accent-hover:#651737;--secondary:#246965;--text:#3d4e47;--muted:#686756;
+ --line:#c8bba4;--line-strong:#6a8e80;--danger:#a83345;
+ --accent-rgb:139,33,71;--secondary-rgb:36,105,101;--soft-rgb:228,200,191;--input-rgb:255,249,236;--panel-rgb:255,244,223;--text-rgb:61,78,71;
+ --glow-top:#edc2c0;--glow-base:#f3e5ce;--ornament:url('assets/ornament-peach.svg');--ornament-ink:#a7b4a0;color-scheme:light;
 }
 :root[data-shop=cafeteria] {
  --page:#1f2220;--surface:#282d29;--surface-alt:#29302b;--input-bg:#191e1b;--soft:#3d493e;
@@ -20,11 +20,15 @@
  --accent-rgb:189,198,161;--secondary-rgb:209,177,139;--soft-rgb:61,73,62;--input-rgb:25,30,27;--panel-rgb:40,45,41;--text-rgb:187,193,180;
  --glow-top:#c6cda3;--glow-base:#5f705e;--ornament:url('assets/ornament-cafeteria.svg');
 }
-body{color:var(--text);background-image:var(--ornament),radial-gradient(ellipse 400px 250px at 50% -120px,var(--glow-top) 0%,var(--glow-base) 200px,transparent 700px)}
+body{color:var(--text);isolation:isolate;background-image:radial-gradient(ellipse 400px 250px at 50% -120px,var(--glow-top) 0%,var(--glow-base) 200px,transparent 700px)}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--ornament-ink,var(--soft));mask-image:var(--ornament);mask-position:center;mask-size:80px 80px;-webkit-mask-image:var(--ornament);-webkit-mask-position:center;-webkit-mask-size:80px 80px}
 .panel{background-color:var(--surface);min-width:0}
 /* Tint the existing texture rather than replace its pattern. */
-:root[data-shop=peach] .panel,:root[data-shop=cafeteria] .panel{background-image:linear-gradient(rgba(var(--panel-rgb),.7),rgba(var(--panel-rgb),.7)),url('https://drive.dhog.org/hogsm/textures/topic-item-bg.jpg')}
-:root[data-shop=peach] footer,:root[data-shop=cafeteria] footer{background-image:linear-gradient(rgba(var(--panel-rgb),.72),rgba(var(--panel-rgb),.72)),url('assets/footer-bg.jpg')}
+.panel{background-image:linear-gradient(rgba(var(--panel-rgb),.94),rgba(var(--panel-rgb),.94)),url('https://drive.dhog.org/hogsm/textures/topic-item-bg.jpg')}
+:root[data-shop=cafeteria] footer{background-image:linear-gradient(rgba(var(--panel-rgb),.72),rgba(var(--panel-rgb),.72)),url('assets/footer-bg.jpg')}
+:root[data-shop=peach] footer{background-image:linear-gradient(rgba(12,69,71,.78),rgba(12,69,71,.78)),url('assets/footer-bg.jpg')}
+:root[data-shop=peach] footer .footer-text{color:#f3e5ce}
+:root[data-shop=raven] footer .footer-text{color:#bcc9d7}
 :root[data-shop=peach] .product-item.selected{border-color:var(--secondary);background:rgba(var(--secondary-rgb),.12)}
 :root[data-shop=peach] .mode-toggle-btn.active,:root[data-shop=peach] .version-btn.active{border-color:var(--secondary);background:rgba(var(--secondary-rgb),.13)}
 :root[data-shop=peach] .mode-toggle-btn.active i,:root[data-shop=peach] .version-btn.active i,:root[data-shop=peach] .info-box{color:var(--secondary)}
@@ -55,11 +59,6 @@ button:disabled{cursor:wait;opacity:.5}a:focus-visible,button:focus-visible,inpu
  .grid{grid-template-columns:minmax(0,1fr)}.workspace-header{gap:6px}.workspace-header h1{font-size:11px}.header-logo img{max-height:50px}
  .catalog-search{margin-top:0}.image-settings{max-width:95vw}.output-area{overflow-wrap:anywhere}
 }
-/* The separate shop chooser uses the same compact, textured design. */
-body.home{height:auto;min-height:100vh}.home-shell{width:min(850px,100%);margin:0 auto;padding:15px}.home-top{display:flex;justify-content:space-between;gap:10px;font-size:10px;color:var(--muted);margin-bottom:15px}.home-intro{margin-bottom:14px}.home-intro h1{font-size:20px;font-weight:400;color:var(--accent);margin-bottom:5px}.home-intro p{font-size:12px;color:var(--text)}
-.shop-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.shop-card{display:flex;flex-direction:column;gap:8px;color:var(--accent);text-decoration:none;border:1px solid var(--line);padding:12px;background-color:var(--surface);background-image:url('https://drive.dhog.org/hogsm/textures/topic-item-bg.jpg');box-shadow:0 2px 4px rgba(0,0,0,.3)}.shop-card:hover{border-color:var(--accent)}.shop-card.peach{color:#d9adbf;border-color:#68525f}.shop-card.cafe{color:#bdc6a1;border-color:#576452}.shop-card h2{font-size:16px;color:inherit;font-weight:400}.shop-card .emblem{font-size:22px}.shop-card .number{font-size:9px;opacity:.65}.shop-card p{font-size:11px;color:var(--text)}.shop-card .enter{display:flex;justify-content:space-between;margin-top:auto;font-size:11px;border-top:1px solid var(--line);padding-top:8px}.home-note{margin-top:15px;display:flex;justify-content:space-between;gap:20px;font-size:10px;color:var(--muted)}.home-note span{max-width:380px}
-@media(max-width:639px){.home-shell{padding:10px}.shop-cards{grid-template-columns:1fr}.shop-card{gap:5px}.home-note{flex-direction:column;gap:7px}}
-
 /* The product name remains primary; the SKU takes only a small inline badge. */
 .product-sku{display:inline;font-family:Consolas,monospace;font-size:10px;line-height:1.2;font-weight:400;color:var(--muted);white-space:nowrap;margin-left:5px;user-select:text}
 #formSku{font-size:9px}
@@ -68,3 +67,13 @@ body.home{height:auto;min-height:100vh}.home-shell{width:min(850px,100%);margin:
 .cloud-bar #cloudStatus[data-dirty=true]{color:var(--accent)}
 .cloud-bar button{padding:4px 7px;font-size:10px;line-height:1.2}
 .cloud-bar button:disabled{opacity:.45;cursor:default}
+
+/* A small shop switcher stays in the dashboard header, including half-screen windows. */
+.shop-switcher{display:flex;align-items:center;gap:3px;padding:3px;border:1px solid var(--line-strong);background:#11232b;border-radius:5px;flex:0 0 auto}
+.shop-switcher-link{display:flex;align-items:center;justify-content:center;position:relative;width:36px;height:36px;border:1px solid transparent;border-radius:3px;color:#d6b891;text-decoration:none;transition:background .15s,border-color .15s,color .15s}
+.shop-switcher-link i{font-size:17px}
+.shop-switcher-link img{width:34px;height:34px;object-fit:contain;mix-blend-mode:screen;position:absolute;inset:0;margin:auto}
+.shop-switcher-link:hover{color:#f0d4a4;background:#24404a;border-color:#a3b5b3}
+.shop-switcher-link[aria-current=page]{color:#e4c89c;border-color:#d0b48c;background:#29414b;box-shadow:inset 0 -2px #d0b48c}
+.workspace-header{min-height:44px}
+@media(max-width:400px){.workspace-header{gap:5px}.shop-switcher{gap:2px;padding:2px}.shop-switcher-link{width:32px;height:32px}.shop-switcher-link img{width:30px;height:30px}.workspace-actions{gap:3px}.workspace-actions button{width:24px;height:26px}}
