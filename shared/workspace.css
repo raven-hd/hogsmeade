@@ -35,12 +35,13 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 :root[data-shop=peach] .product-item.selected{border-color:var(--secondary);background:rgba(var(--secondary-rgb),.12)}
 :root[data-shop=peach] .mode-toggle-btn.active,:root[data-shop=peach] .version-btn.active{border-color:var(--secondary);background:rgba(var(--secondary-rgb),.13)}
 :root[data-shop=peach] .mode-toggle-btn.active i,:root[data-shop=peach] .version-btn.active i,:root[data-shop=peach] .info-box{color:var(--secondary)}
-.workspace-header{display:flex;align-items:center;gap:8px;min-height:42px;flex:0 0 auto;margin-bottom:10px;padding:4px 6px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
-h1,h2,h3,h4,h5,h6,.category-title,.ced-section-title,.step-label{font-family:'Arsenal SC','Segoe UI',sans-serif}
+.workspace-header{display:flex;align-items:center;gap:8px;min-height:42px;flex:0 0 auto;margin:8px 0 0;padding:4px 6px;background:var(--surface);border:1px solid var(--line);border-radius:0}
+h1,h2,h3,h4,h5,h6,.group-title,.category-title,.ced-section-title,.step-label{font-family:'Arsenal SC','Segoe UI',sans-serif}
 .shop-heading{text-align:center;flex:0 0 auto;margin:2px 0 14px;padding:0 8px}
-.shop-name{font-size:48px;line-height:1.12;font-weight:400;color:var(--accent);letter-spacing:.025em;overflow-wrap:anywhere}
-.shop-subtitle{margin:5px 0 0;font-family:'Segoe UI',Tahoma,sans-serif;font-size:11px;line-height:1.4;font-weight:400;color:var(--muted)}
+.shop-name{font-size:64px;line-height:1;font-weight:700;color:var(--accent);letter-spacing:.025em;overflow-wrap:anywhere}
+.shop-subtitle{margin:0;font-family:'Segoe UI',Tahoma,sans-serif;font-size:11px;line-height:1.2;font-weight:400;color:var(--accent);color:color-mix(in srgb,var(--accent) 72%,#000)}
 .panel-header h2{font-size:18px}
+.group-title{font-size:15px;font-weight:700}
 .category-title{font-size:14px}
 .collection-group .category-title{font-size:13px}
 .footer-text{font-family:'Segoe UI',Tahoma,sans-serif;font-size:10px;line-height:1.4}
@@ -51,7 +52,8 @@ h1,h2,h3,h4,h5,h6,.category-title,.ced-section-title,.step-label{font-family:'Ar
 .catalog-search{position:relative;margin:0 0 7px;flex-shrink:0}.catalog-search>i{position:absolute;left:8px;top:8px;font-size:11px;color:var(--muted)}
 .catalog-search input{width:100%;padding:6px 8px 6px 25px;font-size:11px;color:var(--text);background:var(--input-bg);border:1px solid var(--line);border-radius:4px;box-sizing:border-box}
 .generation-mode-toggle{margin-left:0;padding-left:0;border-left:0}
-.generation-mode-toggle .mode-toggle-btn{width:28px;min-width:28px;height:28px;padding:0;font-size:13px}
+.generation-mode-toggle .mode-toggle-btn{width:28px;min-width:28px;height:28px;padding:0;font-size:13px;line-height:1}
+.generation-mode-toggle .mode-toggle-btn i{margin:0;line-height:1}
 .panel-header>div{min-width:0}.panel-header h2{white-space:nowrap}.product-name{overflow-wrap:anywhere}.version-toggle{flex-shrink:0}
 .form-box{min-height:0}.image-upload-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}.file-button{font-size:10px;cursor:pointer;padding:3px 6px;border:1px dashed var(--line-strong);border-radius:3px;color:var(--secondary)}.upload-status{font-size:10px;color:var(--muted)}
 .image-settings{max-width:450px}.image-settings label{display:block;margin:7px 0}.image-settings label input{display:block;width:100%;margin-top:3px}.image-settings p{margin:7px 0;font-size:12px;color:var(--text)}.image-settings small{display:block;font-size:10px;color:var(--muted);line-height:1.5}.image-settings input[type=password]{padding:8px;border-radius:4px;background:var(--input-bg);color:var(--text);border:1px solid var(--line)}
@@ -61,12 +63,12 @@ button:disabled{cursor:wait;opacity:.5}a:focus-visible,button:focus-visible,inpu
 @media(min-width:640px) and (max-width:1000px){
  .main-wrapper{padding:8px}.grid{gap:8px}.panel{padding:8px}.panel-header{gap:6px}.panel-header h2{font-size:14px}
  .catalog-controls{gap:4px}.catalog-btn,.add-product-btn,.version-btn{width:26px;height:26px}.catalog-btn i,.add-product-btn i,.version-btn i{font-size:12px}
- .shop-name{font-size:36px}.shop-heading{margin-bottom:10px}.generation-mode-toggle .mode-toggle-btn{width:26px;min-width:26px;height:26px}
+ .shop-name{font-size:48px}.shop-heading{margin-bottom:10px}.generation-mode-toggle .mode-toggle-btn{width:26px;min-width:26px;height:26px}
  .group-collection-row{gap:6px}.form-row{gap:6px}.template-selector{gap:4px}.template-selector select{min-width:0}
  .catalog-settings{padding:8px}.form-box{overflow-y:auto;max-height:65vh}
 }
 @media(max-width:639px){
- .grid{grid-template-columns:minmax(0,1fr)}.workspace-header{gap:6px}.shop-name{font-size:30px}.shop-heading{margin-bottom:10px}
+ .grid{grid-template-columns:minmax(0,1fr)}.workspace-header{gap:6px}.shop-name{font-size:38px}.shop-heading{margin-bottom:10px}
  .catalog-search{margin-top:0}.image-settings{max-width:95vw}.output-area{overflow-wrap:anywhere}
 }
 /* The product name remains primary; the SKU takes only a small inline badge. */
