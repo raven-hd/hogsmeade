@@ -83,6 +83,9 @@ App.Workspace = {
         var actions = document.querySelector('.workspace-actions');
         var cloud = document.getElementById('cloudBar');
         if (!actions || !cloud) return;
+        var grid = document.querySelector('.container > .grid');
+        var menu = document.querySelector('.workspace-header');
+        if (grid && menu && grid.nextElementSibling !== menu) grid.after(menu);
         actions.appendChild(cloud);
         var save = document.getElementById('cloudSave');
         var icon = document.createElement('i');
