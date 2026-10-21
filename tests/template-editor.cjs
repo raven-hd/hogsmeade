@@ -18,6 +18,24 @@ let checks=0;function ok(v,m){assert.ok(v,m);checks++;console.log('ok · '+m);}
  try{
   const p=await open('under-the-raven-wing');
   ok(await p.evaluate(()=>[App.Config.DEFAULT_PRODUCT_CARD_TEMPLATE,App.Config.DEFAULT_CATALOG_CARD_TEMPLATE].every(s=>(s.match(/\[center\]/g)||[]).length===(s.match(/\[\/center\]/g)||[]).length)),'new default cards have balanced center tags');
+  const compatibility=await p.evaluate(()=>{
+   const t={fields:[{id:'label',enabled:true},{id:'note1',enabled:true}],contexts:{delivery_hogsmeade:{cardTemplate:'CARD',optionalFields:{label:{enabled:true,template:'[more=LABEL]{{label}}[/more]'},note1:{enabled:true,template:'[more=NOTE]{{note1}}[/more]'}}}}};
+   const original=JSON.stringify(t),data={label:'old label',note1:'box image'},render=()=>App.Message.generateProductCard(t,data,'delivery_hogsmeade');
+   const result={};
+   result.retiredLabel=!render().includes('old label')&&render().includes('[more=NOTE]box image[/more]');
+   result.readOnly=JSON.stringify(t)===original&&data.label==='old label';
+   const normalized=App.Templates.normalizeCardContexts(structuredClone(t));
+   result.migrated=!normalized.contexts.delivery_hogsmeade.optionalFields&&App.Message.generateProductCard(normalized,data,'delivery_hogsmeade')===render();
+   result.idempotent=JSON.stringify(App.Templates.normalizeCardContexts(structuredClone(normalized)))===JSON.stringify(normalized);
+   data.note1='';result.emptyNote=render()==='CARD';data.note1='box image';t.fields[1].enabled=false;result.disabledNote=render()==='CARD';t.fields[1].enabled=true;
+   t.contexts.delivery_hogsmeade.cardTemplate='[more=BOX][img]{{note1}}[/img][/more]';
+   result.box=render()==='[more=BOX][img]box image[/img][/more]';
+   t.contexts.delivery_hogsmeade.cardTemplate='{{#note1}}outer {{#label}}{{label}}{{/label}}{{/note1}}';delete t.contexts.delivery_hogsmeade.optionalFields;
+   result.nested=render()==='outer old label';
+   data.label='{{#note1}}literal{{/note1}}';result.literal=render()==='outer {{#note1}}literal{{/note1}}';
+   return result;
+  });
+  for(const [name,value] of Object.entries(compatibility))ok(value,'legacy template compatibility: '+name);
   if(process.env.BASELINE_MESSAGE_FILE){
    const old=fs.readFileSync(process.env.BASELINE_MESSAGE_FILE,'utf8');
    for(const [page,label] of [[p,'raven'],[await open('rich-peach'),'peach']]){
@@ -28,28 +46,29 @@ let checks=0;function ok(v,m){assert.ok(v,m);checks++;console.log('ok · '+m);}
   await p.evaluate(()=>{App.Templates.openModal();App.Templates.showTemplateForm();});
   await p.locator('#wizardTemplateName').fill('проверка "карточки"');
   const indexes=await p.evaluate(()=>Object.fromEntries(App.State.tempTemplate.fields.map((f,i)=>[f.id,i])));
-  for(const id of ['image','productType','composition','note1','note2'])await p.locator('#field_enabled_'+indexes[id]).uncheck();
+  for(const id of ['image','productType','composition','note2'])await p.locator('#field_enabled_'+indexes[id]).uncheck();
+  await p.locator('#field_enabled_'+indexes.note1).check();
   await p.locator('#wizardNextBtn').click();
+  ok(await p.locator('.optional-fields-section').count()===0,'one card editor replaces the optional-fields panel');
+  ok(await p.locator('#ctx_price_catalog').count()===0,'catalog payment placement is fixed, with no extra selector');
   await p.locator('#ctx_card_catalog').fill('CAT {{name}} {{payment}}');
   await p.evaluate(()=>App.Templates.switchCtxTab('delivery_hogsmeade'));
-  await p.locator('#ctx_card_delivery_hogsmeade').fill('HG {{name}} {{description}} {{composition}}');
-  await p.locator('#opt_delivery_hogsmeade_label_template').fill('[more=Этикетка]{{label}}[/more]');
+  await p.locator('#ctx_card_delivery_hogsmeade').fill('HG {{name}} {{description}} {{composition}}{{#note1}}[more=коробочка]{{note1}}[/more]{{/note1}}');
   await p.evaluate(()=>App.Templates.switchCtxTab('delivery_hogwarts'));
-  await p.locator('#ctx_card_delivery_hogwarts').fill('HW {{name}} {{description}} {{composition}}');
-  await p.locator('#opt_delivery_hogwarts_label_template').fill('[quote]{{label}}[/quote]');
+  await p.locator('#ctx_card_delivery_hogwarts').fill('HW {{name}} {{description}} {{composition}}{{#note1}}[quote]{{note1}}[/quote]{{/note1}}');
   await p.locator('#wizardPrevBtn').click();await p.locator('#wizardNextBtn').click();
-  ok(await p.locator('#ctx_card_delivery_hogwarts').inputValue()==='HW {{name}} {{description}} {{composition}}','back and next preserve edits in all forum tabs');
+  ok(await p.locator('#ctx_card_delivery_hogwarts').inputValue()==='HW {{name}} {{description}} {{composition}}{{#note1}}[quote]{{note1}}[/quote]{{/note1}}','back and next preserve edits in all forum tabs');
   ok(await p.locator('#ctx_card_catalog').inputValue()==='CAT {{name}} {{payment}}','delivery edits do not overwrite the catalog card');
   await p.locator('#wizardNextBtn').click();
   const hgPreview=await p.locator('#step3_preview_delivery_hogsmeade').inputValue(),hwPreview=await p.locator('#step3_preview_delivery_hogwarts').inputValue();
-  ok(hgPreview.includes('HG ')&&hgPreview.includes('[more=Этикетка]')&&hwPreview.includes('HW ')&&hwPreview.includes('[quote]'),'delivery variants keep distinct cards and quote formatting');
+  ok(hgPreview.includes('HG ')&&hgPreview.includes('[more=коробочка]')&&hwPreview.includes('HW ')&&hwPreview.includes('[quote]'),'delivery variants keep distinct cards and quote formatting');
   ok(!hgPreview.includes('{{composition}}')&&!hgPreview.includes('[СОСТАВ]'),'disabled fields disappear from the preview exactly as in actual delivery');
   ok((await p.locator('#step3_preview_catalog').inputValue()).includes('[pay to=217 comment=SV-001]10[/pay]'),'catalog preview renders payment with a sample SKU');
   await p.locator('#wizardSaveBtn').click();
   const id=await p.evaluate(()=>App.State.templates.at(-1).id);
   ok(await p.evaluate(id=>!App.Templates.getById(id).contexts.catalog.fullPreview,id),'example preview text is not saved as template data');
   await p.evaluate(id=>{
-   const item={id:999999,sku:'SV-999',shop:'raven',name:'ПРИМЕР ТОВАРА',category:'свечи',group:'свечи',templateId:id,fieldData:{name:'ПРИМЕР ТОВАРА',description:'[ОПИСАНИЕ]',price:'10',label:'[ЭТИКЕТКА]',composition:'сохраненный состав'}};
+   const item={id:999999,sku:'SV-999',shop:'raven',name:'ПРИМЕР ТОВАРА',category:'свечи',group:'свечи',templateId:id,fieldData:{name:'ПРИМЕР ТОВАРА',description:'[ОПИСАНИЕ]',price:'10',label:'[ЭТИКЕТКА]',note1:'[ПРИМЕЧАНИЕ 1]',composition:'сохраненный состав'}};
    App.State.products=[item];App.State.selectedProducts=[item.id];App.State.catalogMode='delivery';App.State.currentDeliveryProfileId='hogsmeade';App.State.currentMode='hogsmeade';
    document.getElementById('recipient').value='Получатель';document.getElementById('recipientId').value='000';document.getElementById('sender').value='Отправитель';document.getElementById('senderId').value='000';document.getElementById('note').value='Текст записки';App.Message.update();
   },id);
@@ -65,10 +84,9 @@ let checks=0;function ok(v,m){assert.ok(v,m);checks++;console.log('ok · '+m);}
    c.pricePlacement='auto';let legacy=App.Message.generateCatalog();
    return {inline,number,row,hidden,legacy};
   },id);
-  ok((prices.inline.match(/\[pay /g)||[]).length===1&&!prices.inline.includes('[tdt=transparent]'),'inline payment is not duplicated in a separate table row');
-  ok(!prices.number.includes('[pay ')&&prices.number.includes('10'),'inline plain price does not force an extra payment row');
-  ok(prices.row.includes('[tdt=transparent]')&&(prices.row.match(/\[pay /g)||[]).length===1,'explicit price row remains available');
-  ok(!prices.hidden.includes('[pay ')&&prices.legacy.includes('[pay '),'card-only mode can omit payment while legacy cards retain their payment row');
+  for(const [mode,output] of Object.entries(prices)){
+   ok((output.match(/\[pay /g)||[]).length===1&&output.includes('[tdt=transparent]\n[pay to=217 comment=SV-999]10[/pay]\n[/tdt]'),'catalog has one correctly formatted payment cell regardless of old setting: '+mode);
+  }
   ok(await p.evaluate(id=>{
    const t=App.Templates.getById(id);App.State.deliveryProfiles.push({id:'extra-forum',name:'другой форум',icon:'fa-solid fa-book',userField:'hogwartsId'});
    return App.Message.getTemplateContext(t,'delivery_extra-forum').cardTemplate.startsWith('HW ');
@@ -86,9 +104,9 @@ let checks=0;function ok(v,m){assert.ok(v,m);checks++;console.log('ok · '+m);}
   ok(await p.evaluate(()=>App.State.products[0].fieldData.composition==='сохраненный состав'),'editing a product preserves temporarily disabled field values');
   await p.evaluate(id=>{App.Templates.openModal();App.Templates.edit(id);},id);
   ok(await p.locator('#wizardTemplateName').inputValue()==='проверка "карточки"','quoted template names survive reopening the editor');
-  ok(await p.evaluate(id=>App.Cloud.normalize(App.Cloud.snapshot()).templates.find(t=>t.id===id).contexts.catalog.pricePlacement==='auto',id),'GitHub catalog normalization preserves the new price placement setting');
+  ok(await p.evaluate(id=>!App.Cloud.normalize(App.Cloud.snapshot()).templates.find(t=>t.id===id).contexts.catalog.optionalFields,id),'GitHub snapshot preserves unified template contexts');
   await p.setViewportSize({width:390,height:900});await p.evaluate(()=>{App.Templates.goToStep(2);App.Templates.switchCtxTab('catalog');});
-  ok(await p.locator('#ctx_price_catalog').evaluate(el=>el.getBoundingClientRect().width>0&&el.getBoundingClientRect().width<=el.closest('.ctx-tab-content').getBoundingClientRect().width),'price control fits a narrow window');
+  ok(await p.locator('#ctx_card_catalog').evaluate(el=>el.getBoundingClientRect().width>0&&el.getBoundingClientRect().width<=el.closest('.ctx-tab-content').getBoundingClientRect().width),'card editor fits a narrow window');
   ok(errors.length===0,'template editing and generation produce no JavaScript errors');
   console.log('PASS '+checks+' checks');
  }finally{await browser.close();server.close();}
