@@ -1,7 +1,20 @@
 <!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>мастерская доставок</title><link rel="stylesheet" href="shared/vendor/fontawesome/css/all.min.css"><link rel="stylesheet" href="shared/styles.css"><link rel="stylesheet" href="shared/workspace.css"></head>
-<body class="home"><main class="home-shell"><div class="home-top"><span>ЛИЧНАЯ МАСТЕРСКАЯ</span><span>ТОВАРЫ / КАТАЛОГИ / ДОСТАВКИ</span></div><header class="home-intro"><h1>мастерская доставок</h1><p>выберите магазин, соберите доставку и скопируйте готовое сообщение для форума.</p></header><section class="shop-cards" aria-label="магазины">
-<a class="shop-card peach" href="rich-peach/"><span class="number">01 / ЦВЕТЫ И ПОДАРКИ</span><span class="emblem" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span><h2>rich peach</h2><p>букеты, красивые поводы и розовый с зеленым.</p><span class="enter">открыть мастерскую <span>↗</span></span></a>
-<a class="shop-card raven" href="under-the-raven-wing/"><span class="number">02 / КОГТЕВРАНСКИЙ МАГАЗИН</span><span class="emblem" aria-hidden="true"><i class="fa-solid fa-crow"></i></span><h2>под крылом Ворона</h2><p>товары и коллекции. у каждого подарка своя история.</p><span class="enter">открыть мастерскую <span>↗</span></span></a>
-<a class="shop-card cafe" href="cafeteria/"><span class="number">03 / СКОРО ОТКРЫТИЕ</span><span class="emblem" aria-hidden="true"><i class="fa-solid fa-mug-hot"></i></span><h2>кафетерий</h2><p>место уже готово. можно спокойно собирать будущее меню.</p><span class="enter">подготовить меню <span>↗</span></span></a>
-</section><div class="home-note"><span>каталоги, шаблоны и оформление магазинов разделены. общая только база людей и адресов доставки.</span><span>каталоги и шаблоны загружаются с github.<br>изменения отправляются кнопкой «сохранить на github».</span></div></main></body></html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>мастерская доставок</title>
+<script>
+(function () {
+    var folders = { peach: 'rich-peach/', raven: 'under-the-raven-wing/', cafeteria: 'cafeteria/' };
+    var shop = 'raven';
+    try {
+        var saved = localStorage.getItem('delivery.v2.last-shop');
+        if (Object.hasOwn(folders, saved)) shop = saved;
+    } catch (_) {}
+    location.replace(folders[shop]);
+})();
+</script>
+</head>
+<body><p><a href="under-the-raven-wing/">открыть мастерскую доставок</a></p></body>
+</html>
