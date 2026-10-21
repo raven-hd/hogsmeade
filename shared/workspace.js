@@ -8,9 +8,10 @@ App.Workspace = {
     init: function () {
         var shop = App.getCurrentShop();
         App.Workspace.renderDashboardLink();
+        App.Workspace.compactToolbar();
         try { localStorage.setItem('delivery.v2.last-shop', shop.id); } catch (_) {}
         document.title = shop.name + ' · мастерская доставок';
-        document.getElementById('shopTitle').textContent = shop.name;
+        document.getElementById('shopTitle').hidden = true;
         var logo = document.getElementById('shopLogo');
         var banner = App.getCurrentBanner();
         if (banner.url) { logo.src = banner.url; logo.alt = shop.name; }
@@ -60,9 +61,30 @@ App.Workspace = {
         if (previous) previous.replaceWith(link);
         else header.prepend(link);
     },
+    compactToolbar: function () {
+        var actions = document.querySelector('.workspace-actions');
+        var cloud = document.getElementById('cloudBar');
+        if (!actions || !cloud) return;
+        actions.appendChild(cloud);
+        var save = document.getElementById('cloudSave');
+        var icon = document.createElement('i');
+        icon.className = 'fa-solid fa-cloud-arrow-up';
+        icon.setAttribute('aria-hidden', 'true');
+        save.replaceChildren(icon);
+        save.title = 'сохранить каталог и шаблоны на github';
+        save.setAttribute('aria-label', save.title);
+        if (!App.Cloud?.initialized) {
+            save.disabled = true;
+            document.getElementById('cloudLoad').disabled = true;
+        }
+    },
     saveCatalogSettings: function () {
         var settings = this.getSettings();
         ['catalogColumns', 'catalogHeaderEnabled', 'catalogHeaderEvent', 'catalogHeaderTitle', 'catalogHeaderDescription'].forEach(function (key) { settings[key] = App.State[key]; });
         App.Storage.write(this.settingsKey(), settings);
     }
 };
+
+// The module is loaded after the header markup, before cloud data starts loading.
+App.Workspace.renderDashboardLink();
+App.Workspace.compactToolbar();
