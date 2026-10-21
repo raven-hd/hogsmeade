@@ -3,9 +3,9 @@
     'use strict';
     var requested = document.documentElement.dataset.workspace || new URLSearchParams(location.search).get('shop');
     var shops = {
-        raven: { id: 'raven', name: 'под крылом Ворона', subtitle: 'товары, коллекции и маленькие поводы для доставки', icon: 'fa-solid fa-crow', color: '#bba078' },
-        peach: { id: 'peach', name: 'rich peach', subtitle: 'цветы, подарки и все, что пора отправить', icon: 'fa-solid fa-leaf', color: '#a85370' },
-        cafeteria: { id: 'cafeteria', name: 'кафетерий', subtitle: 'отдельная мастерская для будущего меню', icon: 'fa-solid fa-mug-hot', color: '#a56839' }
+        raven: { id: 'raven', name: 'под крылом Ворона', subtitle: 'товары, коллекции и маленькие поводы для доставки', icon: 'fa-solid fa-crow', switcherIcon: 'shared/assets/shop-raven.png', color: '#d0b48c' },
+        peach: { id: 'peach', name: 'rich peach', subtitle: 'цветы, подарки и все, что пора отправить', icon: 'fa-solid fa-leaf', switcherIcon: 'shared/assets/shop-peach.png', color: '#8b2147' },
+        cafeteria: { id: 'cafeteria', name: 'кафетерий', subtitle: 'отдельная мастерская для будущего меню', icon: 'fa-solid fa-mug-hot', switcherIcon: 'shared/assets/shop-cafeteria.png', color: '#a56839' }
     };
     App.State.currentShop = Object.hasOwn(shops, requested) ? requested : 'raven';
     App.Config.SHOPS = shops;
