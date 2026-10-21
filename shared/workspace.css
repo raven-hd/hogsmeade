@@ -67,13 +67,3 @@ button:disabled{cursor:wait;opacity:.5}a:focus-visible,button:focus-visible,inpu
 .cloud-bar #cloudStatus[data-dirty=true]{color:var(--accent)}
 .cloud-bar button{padding:4px 7px;font-size:10px;line-height:1.2}
 .cloud-bar button:disabled{opacity:.45;cursor:default}
-
-/* A small shop switcher stays in the dashboard header, including half-screen windows. */
-.shop-switcher{display:flex;align-items:center;gap:3px;padding:3px;border:1px solid var(--line-strong);background:#11232b;border-radius:5px;flex:0 0 auto}
-.shop-switcher-link{display:flex;align-items:center;justify-content:center;position:relative;width:36px;height:36px;border:1px solid transparent;border-radius:3px;color:#d6b891;text-decoration:none;transition:background .15s,border-color .15s,color .15s}
-.shop-switcher-link i{font-size:17px}
-.shop-switcher-link img{width:34px;height:34px;object-fit:contain;mix-blend-mode:screen;position:absolute;inset:0;margin:auto}
-.shop-switcher-link:hover{color:#f0d4a4;background:#24404a;border-color:#a3b5b3}
-.shop-switcher-link[aria-current=page]{color:#e4c89c;border-color:#d0b48c;background:#29414b;box-shadow:inset 0 -2px #d0b48c}
-.workspace-header{min-height:44px}
-@media(max-width:400px){.workspace-header{gap:5px}.shop-switcher{gap:2px;padding:2px}.shop-switcher-link{width:32px;height:32px}.shop-switcher-link img{width:30px;height:30px}.workspace-actions{gap:3px}.workspace-actions button{width:24px;height:26px}}
