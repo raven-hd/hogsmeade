@@ -9,7 +9,9 @@
       "gryffindorId": "",
       "ravenclawId": "",
       "hufflepuffId": "",
-      "slytherinId": ""
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": ""
     },
     {
       "name": "Вивьен Джонс",
@@ -582,6 +584,17 @@
       "slytherinId": "",
       "addrHogsmeade": "",
       "addrHogwarts": ""
+    },
+    {
+      "name": "Лиария Спраут",
+      "hogsmeadeId": "",
+      "hogwartsId": "",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/viewtopic.php?t=5828&start=330"
     }
   ]
 }
