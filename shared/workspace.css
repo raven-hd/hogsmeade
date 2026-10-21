@@ -1,3 +1,6 @@
+/* Arsenal SC from the supplied archive; SIL Open Font License in assets/fonts/OFL.txt. */
+@font-face{font-family:'Arsenal SC';src:url('assets/fonts/ArsenalSC-Regular.woff') format('woff');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Arsenal SC';src:url('assets/fonts/ArsenalSC-Bold.woff') format('woff');font-style:normal;font-weight:700;font-display:swap}
 /* Original compact layout and decorative SVG, with a palette for each shop. */
 :root {
  --page:#101925;--surface:#1b2938;--surface-alt:#213246;--input-bg:#0d1722;--soft:#30455b;
@@ -32,11 +35,18 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 :root[data-shop=peach] .product-item.selected{border-color:var(--secondary);background:rgba(var(--secondary-rgb),.12)}
 :root[data-shop=peach] .mode-toggle-btn.active,:root[data-shop=peach] .version-btn.active{border-color:var(--secondary);background:rgba(var(--secondary-rgb),.13)}
 :root[data-shop=peach] .mode-toggle-btn.active i,:root[data-shop=peach] .version-btn.active i,:root[data-shop=peach] .info-box{color:var(--secondary)}
-.workspace-header{display:flex;align-items:center;gap:8px;min-height:26px;flex:0 0 auto;margin-bottom:6px}
-.workspace-header h1{display:none}
-.back-link{font-size:11px;color:var(--muted);text-decoration:none;white-space:nowrap}.back-link:hover{color:var(--accent)}
-.workspace-actions{display:flex;gap:4px;margin-left:auto;flex:0 0 auto}.workspace-actions button{width:26px;height:26px;padding:0;font-size:12px}
-.header-logo{margin-bottom:8px}.header-logo img{width:min(100%,400px);max-width:400px;max-height:138px;height:auto;object-fit:contain}
+.workspace-header{display:flex;align-items:center;gap:8px;min-height:42px;flex:0 0 auto;margin-bottom:10px;padding:4px 6px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+h1,h2,h3,h4,h5,h6,.category-title,.ced-section-title,.step-label{font-family:'Arsenal SC','Segoe UI',sans-serif}
+.shop-heading{text-align:center;flex:0 0 auto;margin:2px 0 14px;padding:0 8px}
+.shop-name{font-size:48px;line-height:1.12;font-weight:400;color:var(--accent);letter-spacing:.025em;overflow-wrap:anywhere}
+.shop-subtitle{margin:5px 0 0;font-family:'Segoe UI',Tahoma,sans-serif;font-size:11px;line-height:1.4;font-weight:400;color:var(--muted)}
+.panel-header h2{font-size:18px}
+.category-title{font-size:14px}
+.collection-group .category-title{font-size:13px}
+.footer-text{font-family:'Segoe UI',Tahoma,sans-serif;font-size:10px;line-height:1.4}
+.back-link{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex:0 0 auto;font-size:14px;color:var(--accent);text-decoration:none;border-radius:4px}.back-link:hover{background:var(--soft);color:var(--accent-hover)}
+.workspace-actions{display:flex;gap:4px;margin-left:auto;flex:0 0 auto}.workspace-actions button{width:32px;height:32px;padding:0;font-size:13px}
+.header-logo{display:none}
 .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 .catalog-search{position:relative;margin:0 0 7px;flex-shrink:0}.catalog-search>i{position:absolute;left:8px;top:8px;font-size:11px;color:var(--muted)}
 .catalog-search input{width:100%;padding:6px 8px 6px 25px;font-size:11px;color:var(--text);background:var(--input-bg);border:1px solid var(--line);border-radius:4px;box-sizing:border-box}
@@ -51,12 +61,12 @@ button:disabled{cursor:wait;opacity:.5}a:focus-visible,button:focus-visible,inpu
 @media(min-width:640px) and (max-width:1000px){
  .main-wrapper{padding:8px}.grid{gap:8px}.panel{padding:8px}.panel-header{gap:6px}.panel-header h2{font-size:14px}
  .catalog-controls{gap:4px}.catalog-btn,.add-product-btn,.version-btn{width:26px;height:26px}.catalog-btn i,.add-product-btn i,.version-btn i{font-size:12px}
- .header-logo img{width:min(100%,320px);max-width:320px;max-height:110px}.header-logo{margin-bottom:6px}.generation-mode-toggle .mode-toggle-btn{width:26px;min-width:26px;height:26px}
+ .shop-name{font-size:36px}.shop-heading{margin-bottom:10px}.generation-mode-toggle .mode-toggle-btn{width:26px;min-width:26px;height:26px}
  .group-collection-row{gap:6px}.form-row{gap:6px}.template-selector{gap:4px}.template-selector select{min-width:0}
  .catalog-settings{padding:8px}.form-box{overflow-y:auto;max-height:65vh}
 }
 @media(max-width:639px){
- .grid{grid-template-columns:minmax(0,1fr)}.workspace-header{gap:6px}.workspace-header h1{font-size:11px}.header-logo img{width:min(100%,300px);max-width:300px;max-height:104px}
+ .grid{grid-template-columns:minmax(0,1fr)}.workspace-header{gap:6px}.shop-name{font-size:30px}.shop-heading{margin-bottom:10px}
  .catalog-search{margin-top:0}.image-settings{max-width:95vw}.output-area{overflow-wrap:anywhere}
 }
 /* The product name remains primary; the SKU takes only a small inline badge. */
@@ -66,7 +76,7 @@ button:disabled{cursor:wait;opacity:.5}a:focus-visible,button:focus-visible,inpu
 .workspace-actions{align-items:center;flex-wrap:nowrap}
 .cloud-bar:not([hidden]){display:flex;align-items:center;gap:4px;margin:0;min-height:0;flex-wrap:nowrap}
 .cloud-bar #cloudStatus{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
-.cloud-bar button{position:relative;width:26px;height:26px;padding:0;font-size:12px;line-height:1;flex:0 0 auto}
+.cloud-bar button{position:relative;width:32px;height:32px;padding:0;font-size:13px;line-height:1;flex:0 0 auto}
 .cloud-bar button:disabled{opacity:.45;cursor:default}
 #cloudSave[data-sync-state=dirty],#cloudSave[data-sync-state=warning]{color:var(--accent);border-color:var(--accent)}
 #cloudSave[data-sync-state=dirty]::after,#cloudSave[data-sync-state=warning]::after,#cloudSave[data-sync-state=external]::after,#cloudSave[data-sync-state=conflict]::after{content:'';position:absolute;top:2px;right:2px;width:6px;height:6px;border:1px solid var(--input-bg);border-radius:50%;background:var(--accent)}
