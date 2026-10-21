@@ -242,7 +242,7 @@
       "hufflepuffId": "",
       "slytherinId": "",
       "addrHogsmeade": "",
-      "addrHogwarts": ""
+      "addrHogwarts": "https://dhog.org/viewtopic.php?p=185402#p185402"
     },
     {
       "name": "Сэм Кинз",
@@ -440,7 +440,7 @@
       "hufflepuffId": "",
       "slytherinId": "",
       "addrHogsmeade": "",
-      "addrHogwarts": ""
+      "addrHogwarts": "https://dhog.org/viewtopic.php?p=185411#p185411"
     },
     {
       "name": "Игараси Кайто",
@@ -550,12 +550,12 @@
       "hufflepuffId": "",
       "slytherinId": "",
       "addrHogsmeade": "https://hogsmeade.dhog.org/viewtopic.php?t=552",
-      "addrHogwarts": ""
+      "addrHogwarts": "https://dhog.org/viewtopic.php?p=185404#p185404"
     },
     {
       "name": "Хаттори Райто",
       "hogsmeadeId": "190",
-      "hogwartsId": "",
+      "hogwartsId": "138",
       "gryffindorId": "",
       "ravenclawId": "",
       "hufflepuffId": "",
@@ -588,13 +588,112 @@
     {
       "name": "Лиария Спраут",
       "hogsmeadeId": "",
-      "hogwartsId": "",
+      "hogwartsId": "69",
       "gryffindorId": "",
       "ravenclawId": "",
       "hufflepuffId": "",
       "slytherinId": "",
       "addrHogsmeade": "",
       "addrHogwarts": "https://dhog.org/viewtopic.php?t=5828&start=330"
+    },
+    {
+      "name": "Энни Мур",
+      "hogsmeadeId": "",
+      "hogwartsId": "77",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/viewtopic.php?t=5870"
+    },
+    {
+      "name": "Evylin McFie",
+      "hogsmeadeId": "",
+      "hogwartsId": "76",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/viewtopic.php?t=5828&start=330"
+    },
+    {
+      "name": "Алиса Индиго",
+      "hogsmeadeId": "",
+      "hogwartsId": "82",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/viewtopic.php?t=5828&start=330"
+    },
+    {
+      "name": "Анна Хоффман",
+      "hogsmeadeId": "",
+      "hogwartsId": "244",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/posting.php?mode=reply&t=6372#preview"
+    },
+    {
+      "name": "Аларик Каслбрук",
+      "hogsmeadeId": "",
+      "hogwartsId": "1845",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/viewtopic.php?t=6149"
+    },
+    {
+      "name": "Алиас Кроу",
+      "hogsmeadeId": "",
+      "hogwartsId": "2981",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/viewtopic.php?t=5828&start=360"
+    },
+    {
+      "name": "Marin Seafour",
+      "hogsmeadeId": "",
+      "hogwartsId": "1561",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/viewtopic.php?p=182654#p182654"
+    },
+    {
+      "name": "Джервис Уоттс",
+      "hogsmeadeId": "",
+      "hogwartsId": "",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/viewtopic.php?t=5828&start=360"
+    },
+    {
+      "name": "Чжоули Линк",
+      "hogsmeadeId": "",
+      "hogwartsId": "1498",
+      "gryffindorId": "",
+      "ravenclawId": "",
+      "hufflepuffId": "",
+      "slytherinId": "",
+      "addrHogsmeade": "",
+      "addrHogwarts": "https://dhog.org/posting.php?mode=reply&t=5828"
     }
   ]
 }
