@@ -10,11 +10,11 @@
  --glow-top:#48627e;--glow-base:#192b43;--ornament:url('assets/ornament-raven.svg');--ornament-ink:#526779;color-scheme:dark;
 }
 :root[data-shop=peach] {
- --page:#0d201b;--surface:#17332b;--surface-alt:#1d3d33;--input-bg:#0b1b16;--soft:#2d5142;
- --accent:#dda4b8;--accent-hover:#edbccb;--secondary:#9cb8a7;--text:#ccd8cf;--muted:#8fa99b;
- --line:#315348;--line-strong:#587966;--danger:#e58c9e;
- --accent-rgb:221,164,184;--secondary-rgb:156,184,167;--soft-rgb:45,81,66;--input-rgb:11,27,22;--panel-rgb:23,51,43;--text-rgb:204,216,207;
- --glow-top:#315a49;--glow-base:#10271f;--ornament:url('assets/ornament-peach.svg');--ornament-ink:#38584a;color-scheme:dark;
+ --page:#1b2421;--surface:#27322e;--surface-alt:#2d3a34;--input-bg:#18201d;--soft:#3d4c44;
+ --accent:#dda4b8;--accent-hover:#edbccb;--secondary:#9cb8a7;--text:#ccd8cf;--muted:#9ba99f;
+ --line:#424f48;--line-strong:#617067;--danger:#e58c9e;
+ --accent-rgb:221,164,184;--secondary-rgb:156,184,167;--soft-rgb:61,76,68;--input-rgb:24,32,29;--panel-rgb:39,50,46;--text-rgb:204,216,207;
+ --glow-top:#4b5b51;--glow-base:#252f29;--ornament:url('assets/ornament-peach.svg');--ornament-ink:#45534b;color-scheme:dark;
 }
 :root[data-shop=cafeteria] {
  --page:#1f2220;--surface:#282d29;--surface-alt:#29302b;--input-bg:#191e1b;--soft:#3d493e;
@@ -29,7 +29,7 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 /* Tint the existing texture rather than replace its pattern. */
 .panel{background-image:linear-gradient(rgba(var(--panel-rgb),.94),rgba(var(--panel-rgb),.94)),url('https://drive.dhog.org/hogsm/textures/topic-item-bg.jpg')}
 :root[data-shop=cafeteria] footer{background-image:linear-gradient(rgba(var(--panel-rgb),.72),rgba(var(--panel-rgb),.72)),url('assets/footer-bg.jpg')}
-:root[data-shop=peach] footer{background-image:linear-gradient(rgba(13,32,27,.84),rgba(13,32,27,.84)),url('assets/footer-bg.jpg')}
+:root[data-shop=peach] footer{background-image:linear-gradient(rgba(27,36,33,.88),rgba(27,36,33,.88)),url('assets/footer-bg.jpg')}
 :root[data-shop=peach] footer .footer-text{color:var(--muted)}
 :root[data-shop=raven] footer .footer-text{color:#bcc9d7}
 :root[data-shop=peach] .product-item.selected{border-color:var(--secondary);background:rgba(var(--secondary-rgb),.12)}
