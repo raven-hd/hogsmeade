@@ -44,16 +44,19 @@ App.Workspace = {
         var title = document.getElementById('shopTitle');
         title.hidden = false;
         title.className = 'shop-name';
-        title.textContent = shop.name;
+        title.textContent = shop.id === 'raven' ? 'Под крылом Ворона' : shop.name;
         var branding = document.getElementById('shopLogoContainer');
         branding.className = 'shop-heading';
         branding.hidden = false;
-        branding.replaceChildren(title);
+        var heading = document.createElement('div');
+        heading.className = 'shop-heading-inner';
+        heading.appendChild(title);
+        branding.replaceChildren(heading);
         if (shop.id === 'raven') {
             var subtitle = document.createElement('p');
             subtitle.className = 'shop-subtitle';
             subtitle.textContent = 'оригинальные товары башни воздуха est. 2014';
-            branding.appendChild(subtitle);
+            heading.appendChild(subtitle);
         }
         var footer = document.querySelector('footer .footer-text');
         var credit = document.createElement('span');
