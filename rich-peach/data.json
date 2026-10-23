@@ -1444,6 +1444,25 @@
       "shop": "peach",
       "id": 1792050780425,
       "sku": "CV-040"
+    },
+    {
+      "category": "Цветочная лавка individual order",
+      "group": "Цветочная лавка",
+      "collection": "individual order",
+      "name": "«THIS IS HALLOWEEN»",
+      "templateId": "template_1782507999186",
+      "fieldData": {
+        "name": "«THIS IS HALLOWEEN»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/0f4eeb4e280b252ec7fb3a4e3f9356c35b4955ff/rich-peach/images/flowers/CV-041-097f5bd1.png",
+        "productType": "букет",
+        "composition": "розы, мини-тыквы, леукоспермум, протея, физалис",
+        "description": "Немного осеннего уюта, немного мрачного очарования и щепотка хэллоуинского озорства. Яркие краски октября, причудливые силуэты и праздничное настроение — чтобы порадовать кого-то особенного и подарить ему немного волшебства самой необычной ночи осени.",
+        "price": "40",
+        "note1": "Блейк Эллингтон"
+      },
+      "shop": "peach",
+      "id": 1792744706670,
+      "sku": "CV-041"
     }
   ],
   "templates": [
@@ -2502,15 +2521,6 @@
     }
   ],
   "deliveryProfiles": [],
-  "catalogName": "",
-  "currentDeliveryProfileId": "hogwarts",
-  "settings": {
-    "catalogColumns": 4,
-    "catalogHeaderEnabled": true,
-    "catalogHeaderEvent": "",
-    "catalogHeaderTitle": "",
-    "catalogHeaderDescription": ""
-  },
   "skuRegistry": {
     "version": 1,
     "owners": {
@@ -2617,7 +2627,17 @@
       "CV-037": "1791493844383",
       "CV-038": "1791493934076",
       "CV-039": "1792049833663",
-      "CV-040": "1792050780425"
+      "CV-040": "1792050780425",
+      "CV-041": "1792744706670"
     }
+  },
+  "catalogName": "",
+  "currentDeliveryProfileId": "hogwarts",
+  "settings": {
+    "catalogColumns": 4,
+    "catalogHeaderEnabled": true,
+    "catalogHeaderEvent": "",
+    "catalogHeaderTitle": "",
+    "catalogHeaderDescription": ""
   }
 }
