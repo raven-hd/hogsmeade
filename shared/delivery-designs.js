@@ -163,9 +163,12 @@ App.DeliveryDesigns = {
     },
     exportPackage: function() {
         var library = this.library();
-        library.items.forEach(function(d) { App.getDeliveryProfiles().forEach(function(p) {
-            if (!Object.hasOwn(d.variants, p.id)) d.variants[p.id] = App.DeliveryDesigns.variant(App.Message.baseDeliveryTemplate(p, App.State.currentShop));
-        }); });
+        var profiles = App.getDeliveryProfiles();
+        library.items.forEach(function(d) {
+            d.variants = Object.fromEntries(profiles.map(function(p) {
+                return [p.id, Object.hasOwn(d.variants, p.id) ? d.variants[p.id] : App.DeliveryDesigns.variant(App.Message.baseDeliveryTemplate(p, App.State.currentShop))];
+            }));
+        });
         return { format: 'hogsmeade-design-package', version: 1, templates: structuredClone(App.State.templates), deliveryDesigns: library, deliveryProfiles: App.getDeliveryProfiles().map(function(p) { return { id: p.id, name: p.name, icon: p.icon, userField: p.userField }; }) };
     },
     importPackage: function(data) {
