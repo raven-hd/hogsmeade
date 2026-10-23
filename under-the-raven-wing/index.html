@@ -296,11 +296,11 @@
                 
                 <div class="modal-buttons" id="templateModalButtons">
                     <button type="button" onclick="showTemplateForm()"><i class="fa-solid fa-plus"></i> Новый шаблон</button>
-                    <button type="button" onclick="downloadTemplates()"><i class="fa-solid fa-download"></i> Скачать</button>
+                    <button type="button" onclick="downloadTemplates()" title="скачать шаблоны и оформление доставки"><i class="fa-solid fa-download"></i> Скачать</button>
                     <button type="button" onclick="document.getElementById('templatesFileInput').click()"><i class="fa-solid fa-upload"></i> Загрузить</button>
                     <button type="button" onclick="closeTemplatesModal()">Закрыть</button>
                 </div>
-                <input type="file" id="templatesFileInput" accept=".json" onchange="uploadTemplates(event)">
+                <input type="file" id="templatesFileInput" accept=".json" aria-label="загрузить шаблоны и оформление доставки" onchange="uploadTemplates(event)">
             </div>
             
             <!-- Мастер создания шаблона -->
@@ -364,16 +364,17 @@
     <script src="shared/storage.js"></script>
     <script src="shared/ui.js"></script>
     <script src="shared/users.js"></script>
-    <script src="shared/templates.js"></script>
+    <script src="shared/templates.js?v=delivery-designs-1"></script>
     <script src="shared/products.js"></script>
     <script src="shared/catalog-editor.js"></script>
-    <script src="shared/message.js"></script>
+    <script src="shared/message.js?v=delivery-designs-1"></script>
     <script src="shared/template-library.js"></script>
     <script src="shared/catalog-routing.js"></script>
-    <script src="shared/backup.js"></script>
+    <script src="shared/backup.js?v=delivery-designs-1"></script>
     <script src="shared/images.js"></script>
     <script src="shared/workspace.js"></script>
-    <script src="shared/cloud.js"></script>
+    <script src="shared/cloud.js?v=delivery-designs-1"></script>
+    <script src="shared/delivery-designs.js?v=1"></script>
     <script src="shared/app.js"></script>
 </body>
 </html>
