@@ -106,6 +106,10 @@ App.Message = {
     },
 
     deliveryTemplateFor: function(profile, bannerId) {
+        return App.DeliveryDesigns?.resolve(profile, bannerId) || App.Message.baseDeliveryTemplate(profile, bannerId);
+    },
+
+    baseDeliveryTemplate: function(profile, bannerId) {
         if (!profile) {
             console.warn('Профиль доставки не найден, используем fallback');
             return App.Config.DEFAULT_DELIVERY_TEMPLATES.hogwarts.raven;
@@ -123,6 +127,17 @@ App.Message = {
         return shopTemplate;
     },
     
+    // One assembly path for both real deliveries and previews.
+    composeDelivery: function(style, values, blocks) {
+        var header = style.header || '', recipient = values.RECIPIENT || '', sender = values.SENDER || '';
+        if (!recipient && !sender) header = header.replace(/для \{\{RECIPIENT\}\} от \{\{SENDER\}\}/gi, '').replace(/для \{\{RECIPIENT\}\}/gi, '').replace(/от \{\{SENDER\}\}/gi, '');
+        else if (!recipient) header = header.replace(/для \{\{RECIPIENT\}\}\s*/gi, '');
+        else if (!sender) header = header.replace(/\s*от \{\{SENDER\}\}/gi, '');
+        var note = values.NOTE && style.note ? App.Message.interpolate(style.note, { NOTE: values.NOTE }) : '';
+        var body = blocks.join(style.separator ?? '\n\n\n\n');
+        return App.Message.interpolate(header, values) + (style.notePosition === 'after' ? body + note : note + body) + (style.footer || '');
+    },
+
     // ==================== ОБНОВЛЕНИЕ СООБЩЕНИЯ ====================
     update: function() {
         if (App.State.catalogMode === 'catalog') { document.getElementById('output').textContent = App.Message.generateCatalog(); return; }
@@ -184,17 +199,7 @@ App.Message = {
         // Получаем шаблон доставки
         var msgTemplate = App.Message.getDeliveryTemplate();
         
-        var message = '';
-        
-        // Include the header even without names, keeping its BBCode balanced with the footer.
-        if (msgTemplate.header) {
-            var header = msgTemplate.header;
-            if (!recipientDisplay && !senderDisplay) header = header.replace(/для \{\{RECIPIENT\}\} от \{\{SENDER\}\}/gi, '').replace(/для \{\{RECIPIENT\}\}/gi, '').replace(/от \{\{SENDER\}\}/gi, '');
-            else if (!recipientDisplay) header = header.replace(/для \{\{RECIPIENT\}\}\s*/gi, '');
-            else if (!senderDisplay) header = header.replace(/\s*от \{\{SENDER\}\}/gi, '');
-            message += App.Message.interpolate(header, { RECIPIENT: recipientDisplay, SENDER: senderDisplay });
-        }
-        if (note && msgTemplate.note) message += App.Message.interpolate(msgTemplate.note, { NOTE: note });
+        var blocks = [];
 
         // Товары
         for (var i = 0; i < selected.length; i++) {
@@ -215,29 +220,17 @@ App.Message = {
             var note1BBCode = App.Message.generateFieldBBCode(template, product.fieldData || {}, 'note1', contextId);
             var note2BBCode = App.Message.generateFieldBBCode(template, product.fieldData || {}, 'note2', contextId);
             
-            // Используем productBlock из шаблона
+            var block = productCard;
             if (msgTemplate.productBlock) {
-                var productBlock = App.Message.interpolate(msgTemplate.productBlock, { PRODUCT: productCard, LABEL: labelBBCode, NOTE1: note1BBCode, NOTE2: note2BBCode });
-                message += productBlock;
+                block = App.Message.interpolate(msgTemplate.productBlock, { PRODUCT: productCard, LABEL: labelBBCode, NOTE1: note1BBCode, NOTE2: note2BBCode });
             } else {
-                message += productCard;
-                if (labelBBCode) message += '\n\n' + labelBBCode;
-                if (note1BBCode) message += '\n\n' + note1BBCode;
-                if (note2BBCode) message += '\n\n' + note2BBCode;
+                if (labelBBCode) block += '\n\n' + labelBBCode;
+                if (note1BBCode) block += '\n\n' + note1BBCode;
+                if (note2BBCode) block += '\n\n' + note2BBCode;
             }
-            
-            // Разделитель между товарами
-            if (i < selected.length - 1) {
-                message += '\n\n\n\n';
-            }
+            blocks.push(block);
         }
-        
-        // Подвал
-        if (msgTemplate.footer) {
-            message += msgTemplate.footer;
-        }
-        
-        document.getElementById('output').textContent = message;
+        document.getElementById('output').textContent = App.Message.composeDelivery(msgTemplate, { RECIPIENT: recipientDisplay, SENDER: senderDisplay, NOTE: note }, blocks);
     },
     
     // ==================== ГЕНЕРАЦИЯ КАТАЛОГА (ТАБЛИЦА) ====================

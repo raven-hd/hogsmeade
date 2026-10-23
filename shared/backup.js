@@ -75,6 +75,7 @@ App.Backup = {
             if (bundle && !catalogPackage) {
                 this.validateProfiles(data.deliveryProfiles);
                 if (!data.settings || typeof data.settings !== 'object' || Array.isArray(data.settings)) throw new Error('некорректные настройки');
+                if (data.settings.deliveryDesigns != null) data.settings.deliveryDesigns = App.DeliveryDesigns.validate(data.settings.deliveryDesigns);
             }
             var skuPlan = App.SKU.plan(products, bundle ? data.skuRegistry : null);
             if (!confirm('Заменить каталог магазина «' + App.getCurrentShop().name + '»? Товаров: ' + products.length + (catalogPackage ? '. Нужные шаблоны загрузятся вместе с товарами; настройки магазина сохранятся.' : bundle ? '. Шаблоны и настройки тоже будут восстановлены.' : '. Товары отбираются по сохраненному магазину и проверенным правилам переноса.'))) return;

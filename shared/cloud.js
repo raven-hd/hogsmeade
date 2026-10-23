@@ -17,9 +17,10 @@ App.Cloud = {
     url: function () { return this.base() + '/contents/' + this.path().split('/').map(encodeURIComponent).join('/'); },
     settings: function (source) {
         var result = {};
-        ['catalogColumns', 'catalogHeaderEnabled', 'catalogHeaderEvent', 'catalogHeaderTitle', 'catalogHeaderDescription', 'paymentAccount'].forEach(function (k) {
+        ['catalogColumns', 'catalogHeaderEnabled', 'catalogHeaderEvent', 'catalogHeaderTitle', 'catalogHeaderDescription', 'paymentAccount', 'deliveryDesigns'].forEach(function (k) {
             if (Object.hasOwn(source || {}, k)) result[k] = source[k];
         });
+        if (result.deliveryDesigns != null) result.deliveryDesigns = App.DeliveryDesigns.validate(result.deliveryDesigns);
         return result;
     },
     normalize: function (data) {
@@ -64,7 +65,9 @@ App.Cloud = {
         try {
             Object.keys(changes).forEach(function (k) { previous.set(keys[k], localStorage.getItem(keys[k])); App.Storage.write(k, changes[k]); });
             var settingsKey = App.Workspace.settingsKey(); previous.set(settingsKey, localStorage.getItem(settingsKey));
-            App.Storage.write(settingsKey, Object.assign({}, App.Workspace.getSettings(), data.settings));
+            var settings = Object.assign({}, App.Workspace.getSettings(), data.settings);
+            if (!Object.hasOwn(data.settings, 'deliveryDesigns')) delete settings.deliveryDesigns;
+            App.Storage.write(settingsKey, settings);
             previous.set(this.metaKey(), localStorage.getItem(this.metaKey())); this.remember(data, sha);
         } catch (error) {
             previous.forEach(function (v, k) { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); }); throw error;

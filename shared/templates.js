@@ -84,7 +84,7 @@ App.Templates = {
         
         var html = '<div id="deliveryProfilesSection" style="margin-top: 20px; border-top: 1px solid var(--line); padding-top: 16px;">' +
             '<h4 style="color: var(--accent); margin: 0 0 8px;">Профили доставки</h4>' +
-            '<p style="opacity: 0.7; font-size: 13px; margin-bottom: 12px;">профиль форума выбирает ID пользователя, шапку доставки и оформление записки. карточки товаров настраиваются отдельно в шаблонах. каталог публикуется в Хогсмиде.</p>' +
+            '<p style="opacity: 0.7; font-size: 13px; margin-bottom: 12px;">профиль форума выбирает ID пользователя. шапка и записка меняются в оформлении доставки. карточки товаров настраиваются отдельно в шаблонах. каталог публикуется в Хогсмиде.</p>' +
             '<div class="delivery-profiles-list">';
         
         profiles.forEach(function(profile) {
@@ -191,10 +191,7 @@ App.Templates = {
                     '<option value="slytherinId"' + (profile.userField === 'slytherinId' ? ' selected' : '') + '>slytherinId</option>' +
                 '</select></div>' +
             '</div>' +
-            '<label style="font-size:12px; color:var(--accent);">Шаблон сообщения этого магазина:</label>' +
-            '<textarea id="pf_raven_header" rows="3" placeholder="Заголовок..." style="font-size:11px; font-family:monospace; margin-bottom:4px;">' + App.UI.escapeHtml((profile[App.State.currentShop] || {}).header || '') + '</textarea>' +
-            '<textarea id="pf_raven_note" rows="2" placeholder="Шаблон записки..." style="font-size:11px; font-family:monospace; margin-bottom:4px;">' + App.UI.escapeHtml((profile[App.State.currentShop] || {}).note || '') + '</textarea>' +
-            '<textarea id="pf_raven_footer" rows="2" placeholder="Подвал..." style="font-size:11px; font-family:monospace;">' + App.UI.escapeHtml((profile[App.State.currentShop] || {}).footer || '') + '</textarea>' +
+            '<p style="font-size:12px">шапка и записка настраиваются отдельно: <button type="button" onclick="App.DeliveryDesigns.open(\'' + App.UI.escapeHtml(profile.id) + '\')">оформление доставки <i class="fa-solid fa-pencil" aria-hidden="true"></i></button></p>' +
             '<div style="display:flex; gap:8px; margin-top:10px;">' +
                 '<button type="button" onclick="App.Templates.saveProfileForm(\'' + App.UI.escapeHtml(profile.id) + '\')">Сохранить</button>' +
                 '<button type="button" onclick="document.getElementById(\'profileFormContainer\').innerHTML=\'\'">Отмена</button>' +
@@ -207,9 +204,10 @@ App.Templates = {
         var name = document.getElementById('pf_name').value.trim();
         var icon = document.getElementById('pf_icon').value.trim();
         var userField = document.getElementById('pf_userField').value;
-        var ravenHeader = document.getElementById('pf_raven_header').value;
-        var ravenNote = document.getElementById('pf_raven_note').value;
-        var ravenFooter = document.getElementById('pf_raven_footer').value;
+        var previous = App.getDeliveryProfiles().find(function(p) { return p.id === originalId; });
+        var ravenHeader = previous?.[App.State.currentShop]?.header || '';
+        var ravenNote = previous?.[App.State.currentShop]?.note || '';
+        var ravenFooter = previous?.[App.State.currentShop]?.footer || '';
         
         if (!/^[a-zA-Z0-9_ -]*$/.test(icon)) { App.UI.showToast('Некорректный класс иконки', true); return; }
         if (!id || !name) { App.UI.showToast('Заполните ID и название!', true); return; }
@@ -223,7 +221,6 @@ App.Templates = {
             peach: { header: ravenHeader, note: ravenNote, productBlock: '{{PRODUCT}}\n\n{{LABEL}}{{NOTE1}}{{NOTE2}}', footer: ravenFooter }
         };
         
-        var previous = App.getDeliveryProfiles().find(function(p) { return p.id === originalId; });
         if (previous) profileData = Object.assign({}, previous, profileData);
         delete profileData.raven; delete profileData.peach;
         ['raven', 'peach', 'cafeteria'].forEach(function(shop) {
@@ -517,7 +514,7 @@ App.Templates = {
         if (template.fields.some(function(f) { return f.id === 'image' && f.enabled; })) data.image = 'https://example.org/product.png';
         var product = { sku: App.State.currentShop === 'peach' ? 'BK-001' : App.State.currentShop === 'cafeteria' ? 'KF-001' : 'SV-001', fieldData: data };
         var html = '<div class="wizard-step-content"><h4>Шаг 3: Проверка</h4>' +
-            '<p style="opacity:0.8;margin-bottom:12px">пример с условными данными. каталог и доставки имеют разное оформление. BB-код меняйте на шаге 2, цену — у товара; шапку и записку — в профиле форума.</p><div class="ctx-tabs">';
+            '<p style="opacity:0.8;margin-bottom:12px">пример с условными данными. каталог и доставки имеют разное оформление. BB-код меняйте на шаге 2, цену — у товара; шапку и записку — карандашом возле оформления доставки.</p><div class="ctx-tabs">';
         contexts.forEach(function(ctx) {
             html += '<button type="button" class="ctx-tab' + (ctx.id === active ? ' active' : '') + '" onclick="App.Templates.switchStep3Tab(\'' + ctx.id + '\')">' + App.UI.escapeHtml(ctx.label) + '</button>';
         });
@@ -529,12 +526,13 @@ App.Templates = {
                 var values = { RECIPIENT: '[mention=000]Получатель[/mention]', SENDER: '[mention=000]Отправитель[/mention]', NOTE: 'Текст записки' };
                 var extras = { PRODUCT: card, LABEL: App.Message.generateFieldBBCode(template, data, 'label', ctx.id), NOTE1: App.Message.generateFieldBBCode(template, data, 'note1', ctx.id), NOTE2: App.Message.generateFieldBBCode(template, data, 'note2', ctx.id) };
                 var body = message.productBlock ? App.Message.interpolate(message.productBlock, extras) : card + ['LABEL', 'NOTE1', 'NOTE2'].map(function(k) { return extras[k] ? '\n\n' + extras[k] : ''; }).join('');
-                preview = App.Message.interpolate(message.header || '', values) + App.Message.interpolate(message.note || '', values) + body + (message.footer || '');
+                preview = App.Message.composeDelivery(message, values, [body]);
             } else if (App.Message.catalogPriceInRow(template)) {
                 var payment = App.Message.generatePayment(product);
                 if (payment) preview += '\n\n' + payment;
             }
             html += '<div class="ctx-tab-content' + (ctx.id === active ? ' active' : '') + '" id="step3_content_' + ctx.id + '">' +
+                (ctx.profile && App.DeliveryDesigns ? App.DeliveryDesigns.bar(ctx.profile.id) : '') +
                 '<textarea readonly id="step3_preview_' + ctx.id + '" rows="16" style="font-family:monospace;font-size:11px;width:100%">' + App.UI.escapeHtml(preview) + '</textarea>' +
                 '<small style="opacity:0.7">' + (ctx.profile ? 'полное сообщение доставки · ID пользователя выбирается по полю ' + App.UI.escapeHtml(ctx.profile.userField) : 'карточка каталога и ее оплата; общая таблица собирается при публикации каталога') + '</small></div>';
         });
@@ -640,7 +638,7 @@ App.Templates = {
         }
         
         
-        // Message headers belong to forum profiles, not individual product templates.
+        // Delivery design is shared by the shop; product templates contain only cards.
         
         // Если это новый шаблон
         if (!template.id || template.id.startsWith('temp_')) {
@@ -698,17 +696,17 @@ App.Templates = {
     
     // ==================== ИМПОРТ/ЭКСПОРТ ====================
     download: function() {
-        var dataStr = JSON.stringify(App.State.templates, null, 2);
+        var dataStr = JSON.stringify(App.DeliveryDesigns.exportPackage(), null, 2);
         var dataBlob = new Blob([dataStr], { type: 'application/json' });
         var url = URL.createObjectURL(dataBlob);
         var link = document.createElement('a');
         link.href = url;
-        link.download = 'templates_' + new Date().toISOString().slice(0, 10) + '.json';
+        link.download = 'shop-design_' + new Date().toISOString().slice(0, 10) + '.json';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
-        App.UI.showToast('Шаблоны скачаны!');
+        App.UI.showToast('скачаны шаблоны и оформление доставки');
     },
     
     upload: function(event) {
@@ -719,6 +717,7 @@ App.Templates = {
         reader.onload = function(e) {
             try {
                 var uploaded = JSON.parse(e.target.result);
+                if (uploaded?.format === 'hogsmeade-design-package') { event.target.value = ''; App.DeliveryDesigns.importPackage(uploaded); return; }
                 if (!Array.isArray(uploaded)) {
                     throw new Error('Файл должен содержать массив');
                 }
