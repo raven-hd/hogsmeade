@@ -1482,6 +1482,25 @@
       "shop": "peach",
       "id": 1793260578562,
       "sku": "CV-042"
+    },
+    {
+      "category": "Цветочная лавка individual order",
+      "group": "Цветочная лавка",
+      "collection": "individual order",
+      "name": "«ТЕМНАЯ СТОРОНА ЭДЕМА»",
+      "templateId": "template_1782507999186",
+      "fieldData": {
+        "name": "«ТЕМНАЯ СТОРОНА ЭДЕМА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/66b9d4e92fddff78e234909de70473a6b861de24/rich-peach/images/flowers/CV-043-d8a29f79.png",
+        "productType": "букет",
+        "composition": "тацца, калла,целозия, амарант, вереск, зелень",
+        "description": "Есть цветы, которые говорят о нежности. А есть те, что не нуждаются в красивых признаниях. Это букет для мужчины, которому не нужно доказывать свою исключительность.",
+        "price": "39",
+        "note1": "Блейк Эллингтон"
+      },
+      "shop": "peach",
+      "id": 1794084393479,
+      "sku": "CV-043"
     }
   ],
   "templates": [
@@ -2648,11 +2667,12 @@
       "CV-039": "1792049833663",
       "CV-040": "1792050780425",
       "CV-041": "1792744706670",
-      "CV-042": "1793260578562"
+      "CV-042": "1793260578562",
+      "CV-043": "1794084393479"
     }
   },
   "catalogName": "",
-  "currentDeliveryProfileId": "hogwarts",
+  "currentDeliveryProfileId": "hogsmeade",
   "settings": {
     "catalogColumns": 4,
     "catalogHeaderEnabled": true,
