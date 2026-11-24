@@ -2639,6 +2639,438 @@
       "shop": "raven",
       "id": 1792500120884,
       "sku": "SV-072"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ПЕРЫШКО К ПЕРЫШКУ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ПЕРЫШКО К ПЕРЫШКУ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/hairbrush.png",
+        "productType": "туалетный набор",
+        "composition": "",
+        "description": "Изящный туалетный набор из щетки и гребня. Непослушные волосы больше не будут вашей проблемой! С помощью этих вещиц вы без труда укротите даже самую своенравную шевелюру.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548353549,
+      "sku": "RV-006"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ГНЕЗДО СОРОКИ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ГНЕЗДО СОРОКИ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/bowl.png",
+        "productType": "чаша для мелочей",
+        "composition": "",
+        "description": "Корзинка для мелочей с мягкой бархатной подкладкой и декоративной птичкой, устроившейся на краю гнезда. Идеальное место для хранения украшений, ключей и прочей мелочевки, для которой не нашлось другого места. А еще эта корзинка может стать излюбленным местом для сна и отдыха вашего клубкопуха.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548426142,
+      "sku": "RV-007"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«НИ ПУХА НИ ПЫЛИ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«НИ ПУХА НИ ПЫЛИ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/duster.png",
+        "productType": "метелка",
+        "composition": "",
+        "description": "Метелка для пыли из мягких сизых и дымчато-синих перьев, собранных в когтевранском птичнике. Незаменимая помощница для ухода за книжными полками и антикварными вещицами. Достаточно легкого взмаха, чтобы избавиться от пыли. Впрочем, если обновить чары, метелка вполне способна и сама заниматься уборкой.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548475760,
+      "sku": "RV-008"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«НОКС»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«НОКС»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/quencher.png",
+        "productType": "гаситель свечей",
+        "composition": "",
+        "description": "Антикварная безделушка — гаситель свечей с длинной металлической рукоятью. Вам больше не придется прибегать к варварскому задуванию свечей! Теперь погасить их можно одним элегантным движением руки. Идеально для тех, кто привык красиво завершать вечер.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548636000,
+      "sku": "SV-073"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ВОРОН И ОРЛИЦА»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ВОРОН И ОРЛИЦА»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/puzzle1.PNG",
+        "productType": "деревянный пазл",
+        "composition": "",
+        "description": "Деревянный пазл в рамке – необычный выбор для тех, кто хочет с пользой провести свободный вечер и украсить интерьер акцентной деталью. Идеальный подарок для пар, друзей и ностальгирующих когтевранцев",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548711640,
+      "sku": "RV-009"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«МУДРОСТЬ ФИЛИНА»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«МУДРОСТЬ ФИЛИНА»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/puzzle2.PNG",
+        "productType": "деревянный пазл",
+        "composition": "",
+        "description": "Лучший способ поделиться мудростью – многосоставной пазл в виде башни. Для тех, кто скучает по дому и все еще решается отправить заветное письмо – это ваш знак. Каждая деталь напоминает о теплом чувстве при получении долгожданного конверта.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548757037,
+      "sku": "RV-010"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ФИЛИН И ГОЛУБКА»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ФИЛИН И ГОЛУБКА»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/keychain_puzzle.PNG",
+        "productType": "брелок-пазл",
+        "composition": "",
+        "description": "Филин и голубка так любят друг друга, что вы обязаны соединить их в одно целое – деревянный брелок-пазл, который станет дополнением к вашей повседневности и напомнит о теплых чувствах, греющих сердце в дождливую пору.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548792509,
+      "sku": "BR-009"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«НОЧЬ В БАШНЕ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«НОЧЬ В БАШНЕ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/glass.PNG",
+        "productType": "стакан для горячих напитков",
+        "composition": "",
+        "description": "Эко-стакан для ваших ароматных напитков. Выдерживает любую температуру и сохраняет тепло надолго. Теперь можно растянуть удовольствие от вечернего расслабляющего чая, смело зачитываясь увлекательной книгой перед сном – за лишний десяток страниц никто не осудит.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548821361,
+      "sku": "RV-011"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ЛАРЧИК»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ЛАРЧИК»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/feeding.png",
+        "productType": "кормушка для птиц",
+        "composition": "",
+        "description": "Каждый хороший волшебник донатит на корм птичкам в «Под крылом ворона». А каждый хороший домохозяин вешает кормушку в своем дворе, чтобы подкармливать птиц, которых не приняли в Хогвартс.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548865868,
+      "sku": "RV-012"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«САДОВЫЙ ЗОНТ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«САДОВЫЙ ЗОНТ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/drinking.png",
+        "productType": "поилка для птиц",
+        "composition": "",
+        "description": "Очень стильная поилка для птиц украсит ваш сад и порадует пернатых обитателей и их гостей.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548904581,
+      "sku": "RV-013"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ХРАНИТЕЛИ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ХРАНИТЕЛИ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/rack.png",
+        "productType": "держатель для книг",
+        "composition": "",
+        "description": "Ворон — птица, отличающаяся умом и мудростью. Поэтому такие ограничители для книг станут не только красивым, но и весьма символичным элементом интерьера.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548939698,
+      "sku": "RV-014"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«СТАЯ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«СТАЯ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/mirror.png[/img][/width][/center]",
+        "productType": "зеркало",
+        "composition": "",
+        "description": "Каждый человек мечтает о своей небольшой стае, а то и о нескольких. Вашему вниманию — зеркало со стаей: стильное и красивое. Как и все когтевранское.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795548973775,
+      "sku": "RV-015"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ГОЛУБЬ — ПТИЦА МИРА»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ГОЛУБЬ — ПТИЦА МИРА»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/bag1.png",
+        "productType": "мешочек для птичьих лакомств",
+        "composition": "",
+        "description": "Мешочек для птичьего корма, созданный так, чтобы защитить лакомства от влаги и рассыпания. Бархатистая ткань и золотая вышивка с изображением птиц придают изделию особую эстетику и уют. Ваши пернатые друзья оценят обновку, а вы — красоту в деталях.\n\nВышивка гладью: прекрасный голубь, а также созвездия павлина, тукана и орла.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795549028175,
+      "sku": "RV-016"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ОРЕЛ — ПТИЦА СИЛЫ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ОРЕЛ — ПТИЦА СИЛЫ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/bag2.png",
+        "productType": "мешочек для птичьих лакомств",
+        "composition": "",
+        "description": "Мешочек для птичьего корма, созданный так, чтобы защитить лакомства от влаги и рассыпания. Бархатистая ткань и золотая вышивка с изображением птиц придают изделию особую эстетику и уют. Ваши пернатые друзья оценят обновку, а вы — красоту в деталях.\n\nВышивка гладью: могучий орел, а также созвездия лебедя, журавля и ворона.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795549069513,
+      "sku": "RV-017"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«СОВА — ПТИЦА МУДРОСТИ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«СОВА — ПТИЦА МУДРОСТИ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/bag3.png",
+        "productType": "мешочек для птичьих лакомств",
+        "composition": "",
+        "description": "Мешочек для птичьего корма, созданный так, чтобы защитить лакомства от влаги и рассыпания. Бархатистая ткань и золотая вышивка с изображением птиц придают изделию особую эстетику и уют. Ваши пернатые друзья оценят обновку, а вы — красоту в деталях.\n\nВышивка гладью: проницательная сова, а также созвездия феникса, павлина и журавля.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795549120543,
+      "sku": "RV-018"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ВОРОН — ПТИЦА ТАЙНЫ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ВОРОН — ПТИЦА ТАЙНЫ»",
+        "image": "https://raven-hd.github.io/hogsmeade/under-the-raven-wing/images/other/11.11/bag4.png",
+        "productType": "мешочек для птичьих лакомств",
+        "composition": "",
+        "description": "Мешочек для птичьего корма, созданный так, чтобы защитить лакомства от влаги и рассыпания. Бархатистая ткань и золотая вышивка с изображением птиц придают изделию особую эстетику и уют. Ваши пернатые друзья оценят обновку, а вы — красоту в деталях.\n\nВышивка гладью: загадочный ворон, а также созвездия голубя, лебедя и райской птицы.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795549169939,
+      "sku": "RV-019"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ВОРОНЕНОК»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ВОРОНЕНОК»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/db8cbde7501dfce52d5847c0b3451456f2519579/under-the-raven-wing/images/other/RV-020-d328ff06.png",
+        "productType": "копилка",
+        "composition": "",
+        "description": "С такой вороной хватит не только на кусочек сыра, но и на все свои хотелки.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795550644073,
+      "sku": "RV-020"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ЛЕДЕНЦОВАЯ ТРОСТОЧКА»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ЛЕДЕНЦОВАЯ ТРОСТОЧКА»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/1a02a087289372c5d8988149f454f5db4e63b36d/under-the-raven-wing/images/other/RV-021-de06fe21.png",
+        "productType": "зонт ",
+        "composition": "",
+        "description": "Яркий зонт, чтобы спрятаться от осеннего дождя самому и прихватить парочку друзей. А можно спрятать до пяти ПОшек.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795550696012,
+      "sku": "RV-021"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ДЕРЕВО ПОЖЕЛАНИЙ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ДЕРЕВО ПОЖЕЛАНИЙ»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/c2d388f3a624855a8ce7336581b542e216a2894f/under-the-raven-wing/images/other/RV-022-f9421241.png",
+        "productType": "музыкальная шкатулка",
+        "composition": "",
+        "description": "Мелодия этой шкатулки заставляет вспомнить все теплые пожелания, которые вам когда-либо говорили.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795550737446,
+      "sku": "RV-022"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ЦВЕТИК-СЕМИЦВЕТИК»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ЦВЕТИК-СЕМИЦВЕТИК»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/48993717af148bef20d43195be0f592970d44007/under-the-raven-wing/images/other/RV-023-2d1b8103.png",
+        "productType": "подушка ",
+        "composition": "",
+        "description": "Говорят, если уснуть на этой подушке, то вскоре исполнится самое заветное желание. Но, возможно, это всего лишь совпадение",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795550769090,
+      "sku": "RV-023"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«RAVENBRO RECORDS 2026 \"NEVER ENDS»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«RAVENBRO RECORDS 2026 \"NEVER ENDS»",
+        "image": "https://i.ibb.co/CRTcpTT/Picsart-26-11-21-11-41-10-200.png",
+        "productType": "музыкальный альбом Пернатый оркестр",
+        "composition": "",
+        "description": "Сборник всех песен Пернатого оркестра за 2026 год. Этого пока нет даже в синей башне.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795551791174,
+      "sku": "RV-024"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«RAVENBRO RECORDS 2025 \"ЭТО КОГТЕВРАН, ДЕТКА»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«RAVENBRO RECORDS 2025 \"ЭТО КОГТЕВРАН, ДЕТКА»",
+        "image": "https://i.ibb.co/fjzNHdJ/Picsart-26-11-21-11-40-40-945.png",
+        "productType": "Музыкальный альбом Пернатый оркестр",
+        "composition": "",
+        "description": "Сборник всех песен Пернатого оркестра за 2025 год. Этого пока нет даже в синей башне.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795551834084,
+      "sku": "RV-025"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«ДЛЯ ПОМЕТОК В СЦЕНАРИЯХ»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«ДЛЯ ПОМЕТОК В СЦЕНАРИЯХ»",
+        "image": "]https://i.ibb.co/ZpFF7jJ4/Picsart-26-11-21-11-41-54-318.png",
+        "productType": "специальная перьевая ручка",
+        "composition": "",
+        "description": "Чтобы видеть важное и не забывать о контексте.",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795551872903,
+      "sku": "RV-026"
+    },
+    {
+      "category": "прочее 11.11 | 2026",
+      "group": "прочее",
+      "collection": "11.11 | 2026",
+      "name": "«RAVENBRO RECORDS»",
+      "templateId": "template_1788173914879",
+      "fieldData": {
+        "name": "«RAVENBRO RECORDS»",
+        "image": "https://i.ibb.co/yBMnyGG0/Picsart-26-11-21-11-42-24-246.png",
+        "productType": "проигрыватель",
+        "composition": "",
+        "description": "",
+        "price": ""
+      },
+      "shop": "raven",
+      "id": 1795551926755,
+      "sku": "RV-027"
     }
   ],
   "templates": [
@@ -4506,7 +4938,31 @@
       "RV-005": "1792499674081",
       "SV-070": "1792499786777",
       "SV-071": "1792499840896",
-      "SV-072": "1792500120884"
+      "SV-072": "1792500120884",
+      "RV-006": "1795548353549",
+      "RV-007": "1795548426142",
+      "RV-008": "1795548475760",
+      "SV-073": "1795548636000",
+      "RV-009": "1795548711640",
+      "RV-010": "1795548757037",
+      "BR-009": "1795548792509",
+      "RV-011": "1795548821361",
+      "RV-012": "1795548865868",
+      "RV-013": "1795548904581",
+      "RV-014": "1795548939698",
+      "RV-015": "1795548973775",
+      "RV-016": "1795549028175",
+      "RV-017": "1795549069513",
+      "RV-018": "1795549120543",
+      "RV-019": "1795549169939",
+      "RV-020": "1795550644073",
+      "RV-021": "1795550696012",
+      "RV-022": "1795550737446",
+      "RV-023": "1795550769090",
+      "RV-024": "1795551791174",
+      "RV-025": "1795551834084",
+      "RV-026": "1795551872903",
+      "RV-027": "1795551926755"
     }
   },
   "catalogName": "",
