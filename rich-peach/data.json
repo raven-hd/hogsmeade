@@ -1501,6 +1501,24 @@
       "shop": "peach",
       "id": 1794084393479,
       "sku": "CV-043"
+    },
+    {
+      "category": "Цветочная лавка lucky pech",
+      "group": "Цветочная лавка",
+      "collection": "lucky pech",
+      "name": "«БОРДО»",
+      "templateId": "template_1785325918208",
+      "fieldData": {
+        "name": "«БОРДО»",
+        "image": "https://raw.githubusercontent.com/raven-hd/hogsmeade/f3caf3c5bcde3bdf2929c221fc447f5fcc882aad/rich-peach/images/flowers/CV-044-ede80d11.png",
+        "productType": "цветочная композиция",
+        "composition": "гипсофила, физалис, ранункулюс, лилия, гвоздика, вереск, тюльпан, фрезия, ромашка,гвоздика",
+        "description": "Выразительная асимметричная композиция в глубоких винных оттенках с воздушной гипсофилой, изящной лилией и яркими фонариками физалиса. Букет для чувств, которые сложно выразить словами, но невозможно оставить без внимания.",
+        "label": ""
+      },
+      "shop": "peach",
+      "id": 1795553085300,
+      "sku": "CV-044"
     }
   ],
   "templates": [
@@ -2668,11 +2686,12 @@
       "CV-040": "1792050780425",
       "CV-041": "1792744706670",
       "CV-042": "1793260578562",
-      "CV-043": "1794084393479"
+      "CV-043": "1794084393479",
+      "CV-044": "1795553085300"
     }
   },
   "catalogName": "",
-  "currentDeliveryProfileId": "hogsmeade",
+  "currentDeliveryProfileId": "hogwarts",
   "settings": {
     "catalogColumns": 4,
     "catalogHeaderEnabled": true,
